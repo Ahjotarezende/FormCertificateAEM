@@ -21,6 +21,9 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
 
+import "./Checkbox/Checkbox"
+import "./Micros/Label/Label"
+
 import { MapTo } from "@adobe/aem-react-editable-components";
 
 import { CarouselV1IsEmptyFn } from "@adobe/aem-core-components-react-spa/dist/isEmptyFunctions";
