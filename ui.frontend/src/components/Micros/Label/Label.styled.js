@@ -2,5 +2,5 @@ import styled from "styled-components";
 
 export const LabelText = styled.p`
   color: ${(color) => color};
-  font-size: ${(fontSize) => fontSize}rem;
+  font-size: ${(props) => props.fontSize}px;
 `;
