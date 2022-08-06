@@ -2,6 +2,8 @@ import styled from "styled-components"
 
 export const SelectMicro = styled.select`
     cursor: pointer;
+    font-family: 'Nunito';
+    font-weight: ${(props) => props.wselect};
     border-color: ${(props) => props.cbselect};
     color: ${(props) => props.colorselect};
     font-size: ${(props) => props.fsslect};

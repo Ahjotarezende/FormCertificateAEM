@@ -4,14 +4,16 @@ import { SelectMicro } from './Select.styled'
 const Select = (props) => {
   let arrayOptions = [];
   for(let i=props.inicio, j=0; i<=props.fim; i++, j++){
-        arrayOptions[j]=i
+        arrayOptions[j]=String(i).padStart(2,'0')
   }
   return (
     <SelectMicro
-        borderradius={`${props.brselect}px`}
+        wselect={props.wselect}
+        brselect={`${props.brselect}px`}
         fsslect={`${props.fsselect}px`}
-        colortext={props.colorselect}
-        colorborder={props.cbselect}
+        colorselect={props.colorselect}
+        cbselect={props.cbselect}
+
     >
         {arrayOptions.map((rdm, i) => (
             <option key={i} value={rdm}>{rdm}</option>
