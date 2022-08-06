@@ -55,7 +55,7 @@
                          name="./txtColor"
                          sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                <number cq-msm-lockable="./number"
-                       fieldLabel="Font Size"
+                       fieldLabel="Font Size(px)"
                        jcr:primaryType="nt:unstructured"
                        name="./number"
                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"/>
