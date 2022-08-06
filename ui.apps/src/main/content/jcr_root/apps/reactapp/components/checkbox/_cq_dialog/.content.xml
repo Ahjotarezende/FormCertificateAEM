@@ -50,7 +50,7 @@
                            name="./inputColor"
                            sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                <txtColor cq-msm-lockable="./txtColor"
-                         fieldLabel="Tect Color"
+                         fieldLabel="Text Color"
                          jcr:primaryType="nt:unstructured"
                          name="./txtColor"
                          sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
