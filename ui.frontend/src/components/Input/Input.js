@@ -5,7 +5,14 @@ import {
   ContainerInputBirthday,
   ContainerInputPhone,
 } from "./Input.styled";
-function Input({ type, placeholder, inputName, color, fontSize }) {
+function Input({
+  type,
+  placeholder,
+  inputName,
+  color,
+  fontSize,
+  borderRadius,
+}) {
   const [age, setAge] = useState(50);
   const getTypeInput = (type) => {
     switch (type) {
@@ -17,6 +24,7 @@ function Input({ type, placeholder, inputName, color, fontSize }) {
               type='text'
               fontSize={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
+              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -32,6 +40,7 @@ function Input({ type, placeholder, inputName, color, fontSize }) {
               maxLength='11'
               font-size={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
+              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -46,6 +55,7 @@ function Input({ type, placeholder, inputName, color, fontSize }) {
               type='email'
               color={color ? color : "#aaaaaa"}
               font-size={fontSize ? fontSize : "16px"}
+              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -59,6 +69,7 @@ function Input({ type, placeholder, inputName, color, fontSize }) {
               type='number'
               font-size={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
+              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               value={age}
               disabled
               onChange={(e) => {

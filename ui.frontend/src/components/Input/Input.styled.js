@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerInput = styled.input`
-  border: 0.125rem solid ${(props) => props.color};
+  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
   height: 2rem;
@@ -26,7 +26,7 @@ export const ContainerInput = styled.input`
 `;
 
 export const ContainerInputBirthday = styled.input`
-  border: 0.125rem solid ${(props) => props.color};
+  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
   height: 2rem;
@@ -40,7 +40,7 @@ export const ContainerInputBirthday = styled.input`
 `;
 
 export const ContainerInputPhone = styled.input`
-  border: 0.125rem solid ${(props) => props.color};
+  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
   height: 2rem;
