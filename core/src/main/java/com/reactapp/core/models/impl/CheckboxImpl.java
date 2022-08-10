@@ -1,37 +1,20 @@
-/*
-
- * ***********************************************************************
-
- * React App CONFIDENTIAL
-
- * ___________________
-
- *
-
- * Copyright 2022 React App.
-
- * All Rights Reserved.
-
- *
-
- * NOTICE:  All information contained herein is, and remains the property
-
- * of React App and its suppliers, if any. The intellectual and
-
- * technical concepts contained herein are proprietary to React App
-
- * and its suppliers and are protected by trade secret or copyright law.
-
- * Dissemination of this information or reproduction of this material
-
- * is strictly forbidden unless prior written permission is obtained
-
- * from React App.
-
- * ***********************************************************************
-
- */
-
+/*
+ * ***********************************************************************
+ * React App CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2022 React App.
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains the property
+ * of React App and its suppliers, if any. The intellectual and
+ * technical concepts contained herein are proprietary to React App
+ * and its suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from React App.
+ * ***********************************************************************
+ */
 
 package com.reactapp.core.models.impl;
 
@@ -61,7 +44,9 @@ public class CheckboxImpl
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private Boolean type;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private Boolean option;
+    private Boolean round;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private Boolean required;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String text;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -77,6 +62,18 @@ public class CheckboxImpl
     @JsonProperty("type")
     public Boolean getType() {
         return type;
+    }
+
+    @Override
+    @JsonProperty("round")
+    public Boolean getRound() {
+        return round;
+    }
+
+    @Override
+    @JsonProperty("required")
+    public Boolean getRequired() {
+        return required;
     }
 
     @Override
