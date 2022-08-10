@@ -11,15 +11,15 @@ export const Checkbox = ({ type , txtColor, inputColor, text, number }) => {
 
     if(type) {
       return (
-        <CheckBoxContainer >
-          <CheckboxInput  onClick={handleClick} color={inputColor} type={"checkbox"} id={"checkbox"} checked={checked}/>
+        <CheckBoxContainer role="checkbox" onClick={handleClick} tabindex="0" title={text}>
+          <CheckboxInput color={inputColor} type={"checkbox"} id={"checkbox"} title={text} aria-label={text} aria-checked={checked} checked={checked}/>
           <Label text={text} color={txtColor} fontSize={number} />
         </CheckBoxContainer>
       );
     } else {
       return (
-        <CheckBoxContainer >
-          <CheckboxInput  onClick={handleClick} color={inputColor} type={"checkbox"} id={"checkbox"}/>
+        <CheckBoxContainer role="checkbox" onClick={handleClick} tabindex="0" title={text}>
+          <CheckboxInput   color={inputColor} type={"checkbox"} id={"checkbox"} title={text} aria-label={text} aria-checked={checked} />
           <Label text={text} color={txtColor} fontSize={number} />
         </CheckBoxContainer>
       );
