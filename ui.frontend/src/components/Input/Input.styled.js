@@ -2,18 +2,14 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 export const Container = styled.div`
   display: flex;
-  width: 50vw;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   flex: 1;
-  @media (max-width: 768px) {
-    height: 4.5rem;
-  }
 `;
 
 export const ContainerInput = styled.input`
-  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
+  border: 0.125rem solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
   height: 2rem;
@@ -26,21 +22,17 @@ export const ContainerInput = styled.input`
 `;
 
 export const ContainerInputBirthday = styled.input`
-  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
+  border: 0.125rem solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
-  height: 2rem;
+  width: 7.18rem;
+  height: 2.5rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
-  width: 20%;
-
-  @media (max-width: 768px) {
-    width: 60%;
-  }
 `;
 
 export const ContainerInputPhone = styled.input`
-  border: ${(props) => props.borderRadius} solid ${(props) => props.color};
+  border: 0.125rem solid ${(props) => props.color};
   box-sizing: border-box;
   border-radius: 4px;
   height: 2rem;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   ContainerInput,
@@ -12,8 +12,8 @@ function Input({
   color,
   fontSize,
   borderRadius,
+  valueAge,
 }) {
-  const [age, setAge] = useState(50);
   const getTypeInput = (type) => {
     switch (type) {
       case "text":
@@ -24,7 +24,6 @@ function Input({
               type='text'
               fontSize={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -40,7 +39,6 @@ function Input({
               maxLength='11'
               font-size={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -55,7 +53,6 @@ function Input({
               type='email'
               color={color ? color : "#aaaaaa"}
               font-size={fontSize ? fontSize : "16px"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -69,8 +66,7 @@ function Input({
               type='number'
               font-size={fontSize ? fontSize : "16px"}
               color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
-              value={age}
+              value={valueAge}
               disabled
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
