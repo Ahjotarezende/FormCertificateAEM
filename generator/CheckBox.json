@@ -39,6 +39,26 @@
         }
       },
       {
+        "field": "round",
+        "type": "checkbox",
+        "json-expose": true,
+        "json-property": "round",
+        "attributes": {
+          "value": "{Boolean}true",
+          "text": "Check"
+        }
+      },
+      {
+        "field": "required",
+        "type": "checkbox",
+        "json-expose": true,
+        "json-property": "required",
+        "attributes": {
+          "value": "{Boolean}true",
+          "text": "*Required"
+        }
+      },
+      {
         "field": "text",
         "label": "Texto",
         "type": "textfield",
