@@ -42,6 +42,10 @@ public class certSocialModelImpl
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String labelcertsc;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorlabelcertsc;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String colorbtsc;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private com.adobe.cq.wcm.core.components.models.Image leftimagecertsc;
@@ -79,6 +83,18 @@ public class certSocialModelImpl
     private String errortextsc;
     @SlingObject
     private Resource resource;
+
+    @Override
+    @JsonProperty("labelcertsc")
+    public String getLabelcertsc() {
+        return labelcertsc;
+    }
+
+    @Override
+    @JsonProperty("colorlabelcertsc")
+    public String getColorlabelcertsc() {
+        return colorlabelcertsc;
+    }
 
     @Override
     @JsonProperty("colorbtsc")

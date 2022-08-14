@@ -188,42 +188,42 @@
           {
             "field": "textonebs",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "First Navbar text.",
             "json-expose": true,
             "json-property": "textonebs"
           },
           {
             "field": "texttwobs",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Second Navbar text.",
             "json-expose": true,
             "json-property": "texttwobs"
           },
           {
             "field": "textthreebs",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Third Navbar text.",
             "json-expose": true,
             "json-property": "textthreebs"
           },
           {
             "field": "colortextnavbs",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Navbar text color.",
             "json-expose": true,
             "json-property": "colortextnavbs"
           },
           {
             "field": "colorselectedbs",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Navbar text color (selected).",
             "json-expose": true,
             "json-property": "colorselectedbs"
           },
           {
             "field": "fsnavbs",
             "type": "numberfield",
-            "label": "Font-Size Nav Bar.",
+            "label": "Navbar font-size.",
             "json-expose": true,
             "json-property": "fsnavbs"
           }
@@ -240,42 +240,42 @@
           {
             "field": "textlabelbs",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "textonebs"
           },
           {
             "field": "textplacebs",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Placeholder.",
             "json-expose": true,
             "json-property": "texttwobs"
           },
           {
             "field": "texterrorbs",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Error Message.",
             "json-expose": true,
             "json-property": "textthreebs"
           },
           {
             "field": "colorlabelbs",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Label Color.",
             "json-expose": true,
             "json-property": "colortextnavbs"
           },
           {
             "field": "colorerrorbs",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Error message color.",
             "json-expose": true,
             "json-property": "colorselectedbs"
           },
           {
             "field": "fsinputbs",
             "type": "numberfield",
-            "label": "Color for Basic form components.",
+            "label": "Input font-size.",
             "json-expose": true,
             "json-property": "colorcompbs"
           },
@@ -358,14 +358,14 @@
           {
             "field": "labelbirthbs",
             "type": "textfield",
-            "label": "Label for birthday component.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "labelbirthbs"
           },
           {
             "field": "colorbirthbs",
             "type": "textfield",
-            "label": "Text color for birthday component.",
+            "label": "Text color.",
             "json-expose": true,
             "json-property": "colorbirthbs"
           },
@@ -396,42 +396,42 @@
           {
             "field": "textcheckbs",
             "type": "textfield",
-            "label": "Text for checkbox component",
+            "label": "Checkbox text.",
             "json-expose": true,
             "json-property": "textcheckbs"
           },
           {
             "field": "errorcheckbs",
             "type": "textfield",
-            "label": "Error message for checkbox component",
+            "label": "Checkbox error message.",
             "json-expose": true,
             "json-property": "errorcheckbs"
           },
           {
             "field": "colorcheckbs",
             "type": "textfield",
-            "label": "Color for checkbox component",
+            "label": "Checkbox color.",
             "json-expose": true,
             "json-property": "colorcheckbs"
           },
           {
             "field": "colortextcheckbs",
             "type": "textfield",
-            "label": "Text color for checkbox component",
+            "label": "Checkbox text color.",
             "json-expose": true,
             "json-property": "colortextcheckbs"
           },
           {
             "field": "colorerrorcheckbs",
             "type": "textfield",
-            "label": "Error message color for checkbox component",
+            "label": "Checkbox error message color.",
             "json-expose": true,
             "json-property": "colorerrorcheckbs"
           },
           {
             "field": "fscheckbs",
             "type": "numberfield",
-            "label": "Font-Size text for checkbox component",
+            "label": "Font-Size text.",
             "json-expose": true,
             "json-property": "fscheckbs"
           },
@@ -535,6 +535,20 @@
         "json-expose": true,
         "items": [
           {
+            "field": "labelcertbs",
+            "type": "textfield",
+            "label": "Label.",
+            "json-expose": true,
+            "json-property": "labelcertbs"
+          },
+          {
+            "field": "colorlabelcertbs",
+            "type": "textfield",
+            "label": "Label color.",
+            "json-expose": true,
+            "json-property": "colorlabelcertbs"
+          },
+          {
             "field": "colorbtbs",
             "type": "textfield",
             "label": "Certificate button color.",
@@ -558,14 +572,14 @@
           {
             "field": "txtcertbs",
             "type": "textfield",
-            "label": "Certificates button text.",
+            "label": "Certificate button text.",
             "json-expose": true,
             "json-property": "txtcertbs"
           },
           {
             "field": "colortxtcertbs",
             "type": "textfield",
-            "label": "Certificates button text color.",
+            "label": "Certificate button text color.",
             "json-expose": true,
             "json-property": "colortxtcertbs"
           },
@@ -711,42 +725,42 @@
           {
             "field": "textonesc",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "First Navbar text.",
             "json-expose": true,
             "json-property": "textonesc"
           },
           {
             "field": "texttwosc",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Second Navbar text.",
             "json-expose": true,
             "json-property": "texttwosc"
           },
           {
             "field": "textthreesc",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Third Navbar text.",
             "json-expose": true,
             "json-property": "textthreesc"
           },
           {
             "field": "colortextnavsc",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Navbar text color.",
             "json-expose": true,
             "json-property": "colortextnavsc"
           },
           {
             "field": "colorselectedsc",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Navbar text color (selected).",
             "json-expose": true,
             "json-property": "colorselectedsc"
           },
           {
             "field": "fsnavsc",
             "type": "numberfield",
-            "label": "Font-Size Nav Bar.",
+            "label": "Navbar font-size.",
             "json-expose": true,
             "json-property": "fsnavsc"
           }
@@ -763,42 +777,42 @@
           {
             "field": "textlabelsc",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "textonesc"
           },
           {
             "field": "textplacesc",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Placeholder.",
             "json-expose": true,
             "json-property": "texttwosc"
           },
           {
             "field": "texterrorsc",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Error message.",
             "json-expose": true,
             "json-property": "textthreesc"
           },
           {
             "field": "colorlabelsc",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Label color.",
             "json-expose": true,
             "json-property": "colortextnavsc"
           },
           {
             "field": "colorerrorsc",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Error message color.",
             "json-expose": true,
             "json-property": "colorselectedsc"
           },
           {
             "field": "fsinputsc",
             "type": "numberfield",
-            "label": "Color for Social form components.",
+            "label": "Input font-size.",
             "json-expose": true,
             "json-property": "colorcompsc"
           },
@@ -881,14 +895,14 @@
           {
             "field": "labelbirthsc",
             "type": "textfield",
-            "label": "Label for birthday component.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "labelbirthsc"
           },
           {
             "field": "colorbirthsc",
             "type": "textfield",
-            "label": "Text color for birthday component.",
+            "label": "Text color.",
             "json-expose": true,
             "json-property": "colorbirthsc"
           },
@@ -919,42 +933,42 @@
           {
             "field": "textchecksc",
             "type": "textfield",
-            "label": "Text for checkbox component",
+            "label": "Checkbox text.",
             "json-expose": true,
             "json-property": "textchecksc"
           },
           {
             "field": "errorchecksc",
             "type": "textfield",
-            "label": "Error message for checkbox component",
+            "label": "Checkbox error message.",
             "json-expose": true,
             "json-property": "errorchecksc"
           },
           {
             "field": "colorchecksc",
             "type": "textfield",
-            "label": "Color for checkbox component",
+            "label": "Checkbox color.",
             "json-expose": true,
             "json-property": "colorchecksc"
           },
           {
             "field": "colortextchecksc",
             "type": "textfield",
-            "label": "Text color for checkbox component",
+            "label": "Checkbox text color.",
             "json-expose": true,
             "json-property": "colortextchecksc"
           },
           {
             "field": "colorerrorchecksc",
             "type": "textfield",
-            "label": "Error message color for checkbox component",
+            "label": "Checkbox error message color.",
             "json-expose": true,
             "json-property": "colorerrorchecksc"
           },
           {
             "field": "fschecksc",
             "type": "numberfield",
-            "label": "Font-Size text for checkbox component",
+            "label": "Checkbox font-size.",
             "json-expose": true,
             "json-property": "fschecksc"
           },
@@ -1058,6 +1072,20 @@
         "json-expose": true,
         "items": [
           {
+            "field": "labelcertsc",
+            "type": "textfield",
+            "label": "Label.",
+            "json-expose": true,
+            "json-property": "labelcertsc"
+          },
+          {
+            "field": "colorlabelcertsc",
+            "type": "textfield",
+            "label": "Label color.",
+            "json-expose": true,
+            "json-property": "colorlabelcertsc"
+          },
+          {
             "field": "colorbtsc",
             "type": "textfield",
             "label": "Certificate button color.",
@@ -1067,28 +1095,28 @@
           {
             "field": "leftimagecertsc",
             "type": "image",
-            "label": "Left image for certificates button.",
+            "label": "Left image for certificate button.",
             "json-expose": true,
             "json-property": "leftimagecertsc"
           },
           {
             "field": "rightimagecertsc",
             "type": "image",
-            "label": "Right image for certificates button.",
+            "label": "Right image for certificate button.",
             "json-expose": true,
             "json-property": "rightimagecertsc"
           },
           {
             "field": "txtcertsc",
             "type": "textfield",
-            "label": "Certificates button text.",
+            "label": "Certificate button text.",
             "json-expose": true,
             "json-property": "txtcertsc"
           },
           {
             "field": "colortxtcertsc",
             "type": "textfield",
-            "label": "Certificates button text color.",
+            "label": "Certificate button text color.",
             "json-expose": true,
             "json-property": "colortxtcertsc"
           },
@@ -1234,42 +1262,42 @@
           {
             "field": "textonect",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "First Navbar text.",
             "json-expose": true,
             "json-property": "textonect"
           },
           {
             "field": "texttwoct",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Second Navbar text.",
             "json-expose": true,
             "json-property": "texttwoct"
           },
           {
             "field": "textthreect",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Third Navbar text.",
             "json-expose": true,
             "json-property": "textthreect"
           },
           {
             "field": "colortextnavct",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Navbar text color.",
             "json-expose": true,
             "json-property": "colortextnavct"
           },
           {
             "field": "colorselectedct",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Navbar text color (selected).",
             "json-expose": true,
             "json-property": "colorselectedct"
           },
           {
             "field": "fsnavct",
             "type": "numberfield",
-            "label": "Font-Size Nav Bar.",
+            "label": "Navbar font-size.",
             "json-expose": true,
             "json-property": "fsnavct"
           }
@@ -1286,42 +1314,42 @@
           {
             "field": "textlabelct",
             "type": "textfield",
-            "label": "First text Nav Bar.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "textonect"
           },
           {
             "field": "textplacect",
             "type": "textfield",
-            "label": "Second text Nav Bar.",
+            "label": "Placeholder.",
             "json-expose": true,
             "json-property": "texttwoct"
           },
           {
             "field": "texterrorct",
             "type": "textfield",
-            "label": "Third text Nav Bar.",
+            "label": "Error message.",
             "json-expose": true,
             "json-property": "textthreect"
           },
           {
             "field": "colorlabelct",
             "type": "textfield",
-            "label": "Color for Nav Bar text.",
+            "label": "Label color.",
             "json-expose": true,
             "json-property": "colortextnavct"
           },
           {
             "field": "colorerrorct",
             "type": "textfield",
-            "label": "Color for selected text on Nav Bar.",
+            "label": "Error message color.",
             "json-expose": true,
             "json-property": "colorselectedct"
           },
           {
             "field": "fsinputct",
             "type": "numberfield",
-            "label": "Color for Certificate form components.",
+            "label": "Input font-size.",
             "json-expose": true,
             "json-property": "colorcompct"
           },
@@ -1404,14 +1432,14 @@
           {
             "field": "labelbirthct",
             "type": "textfield",
-            "label": "Label for birthday component.",
+            "label": "Label.",
             "json-expose": true,
             "json-property": "labelbirthct"
           },
           {
             "field": "colorbirthct",
             "type": "textfield",
-            "label": "Text color for birthday component.",
+            "label": "Text color.",
             "json-expose": true,
             "json-property": "colorbirthct"
           },
@@ -1442,42 +1470,42 @@
           {
             "field": "textcheckct",
             "type": "textfield",
-            "label": "Text for checkbox component",
+            "label": "Checkbox text.",
             "json-expose": true,
             "json-property": "textcheckct"
           },
           {
             "field": "errorcheckct",
             "type": "textfield",
-            "label": "Error message for checkbox component",
+            "label": "Checkbox error message.",
             "json-expose": true,
             "json-property": "errorcheckct"
           },
           {
             "field": "colorcheckct",
             "type": "textfield",
-            "label": "Color for checkbox component",
+            "label": "Checkbox color.",
             "json-expose": true,
             "json-property": "colorcheckct"
           },
           {
             "field": "colortextcheckct",
             "type": "textfield",
-            "label": "Text color for checkbox component",
+            "label": "Checkbox text color.",
             "json-expose": true,
             "json-property": "colortextcheckct"
           },
           {
             "field": "colorerrorcheckct",
             "type": "textfield",
-            "label": "Error message color for checkbox component",
+            "label": "Checkbox error message color.",
             "json-expose": true,
             "json-property": "colorerrorcheckct"
           },
           {
             "field": "fscheckct",
             "type": "numberfield",
-            "label": "Font-Size text for checkbox component",
+            "label": "Checkbox font-size.",
             "json-expose": true,
             "json-property": "fscheckct"
           },
@@ -1580,6 +1608,20 @@
         "use-existing-model": false,
         "json-expose": true,
         "items": [
+          {
+            "field": "labelcertct",
+            "type": "textfield",
+            "label": "Label.",
+            "json-expose": true,
+            "json-property": "labelcertct"
+          },
+          {
+            "field": "colorlabelcertct",
+            "type": "textfield",
+            "label": "Label color.",
+            "json-expose": true,
+            "json-property": "colorlabelcertct"
+          },
           {
             "field": "colorbtct",
             "type": "textfield",

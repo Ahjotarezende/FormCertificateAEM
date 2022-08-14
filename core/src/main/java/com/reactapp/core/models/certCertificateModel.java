@@ -33,6 +33,12 @@ public interface certCertificateModel
 {
 
 
+    @JsonProperty("labelcertct")
+    String getLabelcertct();
+
+    @JsonProperty("colorlabelcertct")
+    String getColorlabelcertct();
+
     @JsonProperty("colorbtct")
     String getColorbtct();
 

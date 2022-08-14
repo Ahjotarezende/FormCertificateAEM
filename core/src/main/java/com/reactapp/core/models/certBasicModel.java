@@ -33,6 +33,12 @@ public interface certBasicModel
 {
 
 
+    @JsonProperty("labelcertbs")
+    String getLabelcertbs();
+
+    @JsonProperty("colorlabelcertbs")
+    String getColorlabelcertbs();
+
     @JsonProperty("colorbtbs")
     String getColorbtbs();
 

@@ -33,6 +33,12 @@ public interface certSocialModel
 {
 
 
+    @JsonProperty("labelcertsc")
+    String getLabelcertsc();
+
+    @JsonProperty("colorlabelcertsc")
+    String getColorlabelcertsc();
+
     @JsonProperty("colorbtsc")
     String getColorbtsc();
 
