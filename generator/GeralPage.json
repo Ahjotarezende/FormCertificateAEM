@@ -6,10 +6,10 @@
     "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
     "component-path": "reactapp",
     "model-interface-pkg": "com.reactapp.core.models",
-    "model-impl-pkg": "com.reactapp.core.models.impl"
+    "model-impl-pkg": "com.reactapp.core.models"
   },
-  "name": "meu-componente",
-  "title": "Meu Componente",
+  "name": "geralpage",
+  "title": "Geral Page",
   "group": "React App - Content",
   "type": "components",
   "options": {
