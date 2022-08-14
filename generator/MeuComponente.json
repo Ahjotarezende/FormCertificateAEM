@@ -29,22 +29,116 @@
     "generic-javadoc": false,
     "properties-tabs": [
       {
+        "id": "tab-styles",
+        "label": "Set your form styles here.",
+        "fields": ["fonts", "title", "titlecolor", "fstitle", "bgpage", "bgform", "colorcomp"]
+      },
+      {
         "id": "tab-basic",
         "label": "Basic Form",
-        "fields":["headerbasic","titlebasic", "navbasic", "inputbasic"]
+        "fields":["headerbasic", "navbasic", "inputbasic", "birthbasic", "checkbasic", "buttonbasic", "certbasic"]
       },
       {
         "id": "tab-social",
         "label": "Social Form",
-        "fields":["headersocial","titlesocial", "navsocial", "inputsocial"]
+        "fields":["headersocial", "navsocial", "inputsocial", "birthsocial", "checksocial", "buttonsocial", "certsocial"]
       },
       {
         "id": "tab-certificates",
         "label": "Certificate Form",
-        "fields":["headercertificate","titlecertificate", "navcertificate", "inputcertificate"]
+        "fields":["headercertificate", "navcertificate", "inputcertificate", "birthcertificate", "checkcertificate", "buttoncertificate", "certcertificate"]
+      },
+      {
+        "id": "tab-success",
+        "label": "Success Screen",
+        "fields":["headerresult", "colorresult", "buttonresult"]
       }
     ],
     "properties":[
+      {
+        "field": "fonts",
+        "type": "select",
+        "label": "Font-Family.",
+        "json-expose": true,
+        "json-property": "fonts",
+        "attributes": {
+          "defaultValue": "type",
+          "value": false
+        },
+        "items": [
+          {
+            "field": "nunito",
+            "attributes": {
+              "text": "Nunito",
+              "value": "nunito"
+            }
+          },
+          {
+            "field": "montserrat",
+            "attributes": {
+              "selected": "true",
+              "text": "Montserrat",
+              "value": "montserrat"
+            }
+          },
+          {
+            "field": "oswald",
+            "attributes": {
+              "text": "Oswald",
+              "value": "oswald"
+            }
+          },
+          {
+            "field": "inter",
+            "attributes": {
+              "text": "Inter",
+              "value": "inter"
+            }
+          }
+        ]
+      },
+      {
+        "field": "title",
+        "type": "textfield",
+        "label": "Form title.",
+        "json-expose": true,
+        "json-property": "title"
+      },
+      {
+        "field": "titlecolor",
+        "type": "textfield",
+        "label": "Title color",
+        "json-expose": true,
+        "json-property": "titlecolor"
+      },
+      {
+        "field": "fstitle",
+        "type": "numberfield",
+        "label": "Title font-size.",
+        "json-expose": true,
+        "json-property": "fstitle"
+      },
+      {
+        "field": "bgpage",
+        "type": "textfield",
+        "label": "Background color of your page.",
+        "json-expose": true,
+        "json-property": "bgpage"
+      },
+      {
+        "field": "bgform",
+        "type": "textfield",
+        "label": "Background color of your forms",
+        "json-expose": true,
+        "json-property": "bgform"
+      },
+      {
+        "field": "colorcomp",
+        "type": "textfield",
+        "label": "Color of your components.",
+        "json-expose": true,
+        "json-property": "colorcomp"
+      },
       {
         "field": "headerbasic",
         "label": "Header for basic screen.",
@@ -80,57 +174,12 @@
             "label": "Color for small text for Basic Form",
             "json-expose": true,
             "json-property": "colorsmalltextbs"
-          },
-          {
-            "field": "colorpagebs",
-            "type": "textfield",
-            "label": "Background color for Basic Form",
-            "json-expose": true,
-            "json-property": "colorpagebs"
-          }
-        ]
-      },
-      {
-        "field": "titlebasic",
-        "label": "Title for basic screen.",
-        "type": "multifield",
-        "model-name": "titleBasicModel",
-        "use-existing-model": false,
-        "json-expose": true,
-        "items": [
-          {
-            "field": "titletextbs",
-            "type": "textfield",
-            "label": "Text for title Basic Form",
-            "json-expose": true,
-            "json-property": "titletextbs"
-          },
-          {
-            "field": "colortitlebs",
-            "type": "textfield",
-            "label": "Color for title Basic Form",
-            "json-expose": true,
-            "json-property": "colortitlebs"
-          },
-          {
-            "field": "colorbs",
-            "type": "textfield",
-            "label": "Background color for Basic Form",
-            "json-expose": true,
-            "json-property": "colorbs"
-          },
-          {
-            "field": "fstitlebs",
-            "type": "numberfield",
-            "label": "Font-Size title Basic Form",
-            "json-expose": true,
-            "json-property": "fstitlebs"
           }
         ]
       },
       {
         "field": "navbasic",
-        "label": "Nav for basic screen.",
+        "label": "NavBar.",
         "type": "multifield",
         "model-name": "navBasicModel",
         "use-existing-model": false,
@@ -172,13 +221,6 @@
             "json-property": "colorselectedbs"
           },
           {
-            "field": "colorcompbs",
-            "type": "textfield",
-            "label": "Color for Basic form components.",
-            "json-expose": true,
-            "json-property": "colorcompbs"
-          },
-          {
             "field": "fsnavbs",
             "type": "numberfield",
             "label": "Font-Size Nav Bar.",
@@ -189,7 +231,7 @@
       },
       {
         "field": "inputbasic",
-        "label": "Input for basic screen.",
+        "label": "Input.",
         "type": "multifield",
         "model-name": "inputBasicModel",
         "use-existing-model": false,
@@ -306,6 +348,321 @@
         ]
       },
       {
+        "field": "birthbasic",
+        "label": "Birthday.",
+        "type": "multifield",
+        "model-name": "birthBasicModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labelbirthbs",
+            "type": "textfield",
+            "label": "Label for birthday component.",
+            "json-expose": true,
+            "json-property": "labelbirthbs"
+          },
+          {
+            "field": "colorbirthbs",
+            "type": "textfield",
+            "label": "Text color for birthday component.",
+            "json-expose": true,
+            "json-property": "colorbirthbs"
+          },
+          {
+            "field": "startbirthbs",
+            "type": "numberfield",
+            "label": "Enter the oldest year you want.",
+            "json-expose": true,
+            "json-property": "startbirthbs"
+          },
+          {
+            "field": "endbirthbs",
+            "type": "numberfield",
+            "label": "Enter the most recent year you want.",
+            "json-expose": true,
+            "json-property": "endbirthbs"
+          }
+        ]
+      },
+      {
+        "field": "checkbasic",
+        "label": "Checkbox.",
+        "type": "multifield",
+        "model-name": "checkBasicModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "textcheckbs",
+            "type": "textfield",
+            "label": "Text for checkbox component",
+            "json-expose": true,
+            "json-property": "textcheckbs"
+          },
+          {
+            "field": "errorcheckbs",
+            "type": "textfield",
+            "label": "Error message for checkbox component",
+            "json-expose": true,
+            "json-property": "errorcheckbs"
+          },
+          {
+            "field": "colorcheckbs",
+            "type": "textfield",
+            "label": "Color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorcheckbs"
+          },
+          {
+            "field": "colortextcheckbs",
+            "type": "textfield",
+            "label": "Text color for checkbox component",
+            "json-expose": true,
+            "json-property": "colortextcheckbs"
+          },
+          {
+            "field": "colorerrorcheckbs",
+            "type": "textfield",
+            "label": "Error message color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorerrorcheckbs"
+          },
+          {
+            "field": "fscheckbs",
+            "type": "numberfield",
+            "label": "Font-Size text for checkbox component",
+            "json-expose": true,
+            "json-property": "fscheckbs"
+          },
+          {
+            "field": "checkbs",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "checkbs",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to be checked?"
+            }
+          },
+          {
+            "field": "roundbs",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "roundbs",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to have a rounded shape?"
+            }
+          },
+          {
+            "field": "requiredcheckbs",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "requiredcheckbs",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "*Required"
+            }
+          }
+        ]
+      },
+      {
+        "field": "buttonbasic",
+        "label": "Button.",
+        "type": "multifield",
+        "model-name": "buttonBasicModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "txtbuttonbs",
+            "type": "textfield",
+            "label": "Button text.",
+            "json-expose": true,
+            "json-property": "txtbuttonbs"
+          },
+          {
+            "field": "colorbuttonbs",
+            "type": "textfield",
+            "label": "Button color.",
+            "json-expose": true,
+            "json-property": "colorbuttonbs"
+          },
+          {
+            "field": "colortxtbuttonbs",
+            "type": "textfield",
+            "label": "Button text color.",
+            "json-expose": true,
+            "json-property": "colortxtbuttonbs"
+          },
+          {
+            "field": "fsbuttonbs",
+            "type": "numberfield",
+            "label": "Button text font-size.",
+            "json-expose": true,
+            "json-property": "fsbuttonbs"
+          },
+          {
+            "field": "brbuttonbs",
+            "type": "numberfield",
+            "label": "Button border-radius.",
+            "json-expose": true,
+            "json-property": "brbuttonbs"
+          },
+          {
+            "field": "leftimagebs",
+            "type": "image",
+            "label": "Left image for button.",
+            "json-expose": true,
+            "json-property": "leftimagebs"
+          },
+          {
+            "field": "rightimagebs",
+            "type": "image",
+            "label": "Right image for button.",
+            "json-expose": true,
+            "json-property": "rightimagebs"
+          }
+        ]
+      },
+      {
+        "field": "certbasic",
+        "label": "Certificates.",
+        "type": "multifield",
+        "model-name": "certBasicModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "colorbtbs",
+            "type": "textfield",
+            "label": "Certificate button color.",
+            "json-expose": true,
+            "json-property": "colorbtbs"
+          },
+          {
+            "field": "leftimagecertbs",
+            "type": "image",
+            "label": "Left image for certificates button.",
+            "json-expose": true,
+            "json-property": "leftimagecertbs"
+          },
+          {
+            "field": "rightimagecertbs",
+            "type": "image",
+            "label": "Right image for certificates button.",
+            "json-expose": true,
+            "json-property": "rightimagecertbs"
+          },
+          {
+            "field": "txtcertbs",
+            "type": "textfield",
+            "label": "Certificates button text.",
+            "json-expose": true,
+            "json-property": "txtcertbs"
+          },
+          {
+            "field": "colortxtcertbs",
+            "type": "textfield",
+            "label": "Certificates button text color.",
+            "json-expose": true,
+            "json-property": "colortxtcertbs"
+          },
+          {
+            "field": "fstxtcertbs",
+            "type": "numberfield",
+            "label": "Certificate button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtcertbs"
+          },
+          {
+            "field": "brbtcertbs",
+            "type": "numberfield",
+            "label": "Certificates button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtcertbs"
+          },
+          {
+            "field": "bgopcertbs",
+            "type": "textfield",
+            "label": "Certificate list background color.",
+            "json-expose": true,
+            "json-property": "bgopcertbs"
+          },
+          {
+            "field": "colorbtmorebs",
+            "type": "textfield",
+            "label": "Invite button color.",
+            "json-expose": true,
+            "json-property": "colorbtmorebs"
+          },
+          {
+            "field": "leftimagemorebs",
+            "type": "image",
+            "label": "Left image for invite button.",
+            "json-expose": true,
+            "json-property": "leftimagemorebs"
+          },
+          {
+            "field": "rightimagemorebs",
+            "type": "image",
+            "label": "Right image for invite button.",
+            "json-expose": true,
+            "json-property": "rightimagemorebs"
+          },
+          {
+            "field": "txtmorebs",
+            "type": "textfield",
+            "label": "Invite button text.",
+            "json-expose": true,
+            "json-property": "txtmorebs"
+          },
+          {
+            "field": "colortxtmorebs",
+            "type": "textfield",
+            "label": "Invite button text color.",
+            "json-expose": true,
+            "json-property": "colortxtmorebs"
+          },
+          {
+            "field": "fstxtmorebs",
+            "type": "numberfield",
+            "label": "Invite button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtmorebs"
+          },
+          {
+            "field": "brbtmorebs",
+            "type": "numberfield",
+            "label": "Invite button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtmorebs"
+          },
+          {
+            "field": "colorerrorcertbs",
+            "type": "textfield",
+            "label": "Error message color.",
+            "json-expose": true,
+            "json-property": "colorerrorcertbs"
+          },
+          {
+            "field": "phcertbs",
+            "type": "textfield",
+            "label": "Certificates placeholder.",
+            "json-expose": true,
+            "json-property": "phcertbs"
+          },
+          {
+            "field": "errortextbs",
+            "type": "textfield",
+            "label": "Error Message.",
+            "json-expose": true,
+            "json-property": "errortextbs"
+          }
+        ]
+      },
+      {
         "field": "headersocial",
         "label": "Header for social screen.",
         "type": "multifield",
@@ -340,57 +697,12 @@
             "label": "Color for small text for Social Form",
             "json-expose": true,
             "json-property": "colorsmalltextsc"
-          },
-          {
-            "field": "colorpagesc",
-            "type": "textfield",
-            "label": "Background color for Social Form",
-            "json-expose": true,
-            "json-property": "colorpagesc"
-          }
-        ]
-      },
-      {
-        "field": "titlesocial",
-        "label": "Title for social screen.",
-        "type": "multifield",
-        "model-name": "titleSocialModel",
-        "use-existing-model": false,
-        "json-expose": true,
-        "items": [
-          {
-            "field": "titletextsc",
-            "type": "textfield",
-            "label": "Text for title Social Form",
-            "json-expose": true,
-            "json-property": "titletextsc"
-          },
-          {
-            "field": "colortitlesc",
-            "type": "textfield",
-            "label": "Color for title Social Form",
-            "json-expose": true,
-            "json-property": "colortitlesc"
-          },
-          {
-            "field": "colorsc",
-            "type": "textfield",
-            "label": "Background color for Social Form",
-            "json-expose": true,
-            "json-property": "colorsc"
-          },
-          {
-            "field": "fstitlesc",
-            "type": "numberfield",
-            "label": "Font-Size title Social Form",
-            "json-expose": true,
-            "json-property": "fstitlesc"
           }
         ]
       },
       {
         "field": "navsocial",
-        "label": "Nav for social screen.",
+        "label": "NavBar.",
         "type": "multifield",
         "model-name": "navSocialModel",
         "use-existing-model": false,
@@ -432,13 +744,6 @@
             "json-property": "colorselectedsc"
           },
           {
-            "field": "colorcompsc",
-            "type": "textfield",
-            "label": "Color for Social form components.",
-            "json-expose": true,
-            "json-property": "colorcompsc"
-          },
-          {
             "field": "fsnavsc",
             "type": "numberfield",
             "label": "Font-Size Nav Bar.",
@@ -449,7 +754,7 @@
       },
       {
         "field": "inputsocial",
-        "label": "Input for social screen.",
+        "label": "Input.",
         "type": "multifield",
         "model-name": "inputSocialModel",
         "use-existing-model": false,
@@ -566,6 +871,321 @@
         ]
       },
       {
+        "field": "birthsocial",
+        "label": "Birthday.",
+        "type": "multifield",
+        "model-name": "birthSocialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labelbirthsc",
+            "type": "textfield",
+            "label": "Label for birthday component.",
+            "json-expose": true,
+            "json-property": "labelbirthsc"
+          },
+          {
+            "field": "colorbirthsc",
+            "type": "textfield",
+            "label": "Text color for birthday component.",
+            "json-expose": true,
+            "json-property": "colorbirthsc"
+          },
+          {
+            "field": "startbirthsc",
+            "type": "numberfield",
+            "label": "Enter the oldest year you want.",
+            "json-expose": true,
+            "json-property": "startbirthsc"
+          },
+          {
+            "field": "endbirthsc",
+            "type": "numberfield",
+            "label": "Enter the most recent year you want.",
+            "json-expose": true,
+            "json-property": "endbirthsc"
+          }
+        ]
+      },
+      {
+        "field": "checksocial",
+        "label": "Checkbox.",
+        "type": "multifield",
+        "model-name": "checkSocialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "textchecksc",
+            "type": "textfield",
+            "label": "Text for checkbox component",
+            "json-expose": true,
+            "json-property": "textchecksc"
+          },
+          {
+            "field": "errorchecksc",
+            "type": "textfield",
+            "label": "Error message for checkbox component",
+            "json-expose": true,
+            "json-property": "errorchecksc"
+          },
+          {
+            "field": "colorchecksc",
+            "type": "textfield",
+            "label": "Color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorchecksc"
+          },
+          {
+            "field": "colortextchecksc",
+            "type": "textfield",
+            "label": "Text color for checkbox component",
+            "json-expose": true,
+            "json-property": "colortextchecksc"
+          },
+          {
+            "field": "colorerrorchecksc",
+            "type": "textfield",
+            "label": "Error message color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorerrorchecksc"
+          },
+          {
+            "field": "fschecksc",
+            "type": "numberfield",
+            "label": "Font-Size text for checkbox component",
+            "json-expose": true,
+            "json-property": "fschecksc"
+          },
+          {
+            "field": "checksc",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "checksc",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to be checked?"
+            }
+          },
+          {
+            "field": "roundsc",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "roundsc",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to have a rounded shape?"
+            }
+          },
+          {
+            "field": "requiredchecksc",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "requiredchecksc",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "*Required"
+            }
+          }
+        ]
+      },
+      {
+        "field": "buttonsocial",
+        "label": "Button.",
+        "type": "multifield",
+        "model-name": "buttonSocialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "txtbuttonsc",
+            "type": "textfield",
+            "label": "Button text.",
+            "json-expose": true,
+            "json-property": "txtbuttonsc"
+          },
+          {
+            "field": "colorbuttonsc",
+            "type": "textfield",
+            "label": "Button color.",
+            "json-expose": true,
+            "json-property": "colorbuttonsc"
+          },
+          {
+            "field": "colortxtbuttonsc",
+            "type": "textfield",
+            "label": "Button text color.",
+            "json-expose": true,
+            "json-property": "colortxtbuttonsc"
+          },
+          {
+            "field": "fsbuttonsc",
+            "type": "numberfield",
+            "label": "Button text font-size.",
+            "json-expose": true,
+            "json-property": "fsbuttonsc"
+          },
+          {
+            "field": "brbuttonsc",
+            "type": "numberfield",
+            "label": "Button border-radius.",
+            "json-expose": true,
+            "json-property": "brbuttonsc"
+          },
+          {
+            "field": "leftimagesc",
+            "type": "image",
+            "label": "Left image for button.",
+            "json-expose": true,
+            "json-property": "leftimagesc"
+          },
+          {
+            "field": "rightimagesc",
+            "type": "image",
+            "label": "Right image for button.",
+            "json-expose": true,
+            "json-property": "rightimagesc"
+          }
+        ]
+      },
+      {
+        "field": "certsocial",
+        "label": "Certificates.",
+        "type": "multifield",
+        "model-name": "certSocialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "colorbtsc",
+            "type": "textfield",
+            "label": "Certificate button color.",
+            "json-expose": true,
+            "json-property": "colorbtsc"
+          },
+          {
+            "field": "leftimagecertsc",
+            "type": "image",
+            "label": "Left image for certificates button.",
+            "json-expose": true,
+            "json-property": "leftimagecertsc"
+          },
+          {
+            "field": "rightimagecertsc",
+            "type": "image",
+            "label": "Right image for certificates button.",
+            "json-expose": true,
+            "json-property": "rightimagecertsc"
+          },
+          {
+            "field": "txtcertsc",
+            "type": "textfield",
+            "label": "Certificates button text.",
+            "json-expose": true,
+            "json-property": "txtcertsc"
+          },
+          {
+            "field": "colortxtcertsc",
+            "type": "textfield",
+            "label": "Certificates button text color.",
+            "json-expose": true,
+            "json-property": "colortxtcertsc"
+          },
+          {
+            "field": "fstxtcertsc",
+            "type": "numberfield",
+            "label": "Certificate button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtcertsc"
+          },
+          {
+            "field": "brbtcertsc",
+            "type": "numberfield",
+            "label": "Certificates button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtcertsc"
+          },
+          {
+            "field": "bgopcertsc",
+            "type": "textfield",
+            "label": "Certificate list background color.",
+            "json-expose": true,
+            "json-property": "bgopcertsc"
+          },
+          {
+            "field": "colorbtmoresc",
+            "type": "textfield",
+            "label": "Invite button color.",
+            "json-expose": true,
+            "json-property": "colorbtmoresc"
+          },
+          {
+            "field": "leftimagemoresc",
+            "type": "image",
+            "label": "Left image for invite button.",
+            "json-expose": true,
+            "json-property": "leftimagemoresc"
+          },
+          {
+            "field": "rightimagemoresc",
+            "type": "image",
+            "label": "Right image for invite button.",
+            "json-expose": true,
+            "json-property": "rightimagemoresc"
+          },
+          {
+            "field": "txtmoresc",
+            "type": "textfield",
+            "label": "Invite button text.",
+            "json-expose": true,
+            "json-property": "txtmoresc"
+          },
+          {
+            "field": "colortxtmoresc",
+            "type": "textfield",
+            "label": "Invite button text color.",
+            "json-expose": true,
+            "json-property": "colortxtmoresc"
+          },
+          {
+            "field": "fstxtmoresc",
+            "type": "numberfield",
+            "label": "Invite button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtmoresc"
+          },
+          {
+            "field": "brbtmoresc",
+            "type": "numberfield",
+            "label": "Invite button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtmoresc"
+          },
+          {
+            "field": "colorerrorcertsc",
+            "type": "textfield",
+            "label": "Error message color.",
+            "json-expose": true,
+            "json-property": "colorerrorcertsc"
+          },
+          {
+            "field": "phcertsc",
+            "type": "textfield",
+            "label": "Certificates placeholder.",
+            "json-expose": true,
+            "json-property": "phcertsc"
+          },
+          {
+            "field": "errortextsc",
+            "type": "textfield",
+            "label": "Error Message.",
+            "json-expose": true,
+            "json-property": "errortextsc"
+          }
+        ]
+      },
+      {
         "field": "headercertificate",
         "label": "Header for certificate screen.",
         "type": "multifield",
@@ -600,57 +1220,12 @@
             "label": "Color for small text for Certificate Form",
             "json-expose": true,
             "json-property": "colorsmalltextct"
-          },
-          {
-            "field": "colorpagect",
-            "type": "textfield",
-            "label": "Background color for Certificate Form",
-            "json-expose": true,
-            "json-property": "colorpagect"
-          }
-        ]
-      },
-      {
-        "field": "titlecertificate",
-        "label": "Title for certificate screen.",
-        "type": "multifield",
-        "model-name": "titleCertificateModel",
-        "use-existing-model": false,
-        "json-expose": true,
-        "items": [
-          {
-            "field": "titletextct",
-            "type": "textfield",
-            "label": "Text for title Certificate Form",
-            "json-expose": true,
-            "json-property": "titletextct"
-          },
-          {
-            "field": "colortitlect",
-            "type": "textfield",
-            "label": "Color for title Certificate Form",
-            "json-expose": true,
-            "json-property": "colortitlect"
-          },
-          {
-            "field": "colorct",
-            "type": "textfield",
-            "label": "Background color for Certificate Form",
-            "json-expose": true,
-            "json-property": "colorct"
-          },
-          {
-            "field": "fstitlect",
-            "type": "numberfield",
-            "label": "Font-Size title Certificate Form",
-            "json-expose": true,
-            "json-property": "fstitlect"
           }
         ]
       },
       {
         "field": "navcertificate",
-        "label": "Nav for certificate screen.",
+        "label": "NavBar.",
         "type": "multifield",
         "model-name": "navCertificateModel",
         "use-existing-model": false,
@@ -692,13 +1267,6 @@
             "json-property": "colorselectedct"
           },
           {
-            "field": "colorcompct",
-            "type": "textfield",
-            "label": "Color for Certificate form components.",
-            "json-expose": true,
-            "json-property": "colorcompct"
-          },
-          {
             "field": "fsnavct",
             "type": "numberfield",
             "label": "Font-Size Nav Bar.",
@@ -709,7 +1277,7 @@
       },
       {
         "field": "inputcertificate",
-        "label": "Input for certificate screen.",
+        "label": "Input.",
         "type": "multifield",
         "model-name": "inputCertificateModel",
         "use-existing-model": false,
@@ -822,6 +1390,425 @@
                 }
               }
             ]
+          }
+        ]
+      },
+      {
+        "field": "birthcertificate",
+        "label": "Birthday.",
+        "type": "multifield",
+        "model-name": "birthCertificateModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labelbirthct",
+            "type": "textfield",
+            "label": "Label for birthday component.",
+            "json-expose": true,
+            "json-property": "labelbirthct"
+          },
+          {
+            "field": "colorbirthct",
+            "type": "textfield",
+            "label": "Text color for birthday component.",
+            "json-expose": true,
+            "json-property": "colorbirthct"
+          },
+          {
+            "field": "startbirthct",
+            "type": "numberfield",
+            "label": "Enter the oldest year you want.",
+            "json-expose": true,
+            "json-property": "startbirthct"
+          },
+          {
+            "field": "endbirthct",
+            "type": "numberfield",
+            "label": "Enter the most recent year you want.",
+            "json-expose": true,
+            "json-property": "endbirthct"
+          }
+        ]
+      },
+      {
+        "field": "checkcertificate",
+        "label": "Checkbox.",
+        "type": "multifield",
+        "model-name": "checkCertificateModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "textcheckct",
+            "type": "textfield",
+            "label": "Text for checkbox component",
+            "json-expose": true,
+            "json-property": "textcheckct"
+          },
+          {
+            "field": "errorcheckct",
+            "type": "textfield",
+            "label": "Error message for checkbox component",
+            "json-expose": true,
+            "json-property": "errorcheckct"
+          },
+          {
+            "field": "colorcheckct",
+            "type": "textfield",
+            "label": "Color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorcheckct"
+          },
+          {
+            "field": "colortextcheckct",
+            "type": "textfield",
+            "label": "Text color for checkbox component",
+            "json-expose": true,
+            "json-property": "colortextcheckct"
+          },
+          {
+            "field": "colorerrorcheckct",
+            "type": "textfield",
+            "label": "Error message color for checkbox component",
+            "json-expose": true,
+            "json-property": "colorerrorcheckct"
+          },
+          {
+            "field": "fscheckct",
+            "type": "numberfield",
+            "label": "Font-Size text for checkbox component",
+            "json-expose": true,
+            "json-property": "fscheckct"
+          },
+          {
+            "field": "checkct",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "checkct",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to be checked?"
+            }
+          },
+          {
+            "field": "roundct",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "roundct",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "Do you want the component to have a rounded shape?"
+            }
+          },
+          {
+            "field": "requiredcheckct",
+            "type": "checkbox",
+            "json-expose": true,
+            "json-property": "requiredcheckct",
+            "attributes": {
+              "value": "{Boolean}true",
+              "text": "*Required"
+            }
+          }
+        ]
+      },
+      {
+        "field": "buttoncertificate",
+        "label": "Button.",
+        "type": "multifield",
+        "model-name": "buttonCertificateModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "txtbuttonct",
+            "type": "textfield",
+            "label": "Button text.",
+            "json-expose": true,
+            "json-property": "txtbuttonct"
+          },
+          {
+            "field": "colorbuttonct",
+            "type": "textfield",
+            "label": "Button color.",
+            "json-expose": true,
+            "json-property": "colorbuttonct"
+          },
+          {
+            "field": "colortxtbuttonct",
+            "type": "textfield",
+            "label": "Button text color.",
+            "json-expose": true,
+            "json-property": "colortxtbuttonct"
+          },
+          {
+            "field": "fsbuttonct",
+            "type": "numberfield",
+            "label": "Button text font-size.",
+            "json-expose": true,
+            "json-property": "fsbuttonct"
+          },
+          {
+            "field": "brbuttonct",
+            "type": "numberfield",
+            "label": "Button border-radius.",
+            "json-expose": true,
+            "json-property": "brbuttonct"
+          },
+          {
+            "field": "leftimagect",
+            "type": "image",
+            "label": "Left image for button.",
+            "json-expose": true,
+            "json-property": "leftimagect"
+          },
+          {
+            "field": "rightimagect",
+            "type": "image",
+            "label": "Right image for button.",
+            "json-expose": true,
+            "json-property": "rightimagect"
+          }
+        ]
+      },
+      {
+        "field": "certcertificate",
+        "label": "Certificates.",
+        "type": "multifield",
+        "model-name": "certCertificateModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "colorbtct",
+            "type": "textfield",
+            "label": "Certificate button color.",
+            "json-expose": true,
+            "json-property": "colorbtct"
+          },
+          {
+            "field": "leftimagecertct",
+            "type": "image",
+            "label": "Left image for certificates button.",
+            "json-expose": true,
+            "json-property": "leftimagecertct"
+          },
+          {
+            "field": "rightimagecertct",
+            "type": "image",
+            "label": "Right image for certificates button.",
+            "json-expose": true,
+            "json-property": "rightimagecertct"
+          },
+          {
+            "field": "txtcertct",
+            "type": "textfield",
+            "label": "Certificates button text.",
+            "json-expose": true,
+            "json-property": "txtcertct"
+          },
+          {
+            "field": "colortxtcertct",
+            "type": "textfield",
+            "label": "Certificates button text color.",
+            "json-expose": true,
+            "json-property": "colortxtcertct"
+          },
+          {
+            "field": "fstxtcertct",
+            "type": "numberfield",
+            "label": "Certificate button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtcertct"
+          },
+          {
+            "field": "brbtcertct",
+            "type": "numberfield",
+            "label": "Certificates button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtcertct"
+          },
+          {
+            "field": "bgopcertct",
+            "type": "textfield",
+            "label": "Certificate list background color.",
+            "json-expose": true,
+            "json-property": "bgopcertct"
+          },
+          {
+            "field": "colorbtmorect",
+            "type": "textfield",
+            "label": "Invite button color.",
+            "json-expose": true,
+            "json-property": "colorbtmorect"
+          },
+          {
+            "field": "leftimagemorect",
+            "type": "image",
+            "label": "Left image for invite button.",
+            "json-expose": true,
+            "json-property": "leftimagemorect"
+          },
+          {
+            "field": "rightimagemorect",
+            "type": "image",
+            "label": "Right image for invite button.",
+            "json-expose": true,
+            "json-property": "rightimagemorect"
+          },
+          {
+            "field": "txtmorect",
+            "type": "textfield",
+            "label": "Invite button text.",
+            "json-expose": true,
+            "json-property": "txtmorect"
+          },
+          {
+            "field": "colortxtmorect",
+            "type": "textfield",
+            "label": "Invite button text color.",
+            "json-expose": true,
+            "json-property": "colortxtmorect"
+          },
+          {
+            "field": "fstxtmorect",
+            "type": "numberfield",
+            "label": "Invite button text font-size.",
+            "json-expose": true,
+            "json-property": "fstxtmorect"
+          },
+          {
+            "field": "brbtmorect",
+            "type": "numberfield",
+            "label": "Invite button border-radius.",
+            "json-expose": true,
+            "json-property": "brbtmorect"
+          },
+          {
+            "field": "colorerrorcertct",
+            "type": "textfield",
+            "label": "Error message color.",
+            "json-expose": true,
+            "json-property": "colorerrorcertct"
+          },
+          {
+            "field": "phcertct",
+            "type": "textfield",
+            "label": "Certificates placeholder.",
+            "json-expose": true,
+            "json-property": "phcertct"
+          },
+          {
+            "field": "errortextct",
+            "type": "textfield",
+            "label": "Error Message.",
+            "json-expose": true,
+            "json-property": "errortextct"
+          }
+        ]
+      },
+      {
+        "field": "headerresult",
+        "label": "Header for success screen.",
+        "type": "multifield",
+        "model-name": "headerResultModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "smalltextrs",
+            "type": "textfield",
+            "label": "Enter your small text for Success page.",
+            "json-expose": true,
+            "json-property": "smalltextrs"
+          },
+          {
+            "field": "bigtextrs",
+            "type": "textfield",
+            "label": "Enter your big text for Success page.",
+            "json-expose": true,
+            "json-property": "bigtextrs"
+          },
+          {
+            "field": "colorbigtextrs",
+            "type": "textfield",
+            "label": "Color for big text for Success page.",
+            "json-expose": true,
+            "json-property": "colorbigtextrs"
+          },
+          {
+            "field": "colorsmalltextrs",
+            "type": "textfield",
+            "label": "Color for small text for Success page.",
+            "json-expose": true,
+            "json-property": "colorsmalltextrs"
+          }
+        ]
+      },
+      {
+        "field": "colorresult",
+        "type": "textfield",
+        "label": "Form title.",
+        "json-expose": true,
+        "json-property": "colorresult"
+      },
+      {
+        "field": "buttonresult",
+        "label": "Button.",
+        "type": "multifield",
+        "model-name": "buttonResultModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "txtbuttonrs",
+            "type": "textfield",
+            "label": "Button text.",
+            "json-expose": true,
+            "json-property": "txtbuttonrs"
+          },
+          {
+            "field": "colorbuttonrs",
+            "type": "textfield",
+            "label": "Button color.",
+            "json-expose": true,
+            "json-property": "colorbuttonrs"
+          },
+          {
+            "field": "colortxtbuttonrs",
+            "type": "textfield",
+            "label": "Button text color.",
+            "json-expose": true,
+            "json-property": "colortxtbuttonrs"
+          },
+          {
+            "field": "fsbuttonrs",
+            "type": "numberfield",
+            "label": "Button text font-size.",
+            "json-expose": true,
+            "json-property": "fsbuttonrs"
+          },
+          {
+            "field": "brbuttonrs",
+            "type": "numberfield",
+            "label": "Button border-radius.",
+            "json-expose": true,
+            "json-property": "brbuttonrs"
+          },
+          {
+            "field": "leftimagers",
+            "type": "image",
+            "label": "Left image for button.",
+            "json-expose": true,
+            "json-property": "leftimagers"
+          },
+          {
+            "field": "rightimagers",
+            "type": "image",
+            "label": "Right image for button.",
+            "json-expose": true,
+            "json-property": "rightimagers"
           }
         ]
       }
