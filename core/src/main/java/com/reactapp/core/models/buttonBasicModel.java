@@ -24,34 +24,34 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code Checkbox} Sling Model used for the {@code reactapp/components/checkbox} component.
+ * Defines the {@code buttonBasicModel} Sling Model used for the multifield in {@code reactapp/components/geralpage} component.
  * 
  */
 @ConsumerType
-public interface Checkbox
+public interface buttonBasicModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("type")
-    Boolean getType();
+    @JsonProperty("txtbuttonbs")
+    String getTxtbuttonbs();
 
-    @JsonProperty("round")
-    Boolean getRound();
+    @JsonProperty("colorbuttonbs")
+    String getColorbuttonbs();
 
-    @JsonProperty("required")
-    Boolean getRequired();
+    @JsonProperty("colortxtbuttonbs")
+    String getColortxtbuttonbs();
 
-    @JsonProperty("text")
-    String getText();
+    @JsonProperty("fsbuttonbs")
+    Long getFsbuttonbs();
 
-    @JsonProperty("inputColor")
-    String getInputColor();
+    @JsonProperty("brbuttonbs")
+    Long getBrbuttonbs();
 
-    @JsonProperty("txtColor")
-    String getTxtColor();
+    @JsonProperty("leftimagebs")
+    com.adobe.cq.wcm.core.components.models.Image getLeftimagebs();
 
-    @JsonProperty("number")
-    Long getNumber();
+    @JsonProperty("rightimagebs")
+    com.adobe.cq.wcm.core.components.models.Image getRightimagebs();
 
 }

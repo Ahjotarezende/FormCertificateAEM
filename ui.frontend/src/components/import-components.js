@@ -21,8 +21,8 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
 
-import "./Checkbox/Checkbox"
-import "./Micros/Label/Label"
+
+import "./GeralPage/Geral"
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 

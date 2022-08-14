@@ -24,16 +24,22 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code MeuComponente} Sling Model used for the {@code reactapp/components/meu-componente} component.
+ * Defines the {@code Theme} Sling Model used for the {@code reactapp/components/theme} component.
  * 
  */
 @ConsumerType
-public interface MeuComponente
+public interface Theme
     extends ComponentExporter
 {
 
 
     @JsonProperty("text")
     String getText();
+
+    @JsonProperty("texttwo")
+    String getTexttwo();
+
+    @JsonProperty("dark")
+    Boolean getDark();
 
 }

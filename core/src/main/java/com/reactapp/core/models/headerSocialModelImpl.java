@@ -16,12 +16,11 @@
  * ***********************************************************************
  */
 
-package com.reactapp.core.models.impl;
+package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.MeuComponente;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,23 +32,47 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    MeuComponente.class,
+    headerSocialModel.class,
     ComponentExporter.class
-}, resourceType = "reactapp/components/meu-componente")
+})
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class MeuComponenteImpl
-    implements MeuComponente
+public class headerSocialModelImpl
+    implements headerSocialModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String text;
+    private String smalltextsc;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String bigtextsc;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorbigtextsc;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorsmalltextsc;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("text")
-    public String getText() {
-        return text;
+    @JsonProperty("smalltextsc")
+    public String getSmalltextsc() {
+        return smalltextsc;
+    }
+
+    @Override
+    @JsonProperty("bigtextsc")
+    public String getBigtextsc() {
+        return bigtextsc;
+    }
+
+    @Override
+    @JsonProperty("colorbigtextsc")
+    public String getColorbigtextsc() {
+        return colorbigtextsc;
+    }
+
+    @Override
+    @JsonProperty("colorsmalltextsc")
+    public String getColorsmalltextsc() {
+        return colorsmalltextsc;
     }
 
     @Override

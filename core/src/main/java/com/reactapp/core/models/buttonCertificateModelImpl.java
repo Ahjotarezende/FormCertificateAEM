@@ -16,12 +16,12 @@
  * ***********************************************************************
  */
 
-package com.reactapp.core.models.impl;
+package com.reactapp.core.models;
 
+import com.adobe.acs.commons.models.injectors.annotation.ChildResourceFromRequest;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.Checkbox;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,71 +33,71 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    Checkbox.class,
+    buttonCertificateModel.class,
     ComponentExporter.class
-}, resourceType = "reactapp/components/checkbox")
+})
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class CheckboxImpl
-    implements Checkbox
+public class buttonCertificateModelImpl
+    implements buttonCertificateModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private Boolean type;
+    private String txtbuttonct;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private Boolean round;
+    private String colorbuttonct;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private Boolean required;
+    private String colortxtbuttonct;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String text;
+    private Long fsbuttonct;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String inputColor;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String txtColor;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private Long number;
+    private Long brbuttonct;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private com.adobe.cq.wcm.core.components.models.Image leftimagect;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private com.adobe.cq.wcm.core.components.models.Image rightimagect;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("type")
-    public Boolean getType() {
-        return type;
+    @JsonProperty("txtbuttonct")
+    public String getTxtbuttonct() {
+        return txtbuttonct;
     }
 
     @Override
-    @JsonProperty("round")
-    public Boolean getRound() {
-        return round;
+    @JsonProperty("colorbuttonct")
+    public String getColorbuttonct() {
+        return colorbuttonct;
     }
 
     @Override
-    @JsonProperty("required")
-    public Boolean getRequired() {
-        return required;
+    @JsonProperty("colortxtbuttonct")
+    public String getColortxtbuttonct() {
+        return colortxtbuttonct;
     }
 
     @Override
-    @JsonProperty("text")
-    public String getText() {
-        return text;
+    @JsonProperty("fsbuttonct")
+    public Long getFsbuttonct() {
+        return fsbuttonct;
     }
 
     @Override
-    @JsonProperty("inputColor")
-    public String getInputColor() {
-        return inputColor;
+    @JsonProperty("brbuttonct")
+    public Long getBrbuttonct() {
+        return brbuttonct;
     }
 
     @Override
-    @JsonProperty("txtColor")
-    public String getTxtColor() {
-        return txtColor;
+    @JsonProperty("leftimagect")
+    public com.adobe.cq.wcm.core.components.models.Image getLeftimagect() {
+        return leftimagect;
     }
 
     @Override
-    @JsonProperty("number")
-    public Long getNumber() {
-        return number;
+    @JsonProperty("rightimagect")
+    public com.adobe.cq.wcm.core.components.models.Image getRightimagect() {
+        return rightimagect;
     }
 
     @Override
