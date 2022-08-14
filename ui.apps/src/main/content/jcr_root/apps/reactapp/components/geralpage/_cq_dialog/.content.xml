@@ -39,7 +39,7 @@
 									<fstitle cq-msm-lockable="./fstitle" fieldLabel="Title font-size." jcr:primaryType="nt:unstructured" name="./fstitle" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" />
 									<bgpage cq-msm-lockable="./bgpage" fieldLabel="Page Background color." jcr:primaryType="nt:unstructured" name="./bgpage" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 									<bgform cq-msm-lockable="./bgform" fieldLabel="Forms Background colors" jcr:primaryType="nt:unstructured" name="./bgform" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
-									<colorcomp cq-msm-lockable="./colorcomp" fieldLabel="Components Color." jcr:primaryType="nt:unstructured" name="./colorcomp" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
+									<colorcomp cq-msm-lockable="./colorcomp" fieldLabel="Components colors." jcr:primaryType="nt:unstructured" name="./colorcomp" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 								</items>
 							</column>
 						</items>
@@ -52,8 +52,8 @@
 									<headerbasic composite="{Boolean}true" fieldLabel="Header for basic screen." jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
 										<field cq-msm-lockable="./headerbasic" jcr:primaryType="nt:unstructured" name="./headerbasic" sling:resourceType="granite/ui/components/foundation/form/fieldset">
 											<items jcr:primaryType="nt:unstructured">
-												<smalltextbs fieldLabel="Enter small text for Basic Form" jcr:primaryType="nt:unstructured" name="./smalltextbs" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
-												<bigtextbs fieldLabel="Enter big text for Basic Form" jcr:primaryType="nt:unstructured" name="./bigtextbs" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
+												<smalltextbs fieldLabel="Enter small text for Basic Form Header" jcr:primaryType="nt:unstructured" name="./smalltextbs" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
+												<bigtextbs fieldLabel="Enter big text for Basic Form Header" jcr:primaryType="nt:unstructured" name="./bigtextbs" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
 												<colorbigtextbs fieldLabel="Basic Form big text color" jcr:primaryType="nt:unstructured" name="./colorbigtextbs" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 												<colorsmalltextbs fieldLabel="Basic Form small text color" jcr:primaryType="nt:unstructured" name="./colorsmalltextbs" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 											</items>
@@ -146,7 +146,7 @@
 												<colortxtcertbs fieldLabel="Certificates button text color." jcr:primaryType="nt:unstructured" name="./colortxtcertbs" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 												<fstxtcertbs fieldLabel="Certificate button text font-size." jcr:primaryType="nt:unstructured" name="./fstxtcertbs" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" />
 												<brbtcertbs fieldLabel="Certificates button border-radius." jcr:primaryType="nt:unstructured" name="./brbtcertbs" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" />
-												<bgopcertbs fieldLabel="Certificate list background color." jcr:primaryType="nt:unstructured" name="./bgopcertbs" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
+												<bgopcertbs fieldLabel="Certificate list background color." jcr:primaryType="nt:unstructured" name="./bgopcertbs" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 												<colorbtmorebs fieldLabel="Invite button color." jcr:primaryType="nt:unstructured" name="./colorbtmorebs" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 												<leftimagemorebsResType jcr:primaryType="nt:unstructured" name="./leftimagemorebs/sling:resourceType" sling:resourceType="granite/ui/components/coral/foundation/form/hidden" value="core/wcm/components/image/v2/image" />
 												<leftimagemorebs allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Left image for invite button." fileNameParameter="./leftimagemorebs/fileName" fileReferenceParameter="./leftimagemorebs/fileReference" jcr:primaryType="nt:unstructured" mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]" multiple="{Boolean}false" name="./leftimagemorebs/file" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" title="Drag to select image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true" />
@@ -174,10 +174,10 @@
 									<headersocial composite="{Boolean}true" fieldLabel="Header for social screen." jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
 										<field cq-msm-lockable="./headersocial" jcr:primaryType="nt:unstructured" name="./headersocial" sling:resourceType="granite/ui/components/foundation/form/fieldset">
 											<items jcr:primaryType="nt:unstructured">
-												<smalltextsc fieldLabel="Enter your small text for Social Form" jcr:primaryType="nt:unstructured" name="./smalltextsc" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
-												<bigtextsc fieldLabel="Enter your big text for Social Form" jcr:primaryType="nt:unstructured" name="./bigtextsc" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
-												<colorbigtextsc fieldLabel="Color for big text for Social Form" jcr:primaryType="nt:unstructured" name="./colorbigtextsc" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
-												<colorsmalltextsc fieldLabel="Color for small text for Social Form" jcr:primaryType="nt:unstructured" name="./colorsmalltextsc" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
+												<smalltextsc fieldLabel="Enter small text for Social Form" jcr:primaryType="nt:unstructured" name="./smalltextsc" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
+												<bigtextsc fieldLabel="Enter big text for Social Form" jcr:primaryType="nt:unstructured" name="./bigtextsc" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
+												<colorbigtextsc fieldLabel="Social Form big text color" jcr:primaryType="nt:unstructured" name="./colorbigtextsc" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
+												<colorsmalltextsc fieldLabel="Social Form small text color" jcr:primaryType="nt:unstructured" name="./colorsmalltextsc" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
 											</items>
 										</field>
 									</headersocial>
