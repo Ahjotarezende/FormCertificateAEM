@@ -19,10 +19,7 @@ import "./Page/Page";
 import "./Container/Container";
 import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
-import MeuComponente from "./MeuComponente";
-
-
-import "./GeralPage/Geral"
+import "./../Pages/General/General"
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
@@ -121,8 +118,3 @@ const TextEditConfig = {
 MapTo("reactapp/components/text")(LazyTextComponent, TextEditConfig);
 
 const authorAcessibility = { isEmpty: (props) => !props.any };
-
-MapTo("reactapp/components/meu-componente")(MeuComponente, {
-  emptyLabel: "Meu Componente",
-  authorAcessibility,
-});
