@@ -65,7 +65,7 @@
                                        fieldLabel="Title color"
                                        jcr:primaryType="nt:unstructured"
                                        name="./titlecolor"
-                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                            <fstitle cq-msm-lockable="./fstitle"
                                     fieldLabel="Title font-size."
                                     jcr:primaryType="nt:unstructured"
@@ -75,17 +75,17 @@
                                    fieldLabel="Background color of your page."
                                    jcr:primaryType="nt:unstructured"
                                    name="./bgpage"
-                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                            <bgform cq-msm-lockable="./bgform"
                                    fieldLabel="Background color of your forms"
                                    jcr:primaryType="nt:unstructured"
                                    name="./bgform"
-                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                            <colorcomp cq-msm-lockable="./colorcomp"
                                       fieldLabel="Color of your components."
                                       jcr:primaryType="nt:unstructured"
                                       name="./colorcomp"
-                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                         </items>
                      </column>
                   </items>
