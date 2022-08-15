@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 export const Container = styled.div`
   display: flex;
-  width: 50vw;
+
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
@@ -19,10 +19,8 @@ export const ContainerInput = styled.input`
   height: 2rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
-  width: 100%;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
+  width: 40vw;
+  min-width: 20rem;
 `;
 
 export const ContainerInputBirthday = styled.input`

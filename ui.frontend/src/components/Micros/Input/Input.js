@@ -22,9 +22,9 @@ function Input({
             <ContainerInput
               placeholder={placeholder}
               type='text'
-              fontSize={fontSize ? fontSize : "16px"}
-              color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
+              fontSize={fontSize}
+              color={color}
+              borderRadius={borderRadius}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -38,9 +38,9 @@ function Input({
               placeholder={placeholder}
               type='text'
               maxLength='11'
-              font-size={fontSize ? fontSize : "16px"}
-              color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
+              font-size={fontSize}
+              color={color}
+              borderRadius={borderRadius}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -53,9 +53,9 @@ function Input({
             <ContainerInput
               placeholder={placeholder}
               type='email'
-              color={color ? color : "#aaaaaa"}
-              font-size={fontSize ? fontSize : "16px"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
+              color={color}
+              font-size={fontSize}
+              borderRadius={borderRadius}
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
@@ -67,9 +67,9 @@ function Input({
           <Container>
             <ContainerInputBirthday
               type='number'
-              font-size={fontSize ? fontSize : "16px"}
-              color={color ? color : "#aaaaaa"}
-              borderRadius={borderRadius ? `${borderRadius}+px` : "4px"}
+              font-size={fontSize}
+              color={color}
+              borderRadius={borderRadius}
               value={age}
               disabled
               onChange={(e) => {
@@ -84,5 +84,14 @@ function Input({
   };
   return <div>{getTypeInput(type)}</div>;
 }
+
+Input.defaultProps = {
+  type: "text",
+  placeholder: "Eu sou um placeholder",
+  inputName: "inputName",
+  color: "#aaaaaa",
+  fontSize: "16px",
+  borderRadius: "4px",
+};
 
 export default Input;
