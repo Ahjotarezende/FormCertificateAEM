@@ -23,12 +23,26 @@ const General = ({
         backGround={bgpage}
         id="FullPage"
     >
-        <Basic/>
+        <Basic headerbasic={headerbasic}/>
         <Social/>
         <Certificate/>
         <Success/>
     </FullPage>
   )
 }
+
+
+General.defaultProps = {
+  headerbasic: [
+    {
+      smalltextbs: "forms",
+      bigtextbs: "Tab",
+      colorsmalltextbs: "#111111",
+      colorbigtextbs: "#074ee8"
+    }
+  ]
+}
+
+
 
 export default MapTo("reactapp/components/geralpage")(General)

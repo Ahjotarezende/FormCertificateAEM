@@ -18,16 +18,7 @@ const Header = ({smalltextbs, bigtextbs, colorbigtextbs, colorsmalltextbs}) => {
   )
 }
 
-Header.defaultProps = {
-    headerbasic: [
-      {
-        smalltextbs: "Oi",
-        bigtextbs: "Ola",
-        colorsmalltextbs: "#000000",
-        colorbigtextbs: "#777777"
-      }
-    ]
-  }
+
 
 
 export default Header
