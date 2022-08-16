@@ -1,9 +1,14 @@
 import React from 'react'
+import Header from '../../components/Header/Header'
 
-const Success = () => {
+const Sucess = ({headerresult}) => {
   return (
-    <div>Success</div>
+    <div>
+      {headerresult.map(({smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {}}, index) => (
+        <Header key={index} smalltext={smalltextsc} bigtext={bigtextsc} colorbigtext={colorbigtextsc} colorsmalltext={colorsmalltextsc}/>
+      ))}
+    </div>
   )
 }
 
-export default Success
+export default Sucess

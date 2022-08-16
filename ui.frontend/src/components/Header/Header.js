@@ -1,25 +1,13 @@
-import React from 'react'
-import { DivHeader, SmallText, BigText } from './Header.styled'
+import React from "react";
+import { DivHeader, SmallText, BigText } from "./Header.styled";
 
-const Header = ({smalltextbs, bigtextbs, colorbigtextbs, colorsmalltextbs}) => {
+const Header = ({ smalltext, bigtext, colorbigtext, colorsmalltext }) => {
   return (
     <DivHeader>
-        <SmallText
-            colorsmalltextbs={colorsmalltextbs}
-        >
-            {smalltextbs}
-        </SmallText>
-        <BigText
-            colorbigtextbs={colorbigtextbs}
-        >
-            {bigtextbs}
-        </BigText>
+      <SmallText colorsmalltext={colorsmalltext}>{smalltext}</SmallText>
+      <BigText colorbigtext={colorbigtext}>{bigtext}</BigText>
     </DivHeader>
-  )
-}
+  );
+};
 
-
-
-
-export default Header
-
+export default Header;
