@@ -23,42 +23,24 @@ const General = ({
         backGround={bgpage}
         id="FullPage"
     >
-        <Basic headerbasic={headerbasic}/>
-        <Social headersocial={headersocial}/>
-        <Certificate headercertificate={headercertificate}/>
-       <Success headerresult={headerresult}/>
+        <Basic/>
+        <Social />
+        <Certificate />
+       <Success />
         
     </FullPage>
   )
 }
 
-
+{/*}
 General.defaultProps = {
   headerbasic: [
     {
       smalltextbs: "Forms",
       bigtextbs: "First Tab",
     }
-  ] ,
-  headersocial: [
-    {
-      smalltextsc: "Forms",
-      bigtextsc: "Second Tab",
-    }
-  ], 
-  headercertificate: [
-    {
-      smalltextct: "Forms",
-      bigtextct: "Third Tab",
-    }
-  ] ,
-  headerresult: [
-    {
-      smalltextrs: "Forms",
-      bigtextrs: "Success Tab",
-    }
   ] 
-}
+} */}
 
 
 

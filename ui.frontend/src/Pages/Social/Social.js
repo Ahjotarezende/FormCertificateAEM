@@ -1,12 +1,10 @@
 import React from 'react'
 import Header from '../../components/Micros/Header/Header'
 
-const Social = ({headersocial}) => {
+const Social = () => {
   return (
     <div>
-      {headersocial.map(({smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {}}, index) => (
-        <Header key={index} smalltext={smalltextsc} bigtext={bigtextsc} colorbigtext={colorbigtextsc} colorsmalltext={colorsmalltextsc}/>
-      ))}
+      Social
     </div>
   )
 }
