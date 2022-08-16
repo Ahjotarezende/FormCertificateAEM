@@ -51,37 +51,65 @@ const General = (props) => {
         buttonbasic={buttonbasic}
         certbasic={certbasic}
       />
-      {/* {buttonbasic.map(
-        (
-          {
-            txtbuttonbs,
-            colorbuttonbs,
-            colortxtbuttonbs,
-            fsbuttonbs,
-            brbuttonbs,
-            leftimagebs,
-            rightimagebs = {},
-          },
-          index
-        ) => (
-          <div key={index}>
-            {console.log(
-              txtbuttonbs,
-              colorbuttonbs,
-              colortxtbuttonbs,
-              fsbuttonbs,
-              brbuttonbs,
-              leftimagebs,
-              rightimagebs
-            )}
-          </div>
-        )
-      )} */}
+
       <Social />
       <Certificate />
       <Success />
     </FullPage>
   );
+};
+
+General.defaultProps = {
+  headerbasic: [{}],
+  navbasic: [{}],
+  inputbasic: [
+    {
+      textonebs: "",
+      texttwobs: "",
+      typeinputbs: "",
+      textthreebs: "",
+      colortextnavbs: "",
+      colorselectedbs: "",
+      colorcompbs: "",
+      requiredinputbs: {},
+    },
+  ],
+  birthbasic: [
+    {
+      startbirthbs: "",
+      endbirthbs: "",
+      colorbirthbs: "#aaaaaa",
+      labelbirthbs: "Set Birthday",
+    },
+  ],
+  checkbasic: [
+    {
+      textcheckbs: "set checkbox",
+      errorcheckbs: "",
+      colorcheckbs: "",
+      colortextcheckbs: "",
+      colorerrorcheckbs: "",
+      fscheckbs: "",
+      checkbs: "",
+      roundbs: "",
+      requiredcheckbs: "",
+    },
+  ],
+  buttonbasic: [
+    {
+      leftimagebs: "https://via.placeholder.com/150",
+      rightimagebs: "https://via.placeholder.com/150",
+      fsbuttonbs: "16",
+      brbuttonbs: "2",
+      txtbuttonbs: "Button",
+      colortxtbuttonbs: "#000000",
+      colorbuttonbs: "#ffffff",
+      onClick: () => {},
+      form: "",
+      type: "submit",
+    },
+  ],
+  certbasic: [{}],
 };
 
 export default MapTo("reactapp/components/geralpage")(General);
