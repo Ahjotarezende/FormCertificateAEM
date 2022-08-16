@@ -11,14 +11,14 @@ export const Checkbox = ({ type, round , txtColor, inputColor, text, number, req
     return ( //round checkbox
       <CheckBoxContainer  role="checkbox" tabindex="0" title={text} onClick={() => setChecked(current => !current)} aria-label={type? checked : !checked}>
         <CheckCircleInput color={inputColor} type={"checkbox"}  id={"checkbox"} title={text} aria-label={text}  checked={type? checked : !checked} />
-        <Label text={text} color={txtColor} fontSize={number} />
+        <Label text={text} color={txtColor}  />
       </CheckBoxContainer>
     );
   } else {
     return ( //square checkbox
       <CheckBoxContainer  role="checkbox" tabindex="0" title={text} onClick={() => setChecked(current => !current)} aria-label={type? checked : !checked}>
         <CheckBoxInput color={inputColor} type={"checkbox"}  id={"checkbox"} title={text} aria-label={text}  checked={type? checked : !checked} />
-        <Label text={text} color={txtColor} fontSize={number} />
+        <Label text={text} color={txtColor}  />
       </CheckBoxContainer>
     );
   }
@@ -26,8 +26,6 @@ export const Checkbox = ({ type, round , txtColor, inputColor, text, number, req
 };
 
 
-Checkbox.defaultProps = {
-  text: "Insert Text Here"
-}
+
   
 export default MapTo("reactapp/components/checkbox")(Checkbox);

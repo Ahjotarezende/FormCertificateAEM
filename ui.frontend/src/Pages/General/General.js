@@ -23,10 +23,11 @@ const General = ({
         backGround={bgpage}
         id="FullPage"
     >
-        <Basic headerbasic={headerbasic}/>
-        <Social headersocial={headersocial}/>
+        <Basic headerbasic={headerbasic} checkbasic={checkbasic}/>
+        <Social headersocial={headersocial} checksocial={checksocial}/>
+        {/*
         <Certificate headercertificate={headercertificate}/>
-       <Success headerresult={headerresult}/>
+        <Success headerresult={headerresult}/> */}
         
     </FullPage>
   )
@@ -55,9 +56,20 @@ General.defaultProps = {
   headerresult: [
     {
       smalltextrs: "Forms",
-      bigtextrs: "Success Tab",
+      bigtextrs: "Success Tab", }
+  ] ,
+
+  checkbasic : [
+    {
+      
+    }
+  ] ,
+  checksocial : [
+    {
+      
     }
   ] 
+
 }
 
 

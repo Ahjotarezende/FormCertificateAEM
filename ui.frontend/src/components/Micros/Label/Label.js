@@ -10,8 +10,7 @@ function Label({ text, color, fontSize }) {
 }
 
 Label.defaultProps = {
-  color: "#000",
-  fontSize: "14px",
+  color: "#00000",
   text: "Insert label",
 };
 
