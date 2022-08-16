@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Container,
+  ContainerBirtthday,
   ContainerInput,
   ContainerInputBirthday,
   ContainerInputPhone,
@@ -12,8 +13,8 @@ function Input({
   color,
   fontSize,
   borderRadius,
+  valueAge,
 }) {
-  const [age, setAge] = useState(50);
   const getTypeInput = (type) => {
     switch (type) {
       case "text":
@@ -31,7 +32,37 @@ function Input({
             />
           </Container>
         );
-      case "number":
+      case "url":
+        return (
+          <Container>
+            <ContainerInput
+              placeholder={placeholder}
+              type='text'
+              fontSize={fontSize}
+              color={color}
+              borderRadius={borderRadius}
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
+            />
+          </Container>
+        );
+      case "password":
+        return (
+          <Container>
+            <ContainerInput
+              placeholder={placeholder}
+              type='password'
+              fontSize={fontSize}
+              color={color}
+              borderRadius={borderRadius}
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
+            />
+          </Container>
+        );
+      case "tel":
         return (
           <Container>
             <ContainerInputPhone
@@ -64,19 +95,19 @@ function Input({
         );
       case "birthday":
         return (
-          <Container>
+          <ContainerBirtthday>
             <ContainerInputBirthday
               type='number'
               font-size={fontSize}
               color={color}
               borderRadius={borderRadius}
-              value={age}
+              value={valueAge}
               disabled
               onChange={(e) => {
                 localStorage.setItem(`${inputName}`, e.target.value);
               }}
             />
-          </Container>
+          </ContainerBirtthday>
         );
       default:
         return <Container>set input</Container>;
