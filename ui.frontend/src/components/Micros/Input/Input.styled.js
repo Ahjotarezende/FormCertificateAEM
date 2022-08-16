@@ -1,10 +1,21 @@
 import styled from "styled-components";
-import { toRem } from "../../utils/convertToRem";
+import { toRem } from "../../../utils/convertToRem";
 export const Container = styled.div`
   display: flex;
 
   justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
+  flex: 1;
+  @media (max-width: 768px) {
+    height: 4.5rem;
+  }
+`;
+export const ContainerBirtthday = styled.div`
+  display: flex;
+
+  justify-content: flex-start;
+
   flex-direction: column;
   flex: 1;
   @media (max-width: 768px) {
@@ -20,7 +31,9 @@ export const ContainerInput = styled.input`
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
   width: 40vw;
-  min-width: 20rem;
+  @media (max-width: 768px) {
+    min-width: 20rem;
+  }
 `;
 
 export const ContainerInputBirthday = styled.input`
@@ -30,11 +43,8 @@ export const ContainerInputBirthday = styled.input`
   height: 2rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
-  width: 20%;
-
-  @media (max-width: 768px) {
-    width: 60%;
-  }
+  width: 7.18rem;
+  text-align: center;
 `;
 
 export const ContainerInputPhone = styled.input`
