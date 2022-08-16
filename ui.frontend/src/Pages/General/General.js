@@ -24,11 +24,24 @@ const General = ({
         id="FullPage"
     >
         <Basic/>
-        <Social/>
-        <Certificate/>
-        <Success/>
+        <Social />
+        <Certificate />
+       <Success />
+        
     </FullPage>
   )
 }
+
+{/*}
+General.defaultProps = {
+  headerbasic: [
+    {
+      smalltextbs: "Forms",
+      bigtextbs: "First Tab",
+    }
+  ] 
+} */}
+
+
 
 export default MapTo("reactapp/components/geralpage")(General)
