@@ -25,6 +25,8 @@ const General = ({
     >
         <Basic headerbasic={headerbasic}/>
         <Social headersocial={headersocial}/>
+        <Certificate headercertificate={headercertificate}/>
+       <Success headerresult={headerresult}/>
         
     </FullPage>
   )
@@ -43,7 +45,19 @@ General.defaultProps = {
       smalltextsc: "Forms",
       bigtextsc: "Second Tab",
     }
-  ]
+  ], 
+  headercertificate: [
+    {
+      smalltextct: "Forms",
+      bigtextct: "Third Tab",
+    }
+  ] ,
+  headerresult: [
+    {
+      smalltextrs: "Forms",
+      bigtextrs: "Success Tab",
+    }
+  ] 
 }
 
 
