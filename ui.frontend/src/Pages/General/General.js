@@ -24,10 +24,7 @@ const General = ({
         id="FullPage"
     >
         <Basic headerbasic={headerbasic}/>
-        <Social headersocial={headersocial}/>
-        <Certificate headercertificate={headercertificate}/>
-        <Success headerresult={headerresult}
-        />
+        
     </FullPage>
   )
 }
@@ -38,35 +35,8 @@ General.defaultProps = {
     {
       smalltextbs: "Forms",
       bigtextbs: "First Tab",
-      colorsmalltextbs: "#111111",
-      colorbigtextbs: "#074ee8"
     }
-  ]  ,
-  headersocial: [
-    {
-      smalltextsc: "Forms",
-      bigtextsc: "Second Tab",
-      colorsmalltextsc: "#111111",
-      colorbigtextsc: "#074ee8"
-    }
-  ] ,
-  headercertificate: [
-    {
-      smalltextct: "Forms",
-      bigtextct: "Third Tab",
-      colorsmalltextct: "#111111",
-      colorbigtextct: "#074ee8"
-    }
-  ]  ,
-  headerresult: [
-    {
-      smalltextsc: "Forms",
-      bigtextsc: "Success",
-      colorsmalltextsc: "#111111",
-      colorbigtextsc: "#074ee8"
-    }
-  ]  
-  
+  ]
 }
 
 

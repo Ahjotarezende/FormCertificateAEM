@@ -8,14 +8,17 @@ export const DivHeader = styled.div`
     padding: 3em 0;`
 ;
 
-export const SmallText = styled.h3`
-    color: ${(props) => props.colorsmalltext};
+export const SmallText = styled.h4`
     font-size: 15px;
-    margin-left: 120px;`
+    margin-left: 120px;
+    color: ${(props) => props.colorsmalltext};
+    `
 ;
 
-export const BigText = styled.h1`
+export const BigText = styled.h4`
     font-size: 36px;
     margin-left: 118px;
-    color: ${(props) => props.colorbigtext};`
+    color: ${(props) => props.colorbigtext};
+
+    `
 ;
