@@ -3,6 +3,7 @@ import InputLabel from "../../components/Input+Label/InputLabel";
 import Button from "../../components/Button/Button";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import Birthday from "../../components/Birthday/Birthday";
+import Certificate from "../Certificate/Certificate";
 const Basic = (props) => {
   const {
     headerbasic,
@@ -108,6 +109,33 @@ const Basic = (props) => {
         ) => (
           <div key={index}>
             <Checkbox
+              round={roundbs}
+              txtColor={colortextcheckbs}
+              inputColor={colorcheckbs}
+              text={textcheckbs}
+              number={fscheckbs}
+              required={requiredcheckbs}
+            />
+          </div>
+        )
+      )}
+      {certbasic.map(
+        (
+          {
+            textcheckbs,
+            errorcheckbs,
+            colorcheckbs,
+            colortextcheckbs,
+            colorerrorcheckbs,
+            fscheckbs,
+            checkbs,
+            roundbs,
+            requiredcheckbs = {},
+          },
+          index
+        ) => (
+          <div key={index}>
+            <Certificate
               round={roundbs}
               txtColor={colortextcheckbs}
               inputColor={colorcheckbs}
