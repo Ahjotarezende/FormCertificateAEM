@@ -24,6 +24,7 @@ const General = ({
         id="FullPage"
     >
         <Basic headerbasic={headerbasic}/>
+        <Social headersocial={headersocial}/>
         
     </FullPage>
   )
@@ -35,6 +36,12 @@ General.defaultProps = {
     {
       smalltextbs: "Forms",
       bigtextbs: "First Tab",
+    }
+  ] ,
+  headersocial: [
+    {
+      smalltextsc: "Forms",
+      bigtextsc: "Second Tab",
     }
   ]
 }
