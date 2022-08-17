@@ -1,4 +1,4 @@
-import {React, useState } from "react";
+import { React, useState } from "react";
 import Label from "../Micros/Label/Label"
 import Button from "../Button/Button"
 import { InputCert, DivMore, Empty, DivCertificate, DivButtons, DivCert, DivOptions } from './Certificates.styled'

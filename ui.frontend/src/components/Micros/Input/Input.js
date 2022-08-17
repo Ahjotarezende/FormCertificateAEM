@@ -10,11 +10,21 @@ function Input({
   placeholder,
   inputName,
   color,
+  valor,
   fontSize,
   borderRadius,
+  register
 }) {
+
+  const viewValue = () => {
+    if(valor===false)
+      return true
+    else
+      return false
+  }
+
   const [age, setAge] = useState(50);
-  const getTypeInput = (type) => {
+  const getTypeInput = (type, register) => {
     switch (type) {
       case "text":
         return (
@@ -25,9 +35,10 @@ function Input({
               fontSize={fontSize}
               color={color}
               borderRadius={borderRadius}
-              onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
-              }}
+               onChange={(e) => {
+                 localStorage.setItem(`${inputName}`, e.target.value);
+               }}
+              {...register(`${inputName}`, { required: viewValue()})}      
             />
           </Container>
         );
@@ -41,9 +52,11 @@ function Input({
               font-size={fontSize}
               color={color}
               borderRadius={borderRadius}
-              onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
-              }}
+               onChange={(e) => {
+                 localStorage.setItem(`${inputName}`, e.target.value);
+               }}
+              {...register(`${inputName}`, { required: viewValue()})}      
+ 
             />
           </Container>
         );
@@ -56,9 +69,11 @@ function Input({
               color={color}
               font-size={fontSize}
               borderRadius={borderRadius}
-              onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
-              }}
+               onChange={(e) => {
+                 localStorage.setItem(`${inputName}`, e.target.value);
+               }}
+              {...register(`${inputName}`, viewValue())}    
+  
             />
           </Container>
         );
@@ -72,9 +87,9 @@ function Input({
               borderRadius={borderRadius}
               value={age}
               disabled
-              onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
-              }}
+               onChange={(e) => {
+                 localStorage.setItem(`${inputName}`, e.target.value);
+               }}
             />
           </Container>
         );
@@ -82,16 +97,8 @@ function Input({
         return <Container>set input</Container>;
     }
   };
-  return <div>{getTypeInput(type)}</div>;
+  return <div>{getTypeInput(type, register)}</div>;
 }
 
-Input.defaultProps = {
-  type: "text",
-  placeholder: "Eu sou um placeholder",
-  inputName: "inputName",
-  color: "#aaaaaa",
-  fontSize: "16px",
-  borderRadius: "4px",
-};
 
 export default Input;
