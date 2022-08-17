@@ -30,7 +30,7 @@ export const ContainerInput = styled.input`
   height: 2rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
-  width: 40vw;
+  width: 100%;
   @media (max-width: 768px) {
     min-width: 20rem;
   }
@@ -43,6 +43,7 @@ export const ContainerInputBirthday = styled.input`
   height: 2rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
   width: 7.18rem;
   text-align: center;
 `;

@@ -60,8 +60,23 @@ const General = (props) => {
 };
 
 General.defaultProps = {
-  headerbasic: [{}],
-  navbasic: [{}],
+  headerbasic: [
+    {
+      smalltextbs: "Basic",
+      bigtextbs: "Basic",
+      colorbigtextbs: "#000000",
+      colorsmalltextbs: "red",
+    },
+  ],
+  navbasic: [
+    {
+      textonebs: "First Tab",
+      texttwobs: "Second Tab",
+      textthreebs: "Third Tab",
+      colortextnavbs: "#000000",
+      colorselectedbs: "red",
+    },
+  ],
   inputbasic: [
     {
       textonebs: "",
@@ -109,7 +124,30 @@ General.defaultProps = {
       type: "submit",
     },
   ],
-  certbasic: [{}],
+  certbasic: [
+    {
+      labelcertbs: "sdfsdf",
+      colorlabelcertbs: "",
+      colorbtbs: "",
+      leftimagecertbs: "",
+      rightimagecertbs: "",
+      txtcertbs: "",
+      colortxtcertbs: "",
+      fstxtcertbs: "",
+      brbtcertbs: "",
+      bgopcertbs: "",
+      colorbtmorebs: "",
+      leftimagemorebs: "",
+      rightimagemorebs: "",
+      txtmorebs: "",
+      colortxtmorebs: "",
+      fstxtmorebs: "",
+      brbtmorebs: "",
+      colorerrorcertbs: "",
+      phcertbs: "",
+      errortextbs: "",
+    },
+  ],
 };
 
 export default MapTo("reactapp/components/geralpage")(General);
