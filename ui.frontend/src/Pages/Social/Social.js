@@ -66,6 +66,12 @@ const Social = ({
               index
             ) => (
               <div key={index}>
+                {console.log(
+                  labelbirthsc,
+                  colorbirthsc,
+                  startbirthsc,
+                  endbirthsc
+                )}
                 <Birthday
                   yearBegin={startbirthsc}
                   yearEnd={endbirthsc}
@@ -76,6 +82,35 @@ const Social = ({
             )
           )}
 
+          {checksocial.map(
+            (
+              {
+                textchecksc,
+                errorchecksc,
+                colorchecksc,
+                colortextchecksc,
+                colorerrorchecksc,
+                fschecksc,
+                checksc,
+                roundsc,
+                requiredchecksc = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Checkbox
+                 key={index}
+                 type={checksc}
+                 round={roundsc}
+                 txtColor={colortextchecksc}
+                 inputColor={colorchecksc}
+                 text={textchecksc}
+                 number={fschecksc}
+                 required={requiredchecksc}
+                />
+              </div>
+            )
+          )}
           
        
     </>

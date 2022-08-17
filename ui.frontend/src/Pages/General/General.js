@@ -95,6 +95,8 @@ General.defaultProps = {
     },
   ],
  
+ //
+
   birthsocial: [
     {
       startbirthsc: "",
@@ -110,9 +112,6 @@ General.defaultProps = {
       colorchecksc: "",
       colortextchecksc: "",
       colorerrorchecksc: "",
-      fschecksc: "",
-      checksc: "",
-      roundsc: "",
       requiredchecksc: "",
     },
   ],
