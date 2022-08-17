@@ -10,10 +10,11 @@ import {
 } from "./Birthday.styled";
 import ErrorMessage from "../Micros/ErrorMessage/ErrorMessage";
 import Label from "../Micros/Label/Label";
-function Birthday({ yearBegin, yearEnd, color, labelBirth }) {
+
+function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
   const [age, setAge] = useState(0);
   return (
-    <Body>
+    <Body className={className}>
       <ContainerMessage>
         <Label text={labelBirth} />
         {/* <ErrorMessage txtmessage='Please enter your Age' colormessage='red' /> */}

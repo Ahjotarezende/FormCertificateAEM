@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from '../../components/Micros/Header/Header'
 
-const Success = () => {
+const Sucess = () => {
   return (
-    <div>Success</div>
+    <div>
+    Social  
+    </div>
   )
 }
 
-export default Success
+export default Sucess

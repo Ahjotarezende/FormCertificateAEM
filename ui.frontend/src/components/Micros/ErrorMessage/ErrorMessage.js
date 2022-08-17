@@ -3,12 +3,12 @@ import { Message } from './ErrorMessage.styled'
 
 const ErrorMessage = ({fsmessage, fwmessage, txtmessage, colormessage, errors, className}) => {
   return (
-       errors[className] && <Message
+       errors[className] ? <Message
         fsmessage={`${fsmessage}px`}
         fwmessage={fwmessage}
         colormessage={colormessage}
         className={className}
-    > {txtmessage} </Message>
+    > {txtmessage} </Message> : ""
   )
 }
 

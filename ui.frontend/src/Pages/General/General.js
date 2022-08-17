@@ -41,20 +41,25 @@ const General = (props) => {
 
   const { headerresult, colorresult, buttonresult } = props;
   return (
-    <FullPage fontFamily={fonts} backGround={bgpage} id='FullPage'>
-      <Basic
-        headerbasic={headerbasic}
-        navbasic={navbasic}
-        inputbasic={inputbasic}
-        birthbasic={birthbasic}
-        checkbasic={checkbasic}
-        buttonbasic={buttonbasic}
-        certbasic={certbasic}
-      />
-
-      <Social />
-      <Certificate />
-      <Success />
+    <FullPage
+        fontFamily={fonts}
+        backGround={bgpage}
+        id="FullPage"
+    >
+        <Basic
+          headerbasic={headerbasic}
+          navbasic={navbasic}
+          inputbasic={inputbasic}
+          birthbasic={birthbasic}
+          checkbasic={checkbasic}
+          buttonbasic={buttonbasic}
+          certbasic={certbasic}
+        />
+        <Certificate fonts={fonts} title={title} titlecolor={titlecolor} fonte={fstitle} bgform={bgform}
+          colorcomp={colorcomp} headercertificate={headercertificate} navcertificate={navcertificate} inputcertificate={inputcertificate}
+          birthcertificate={birthcertificate} checkcertificate={checkcertificate} buttoncertificate={buttoncertificate}
+          certcertificate={certcertificate}/>
+        
     </FullPage>
   );
 };
