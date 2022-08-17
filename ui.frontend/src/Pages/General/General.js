@@ -46,7 +46,19 @@ const General = (props) => {
         backGround={bgpage}
         id="FullPage"
     >
-        <Basic
+        
+
+        <Social
+          headersocial={headersocial}
+          navsocial={navsocial}
+          inputsocial={inputsocial}
+          birthsocial={birthsocial}
+          checksocial={checksocial}
+          buttonsocial={buttonsocial}
+          certsocial={certsocial}
+        />
+
+        {/*<Basic
           headerbasic={headerbasic}
           navbasic={navbasic}
           inputbasic={inputbasic}
@@ -58,99 +70,99 @@ const General = (props) => {
         <Certificate fonts={fonts} title={title} titlecolor={titlecolor} fonte={fstitle} bgform={bgform}
           colorcomp={colorcomp} headercertificate={headercertificate} navcertificate={navcertificate} inputcertificate={inputcertificate}
           birthcertificate={birthcertificate} checkcertificate={checkcertificate} buttoncertificate={buttoncertificate}
-          certcertificate={certcertificate}/>
+        certcertificate={certcertificate}/> */}
         
     </FullPage>
   );
 };
 
 General.defaultProps = {
-  headerbasic: [
+  headersocial: [
     {
-      smalltextbs: "Basic",
-      bigtextbs: "Basic",
-      colorbigtextbs: "#000000",
-      colorsmalltextbs: "red",
+      smalltextsc: "Basic",
+      bigtextsc: "Basic",
+      colorbigtextsc: "#000000",
+      colorsmalltextsc: "red",
     },
   ],
-  navbasic: [
+  navsocial: [
     {
-      textonebs: "First Tab",
-      texttwobs: "Second Tab",
-      textthreebs: "Third Tab",
-      colortextnavbs: "#000000",
-      colorselectedbs: "red",
+      textonesc: "First Tab",
+      texttwosc: "Second Tab",
+      textthreesc: "Third Tab",
+      colortextnavsc: "#000000",
+      colorselectedsc: "red",
     },
   ],
-  inputbasic: [
+  inputsocial: [
     {
-      textonebs: "",
-      texttwobs: "",
-      typeinputbs: "",
-      textthreebs: "",
-      colortextnavbs: "",
-      colorselectedbs: "",
-      colorcompbs: "",
-      requiredinputbs: {},
+      textonesc: "",
+      texttwosc: "",
+      typeinputsc: "",
+      textthreesc: "",
+      colortextnavsc: "",
+      colorselectedsc: "",
+      colorcompsc: "",
+      requiredinputsc: {},
     },
   ],
-  birthbasic: [
+  birthsocial: [
     {
-      startbirthbs: "",
-      endbirthbs: "",
-      colorbirthbs: "#aaaaaa",
-      labelbirthbs: "Set Birthday",
+      startbirthsc: "",
+      endbirthsc: "",
+      colorbirthsc: "#aaaaaa",
+      labelbirthsc: "Set Birthday",
     },
   ],
-  checkbasic: [
+  checksocial: [
     {
-      textcheckbs: "set checkbox",
-      errorcheckbs: "",
-      colorcheckbs: "",
-      colortextcheckbs: "",
-      colorerrorcheckbs: "",
-      fscheckbs: "",
-      checkbs: "",
-      roundbs: "",
-      requiredcheckbs: "",
+      textchecksc: "set checkbox",
+      errorchecksc: "",
+      colorchecksc: "",
+      colortextchecksc: "",
+      colorerrorchecksc: "",
+      fschecksc: "",
+      checksc: "",
+      roundsc: "",
+      requiredchecksc: "",
     },
   ],
-  buttonbasic: [
+  buttonsocial: [
     {
-      leftimagebs: "https://via.placeholder.com/150",
-      rightimagebs: "https://via.placeholder.com/150",
-      fsbuttonbs: "16",
-      brbuttonbs: "2",
-      txtbuttonbs: "Button",
-      colortxtbuttonbs: "#000000",
-      colorbuttonbs: "#ffffff",
+      leftimagesc: "https://via.placeholder.com/150",
+      rightimagesc: "https://via.placeholder.com/150",
+      fsbuttonsc: "16",
+      brbuttonsc: "2",
+      txtbuttonsc: "Button",
+      colortxtbuttonsc: "#000000",
+      colorbuttonsc: "#ffffff",
       onClick: () => {},
       form: "",
       type: "submit",
     },
   ],
-  certbasic: [
+  certsocial: [
     {
-      labelcertbs: "sdfsdf",
-      colorlabelcertbs: "",
-      colorbtbs: "",
-      leftimagecertbs: "",
-      rightimagecertbs: "",
-      txtcertbs: "",
-      colortxtcertbs: "",
-      fstxtcertbs: "",
-      brbtcertbs: "",
-      bgopcertbs: "",
-      colorbtmorebs: "",
-      leftimagemorebs: "",
-      rightimagemorebs: "",
-      txtmorebs: "",
-      colortxtmorebs: "",
-      fstxtmorebs: "",
-      brbtmorebs: "",
-      colorerrorcertbs: "",
-      phcertbs: "",
-      errortextbs: "",
+      labelcertsc: "sdfsdf",
+      colorlabelcertsc: "",
+      colorbtsc: "",
+      leftimagecertsc: "",
+      rightimagecertsc: "",
+      txtcertsc: "",
+      colortxtcertsc: "",
+      fstxtcertsc: "",
+      brbtcertsc: "",
+      bgopcertsc: "",
+      colorbtmoresc: "",
+      leftimagemoresc: "",
+      rightimagemoresc: "",
+      txtmoresc: "",
+      colortxtmoresc: "",
+      fstxtmoresc: "",
+      brbtmoresc: "",
+      colorerrorcertsc: "",
+      phcertsc: "",
+      errortextsc: "",
     },
   ],
 };
