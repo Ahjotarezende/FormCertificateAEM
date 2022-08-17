@@ -23,10 +23,13 @@ const General = ({
         backGround={bgpage}
         id="FullPage"
     >
-        <Basic/>
-        <Social />
-        <Certificate />
-       <Success />
+        {/* <Basic/>
+        <Social /> */}
+        <Certificate fonts={fonts} title={title} titlecolor={titlecolor} fonte={fstitle} bgform={bgform}
+          colorcomp={colorcomp} headercertificate={headercertificate} navcertificate={navcertificate} inputcertificate={inputcertificate}
+          birthcertificate={birthcertificate} checkcertificate={checkcertificate} buttoncertificate={buttoncertificate}
+          certcertificate={certcertificate}/>
+       {/* <Success />  */}
         
     </FullPage>
   )
