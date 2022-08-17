@@ -95,7 +95,7 @@ General.defaultProps = {
     },
   ],
  
- //
+
 
   birthsocial: [
     {
@@ -130,30 +130,44 @@ General.defaultProps = {
       }
     }
    ],
-  certsocial: [
+
+   inputsocial: [
     {
-      labelcertsc: "sdfsdf",
-      colorlabelcertsc: "",
-      colorbtsc: "",
-      leftimagecertsc: "",
-      rightimagecertsc: "",
-      txtcertsc: "",
-      colortxtcertsc: "",
-      fstxtcertsc: "",
-      brbtcertsc: "",
-      bgopcertsc: "",
-      colorbtmoresc: "",
-      leftimagemoresc: "",
-      rightimagemoresc: "",
-      txtmoresc: "",
-      colortxtmoresc: "",
-      fstxtmoresc: "",
-      brbtmoresc: "",
-      colorerrorcertsc: "",
-      phcertsc: "",
-      errortextsc: "",
+      
     },
   ],
+
+
+  certsocial: [
+      {
+          colorbtsc: "#074EE8",
+          leftimagecertsc: {
+              src: ""
+          },
+          rightimagecertsc: {
+              src: "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-Down-arrows-tanah-basah-glyph-tanah-basah-5.png"
+          },
+          txtcertsc: "Certificates",
+          colortxtcertsc: "#FFFFFF",
+          fstxtcertsc: 16,
+          brbtcertsc: 4,
+          bgopcertsc: "#074EE8",
+          colorbtmoresc: "#074EE8",
+          leftimagemoresc: {
+              src: "https://img.icons8.com/ios-glyphs/30/FFFFFF/plus-math.png"
+          },
+          rightimagemoresc: {
+              src: "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-Right-arrows-tanah-basah-glyph-tanah-basah-3.png"
+          },
+          txtmoresc: "More",
+          colortxtmoresc: "#FFFFFF",
+          fstxtmoresc: 16,
+          brbtmoresc: 4,
+          colorerrorcertsc: "#FF0000",
+          phcertsc: "https://www.linkedin.com/in/foo-bar-3a0560104/",
+          errortextsc: "Empty certificate is not allowed."
+      }
+  ]
 };
 
 export default MapTo("reactapp/components/geralpage")(General);
