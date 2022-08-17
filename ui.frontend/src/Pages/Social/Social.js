@@ -58,7 +58,25 @@ const Social = ({
               </div>
             )
           )}
-         
+          
+          
+          {birthsocial.map(
+            (
+              { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
+              index
+            ) => (
+              <div key={index}>
+                <Birthday
+                  yearBegin={startbirthsc}
+                  yearEnd={endbirthsc}
+                  color={colorbirthsc}
+                  labelBirth={labelbirthsc}
+                />
+              </div>
+            )
+          )}
+
+          
        
     </>
   );

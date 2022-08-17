@@ -79,10 +79,10 @@ const General = (props) => {
 General.defaultProps = {
   headersocial: [
     {
-      smalltextsc: "Basic",
-      bigtextsc: "Basic",
+      smalltextsc: "Forms",
+      bigtextsc: "Third Tab",
       colorbigtextsc: "#000000",
-      colorsmalltextsc: "red",
+      colorsmalltextsc: "#000000",
     },
   ],
   navsocial: [
@@ -91,21 +91,10 @@ General.defaultProps = {
       texttwosc: "Second Tab",
       textthreesc: "Third Tab",
       colortextnavsc: "#000000",
-      colorselectedsc: "red",
+      colorselectedsc: "#0000FF",
     },
   ],
-  inputsocial: [
-    {
-      textonesc: "",
-      texttwosc: "",
-      typeinputsc: "",
-      textthreesc: "",
-      colortextnavsc: "",
-      colorselectedsc: "",
-      colorcompsc: "",
-      requiredinputsc: {},
-    },
-  ],
+ 
   birthsocial: [
     {
       startbirthsc: "",
