@@ -99,19 +99,53 @@ const Social = ({
             ) => (
               <div key={index}>
                 <Checkbox
-                 key={index}
-                 type={checksc}
-                 round={roundsc}
-                 txtColor={colortextchecksc}
-                 inputColor={colorchecksc}
-                 text={textchecksc}
-                 number={fschecksc}
-                 required={requiredchecksc}
+                  key={index}
+                  type={checksc}
+                  round={roundsc}
+                  txtColor={colortextchecksc}
+                  inputColor={colorchecksc}
+                  text={textchecksc}
+                  number={fschecksc}
+                  required={requiredchecksc}
                 />
               </div>
             )
           )}
+
+         
+
           
+          {buttonsocial.map(
+            (
+              {
+                txtbuttonsc,
+                colorbuttonsc,
+                colortxtbuttonsc,
+                fsbuttonsc,
+                brbuttonsc,
+                leftimagesc,
+                rightimagesc = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Button
+                  leftImage={leftimagesc}
+                  rightImage={rightimagesc}
+                  fsbutton={fsbuttonsc}
+                  brbutton={brbuttonsc}
+                  txtbutton={txtbuttonsc}
+                  colorbutton={colortxtbuttonsc}
+                  bgbutton={colorbuttonsc}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    console.log("click");
+                  }}
+                  type='submit'
+                />
+              </div>
+            )
+          )}
        
     </>
   );

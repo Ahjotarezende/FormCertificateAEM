@@ -107,7 +107,7 @@ General.defaultProps = {
   ],
   checksocial: [
     {
-      textchecksc: "set checkbox",
+      textchecksc: "Insert checkbox label",
       errorchecksc: "",
       colorchecksc: "",
       colortextchecksc: "",
@@ -117,18 +117,19 @@ General.defaultProps = {
   ],
   buttonsocial: [
     {
-      leftimagesc: "https://via.placeholder.com/150",
-      rightimagesc: "https://via.placeholder.com/150",
-      fsbuttonsc: "16",
-      brbuttonsc: "2",
-      txtbuttonsc: "Button",
-      colortxtbuttonsc: "#000000",
-      colorbuttonsc: "#ffffff",
-      onClick: () => {},
-      form: "",
-      type: "submit",
-    },
-  ],
+      txtbuttonsc: "Insert Text",
+      colorbuttonsc: "#074EE8",
+      colortxtbuttonsc: "#FFFFFF",
+      fsbuttonsc: 16,
+      brbuttonsc: 4,
+      leftimagesc: {
+        src: ""
+      },
+      rightimagesc: {
+        src: ""
+      }
+    }
+   ],
   certsocial: [
     {
       labelcertsc: "sdfsdf",
