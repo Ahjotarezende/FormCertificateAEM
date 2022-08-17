@@ -35,6 +35,31 @@ const Social = ({
       )}
 
       
+          {navsocial.map(
+            (
+              {
+                textonesc,
+                texttwosc,
+                textthreesc,
+                colortextnavsc,
+                colorselectedsc,
+                fsnavsc = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Navbar
+                  firstText={textonesc}
+                  secondText={texttwosc}
+                  thirdText={textthreesc}
+                  textColor={colortextnavsc}
+                  color={colorselectedsc}
+                />
+              </div>
+            )
+          )}
+         
+       
     </>
   );
 };
