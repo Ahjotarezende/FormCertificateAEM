@@ -1,12 +1,230 @@
-import React from 'react'
-import Header from '../../components/Micros/Header/Header'
+import React from "react";
+import InputLabel from "../../components/Input+Label/InputLabel";
+import Button from "../../components/Button/Button";
+import Checkbox from "../../components/Checkbox/Checkbox";
+import Birthday from "../../components/Birthday/Birthday";
+import Certificates from "../../components/Certificates/Certificates";
+import Header from "../../components/Micros/Header/Header";
+import Navbar from "../../components/Micros/Navbar/Navbar";
+import { Container, Content, ContainerP } from "./Basic.styled";
+const Basic = (props) => {
+  const {
+    headerbasic,
+    navbasic,
+    inputbasic,
+    birthbasic,
+    checkbasic,
+    buttonbasic,
+    certbasic,
+  } = props;
 
-const Basic = () => {
   return (
-    <div>
-      basic
-    </div>
-  )
-}
+    <>
+      {headerbasic.map(
+        (
+          { smalltextbs, bigtextbs, colorbigtextbs, colorsmalltextbs = {} },
+          index
+        ) => (
+          <div key={index}>
+            <Header
+              smalltext={smalltextbs}
+              bigtext={bigtextbs}
+              colorbigtext={colorbigtextbs}
+              colorsmalltext={colorsmalltextbs}
+            />
+          </div>
+        )
+      )}
+      <Content>
+        <Container>
+          <ContainerP>Team Sign up</ContainerP>
+          {navbasic.map(
+            (
+              {
+                textonebs,
+                texttwobs,
+                textthreebs,
+                colortextnavbs,
+                colorselectedbs,
+                fsnavbs = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Navbar
+                  firstText={textonebs}
+                  secondText={texttwobs}
+                  thirdText={textthreebs}
+                  textColor={colortextnavbs}
+                  color={colorselectedbs}
+                />
+              </div>
+            )
+          )}
+          {inputbasic.map(
+            (
+              {
+                textonebs,
+                texttwobs,
+                typeinputbs,
+                textthreebs,
+                colortextnavbs,
+                colorselectedbs,
+                colorcompbs,
+                requiredinputbs = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <InputLabel
+                  textLabel={textonebs}
+                  placeholder={texttwobs}
+                  txtmessage={textthreebs}
+                  colorLabel={colortextnavbs}
+                  colormessage={colorselectedbs}
+                  fontSizeLabel={colorcompbs}
+                  inputName={texttwobs}
+                  type={typeinputbs}
+                />
+              </div>
+            )
+          )}
+          {birthbasic.map(
+            (
+              { labelbirthbs, colorbirthbs, startbirthbs, endbirthbs = {} },
+              index
+            ) => (
+              <div key={index}>
+                {console.log(
+                  labelbirthbs,
+                  colorbirthbs,
+                  startbirthbs,
+                  endbirthbs
+                )}
+                <Birthday
+                  yearBegin={startbirthbs}
+                  yearEnd={endbirthbs}
+                  color={colorbirthbs}
+                  labelBirth={labelbirthbs}
+                />
+              </div>
+            )
+          )}
 
-export default Basic
+          {checkbasic.map(
+            (
+              {
+                textcheckbs,
+                errorcheckbs,
+                colorcheckbs,
+                colortextcheckbs,
+                colorerrorcheckbs,
+                fscheckbs,
+                checkbs,
+                roundbs,
+                requiredcheckbs = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Checkbox
+                  round={roundbs}
+                  txtColor={colortextcheckbs}
+                  inputColor={colorcheckbs}
+                  text={textcheckbs}
+                  number={fscheckbs}
+                  required={requiredcheckbs}
+                />
+              </div>
+            )
+          )}
+          {certbasic.map(
+            (
+              {
+                labelcertbs,
+                colorlabelcertbs,
+                colorbtbs,
+                leftimagecertbs,
+                rightimagecertbs,
+                txtcertbs,
+                colortxtcertbs,
+                fstxtcertbs,
+                brbtcertbs,
+                bgopcertbs,
+                colorbtmorebs,
+                leftimagemorebs,
+                rightimagemorebs,
+                txtmorebs,
+                colortxtmorebs,
+                fstxtmorebs,
+                brbtmorebs,
+                colorerrorcertbs,
+                phcertbs,
+                errortextbs = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Certificates
+                  labelcert={labelcertbs}
+                  colorlabelcert={colorlabelcertbs}
+                  colorbt={colorbtbs}
+                  leftimagecert={leftimagecertbs}
+                  rightimagecert={rightimagecertbs}
+                  txtcert={txtcertbs}
+                  colortxtcert={colortxtcertbs}
+                  fstxtcert={fstxtcertbs}
+                  brbtcert={brbtcertbs}
+                  bgopcert={bgopcertbs}
+                  colorbtmore={colorbtmorebs}
+                  leftimagemore={leftimagemorebs}
+                  rightimagemore={rightimagemorebs}
+                  txtmore={txtmorebs}
+                  colortxtmore={colortxtmorebs}
+                  fstxtmore={fstxtmorebs}
+                  brbtmore={brbtmorebs}
+                  colorerrorcert={colorerrorcertbs}
+                  phcert={phcertbs}
+                  errortext={errortextbs}
+                />
+              </div>
+            )
+          )}
+          {buttonbasic.map(
+            (
+              {
+                txtbuttonbs,
+                colorbuttonbs,
+                colortxtbuttonbs,
+                fsbuttonbs,
+                brbuttonbs,
+                leftimagebs,
+                rightimagebs = {},
+              },
+              index
+            ) => (
+              <div key={index}>
+                <Button
+                  leftImage={leftimagebs}
+                  rightImage={rightimagebs}
+                  fsbutton={fsbuttonbs}
+                  brbutton={brbuttonbs}
+                  txtbutton={txtbuttonbs}
+                  colorbutton={colortxtbuttonbs}
+                  bgbutton={colorbuttonbs}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    console.log("click");
+                  }}
+                  type='submit'
+                />
+              </div>
+            )
+          )}
+        </Container>
+      </Content>
+    </>
+  );
+};
+
+export default Basic;

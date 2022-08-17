@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 100%;
+  justify-content: center;
 `;
 export const Container = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ export const ContainerMessage = styled.div`
 `;
 export const ContainerMedia = styled.div`
   display: flex;
+  margin: 0 5px;
   @media (max-width: 768px) {
     padding: 0.5rem;
   }

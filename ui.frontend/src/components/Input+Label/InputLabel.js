@@ -14,14 +14,14 @@ function InputLabel(props) {
     <Container className={className}>
       <ContainerLabelError>
         <Label text={textLabel} color={colorLabel} fontSize={fontSizeLabel} />
-        <ErrorMessage
+        {/* <ErrorMessage
           fsmessage={fsmessage}
           fwmessage={fwmessage}
           errors={errors}
           className={textLabel}
           txtmessage={txtmessage}
           colormessage={colormessage}
-        />
+        /> */}
       </ContainerLabelError>
       <Input
         type={type}

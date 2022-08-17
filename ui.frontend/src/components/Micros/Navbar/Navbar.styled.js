@@ -33,5 +33,6 @@ export const NavText = styled.p`
       color: ${(props) => props.textColor};
       
 ;
+
     `};
 `;

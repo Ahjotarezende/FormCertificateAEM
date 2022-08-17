@@ -10,6 +10,7 @@ import {
 } from "./Birthday.styled";
 import ErrorMessage from "../Micros/ErrorMessage/ErrorMessage";
 import Label from "../Micros/Label/Label";
+
 function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
   const [age, setAge] = useState(0);
   return (

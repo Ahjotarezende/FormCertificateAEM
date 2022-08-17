@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { NavStyled, NavText } from "./Navbar.styled";
 
 function Navbar({ firstText, secondText, thirdText, textColor, color }) {
+
   const [page,setPage] = useState(0)
   let tabA,tabB,tabC,Nav
   
-
   if(page == 0) {
     tabA = "true"
   } else if (page == 1) {
@@ -16,7 +16,6 @@ function Navbar({ firstText, secondText, thirdText, textColor, color }) {
     Nav = "sucess"
   } 
 
-
   return (
     <NavStyled>
       <NavText className={tabA}  color={color} textColor={textColor}  onClick={() => setPage(0)}>{firstText}</NavText>
@@ -25,7 +24,6 @@ function Navbar({ firstText, secondText, thirdText, textColor, color }) {
     </NavStyled>
   );
 }
-
 
 Navbar.defaultProps = {
  color: "#074ee8",
