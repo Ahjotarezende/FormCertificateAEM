@@ -7,6 +7,7 @@ import InputLabel from "../../components/Input+Label/InputLabel";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import Birthday from "../../components/Birthday/Birthday";
 import Button from "../../components/Button/Button";
+import { AuthContext } from "../General/General";
 
 import { useForm } from "react-hook-form";
 
@@ -25,8 +26,6 @@ const Social = ({
   buttonsocial,
   certsocial,
 }) => {
-  console.log(inputsocial);
-
   const {
     register,
     handleSubmit,
@@ -40,105 +39,33 @@ const Social = ({
     }
   };
 
-  return (
-    <div>
-      {headersocial.map(
-        (
-          { smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {} },
-          index
-        ) => (
-          <Header
-            key={index}
-            smalltext={smalltextsc}
-            bigtext={bigtextsc}
-            colorbigtext={colorbigtextsc}
-            colorsmalltext={colorsmalltextsc}
-          />
-        )
-      )}
-
-      <DivForm bgform={bgform}>
-        <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
-          {title}
-        </Title>
-
-        {navsocial.map(
+  const { name } = React.useContext(AuthContext); //page authcontext
+  const [page, setPage] = name; //page state
+  
+  if (page === 1) {
+    return (
+      <div>
+        {headersocial.map(
           (
-            {
-              textonesc,
-              texttwosc,
-              textthreesc,
-              colortextnavsc,
-              colorselectedsc,
-              fsnavct = {},
-            },
+            { smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {} },
             index
           ) => (
-            <Navbar
+            <Header
               key={index}
-              firstText={textonesc}
-              secondText={texttwosc}
-              thirdText={textthreesc}
-              textColor={colortextnavsc}
-              color={colorselectedsc}
+              smalltext={smalltextsc}
+              bigtext={bigtextsc}
+              colorbigtext={colorbigtextsc}
+              colorsmalltext={colorsmalltextsc}
             />
           )
         )}
 
-        {certsocial.map(
-          (
-            {
-              labelcertsc,
-              colorlabelcertsc,
-              colorbtsc,
-              leftimagecertsc,
-              rightimagecertsc,
-              txtcertsc,
-              colortxtcertsc,
-              fstxtcertsc,
-              brbtcertsc,
-              bgopcertsc,
-              colorbtmoresc,
-              leftimagemoresc,
-              rightimagemoresc,
-              txtmoresc,
-              colortxtmoresc,
-              fstxtmoresc,
-              brbtmoresc,
-              colorerrorcertsc,
-              phcertsc,
-              errortextsc = {},
-            },
-            index
-          ) => (
-            <Certificates
-              key={index}
-              labelcert={labelcertsc}
-              colorlabelcert={colorlabelcertsc}
-              colorbt={colorbtsc}
-              leftimagecert={leftimagecertsc}
-              rightimagecert={rightimagecertsc}
-              txtcert={txtcertsc}
-              colortxtcert={colortxtcertsc}
-              fstxtcert={fstxtcertsc}
-              brbtcert={brbtcertsc}
-              bgopcert={bgopcertsc}
-              colorbtmore={colorbtmoresc}
-              leftimagemore={leftimagemoresc}
-              rightimagemore={rightimagemoresc}
-              txtmore={txtmoresc}
-              colortxtmore={colortxtmoresc}
-              fstxtmore={fstxtmoresc}
-              brbtmore={brbtmoresc}
-              colorerrorcert={colorerrorcertsc}
-              phcert={phcertsc}
-              errortext={errortextsc}
-              colorcomp={colorcomp}
-            />
-          )
-        )}
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {inputsocial.map(
+        <DivForm bgform={bgform}>
+          <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
+            {title}
+          </Title>
+
+          {navsocial.map(
             (
               {
                 textonesc,
@@ -146,105 +73,186 @@ const Social = ({
                 textthreesc,
                 colortextnavsc,
                 colorselectedsc,
-                colorcompsc,
-                requiredinputsc,
-                typeinputsc = {},
+                fsnavct = {},
               },
               index
             ) => (
-              <InputLabel
+              <Navbar
                 key={index}
-                textLabel={textonesc}
-                colorLabel={colortextnavsc}
-                fontSizeLabel='14px'
-                placeholder={texttwosc}
-                type={typeinputsc}
-                color={colorcomp}
-                required={requiredinputsc}
-                fontSizeInput={colorcompsc}
-                borderRadius='4px'
-                fsmessage='14'
-                fwmessage='400'
-                txtmessage={textthreesc}
-                colormessage={colorselectedsc}
-                register={register}
-                errors={errors}
+                firstText={textonesc}
+                secondText={texttwosc}
+                thirdText={textthreesc}
+                textColor={colortextnavsc}
+                color={colorselectedsc}
               />
             )
           )}
 
-          {birthsocial.map(
-            (
-              { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
-              index
-            ) => (
-              <Birthday
-                key={index}
-                labelBirth={labelbirthsc}
-                yearEnd={endbirthsc}
-                color={colorbirthsc}
-                yearBegin={startbirthsc}
-              />
-            )
-          )}
-
-          {checksocial.map(
+          {certsocial.map(
             (
               {
-                textchecksc,
-                errorchecksc,
-                colorchecksc,
-                colortextchecksc,
-                colorerrorchecksc,
-                fschecksc,
-                checksc,
-                roundsc,
-                requiredchecksc = {},
+                labelcertsc,
+                colorlabelcertsc,
+                colorbtsc,
+                leftimagecertsc,
+                rightimagecertsc,
+                txtcertsc,
+                colortxtcertsc,
+                fstxtcertsc,
+                brbtcertsc,
+                bgopcertsc,
+                colorbtmoresc,
+                leftimagemoresc,
+                rightimagemoresc,
+                txtmoresc,
+                colortxtmoresc,
+                fstxtmoresc,
+                brbtmoresc,
+                colorerrorcertsc,
+                phcertsc,
+                errortextsc = {},
               },
               index
             ) => (
-              <Checkbox
+              <Certificates
                 key={index}
-                type={checksc}
-                round={roundsc}
-                txtColor={colortextchecksc}
-                inputColor={colorchecksc}
-                text={textchecksc}
-                number={`${fschecksc}`}
+                labelcert={labelcertsc}
+                colorlabelcert={colorlabelcertsc}
+                colorbt={colorbtsc}
+                leftimagecert={leftimagecertsc}
+                rightimagecert={rightimagecertsc}
+                txtcert={txtcertsc}
+                colortxtcert={colortxtcertsc}
+                fstxtcert={fstxtcertsc}
+                brbtcert={brbtcertsc}
+                bgopcert={bgopcertsc}
+                colorbtmore={colorbtmoresc}
+                leftimagemore={leftimagemoresc}
+                rightimagemore={rightimagemoresc}
+                txtmore={txtmoresc}
+                colortxtmore={colortxtmoresc}
+                fstxtmore={fstxtmoresc}
+                brbtmore={brbtmoresc}
+                colorerrorcert={colorerrorcertsc}
+                phcert={phcertsc}
+                errortext={errortextsc}
+                colorcomp={colorcomp}
               />
             )
           )}
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {inputsocial.map(
+              (
+                {
+                  textonesc,
+                  texttwosc,
+                  textthreesc,
+                  colortextnavsc,
+                  colorselectedsc,
+                  colorcompsc,
+                  requiredinputsc,
+                  typeinputsc = {},
+                },
+                index
+              ) => (
+                <InputLabel
+                  key={index}
+                  textLabel={textonesc}
+                  colorLabel={colortextnavsc}
+                  fontSizeLabel='14px'
+                  placeholder={texttwosc}
+                  type={typeinputsc}
+                  color={colorcomp}
+                  required={requiredinputsc}
+                  fontSizeInput={colorcompsc}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreesc}
+                  colormessage={colorselectedsc}
+                  register={register}
+                  errors={errors}
+                />
+              )
+            )}
 
-          {buttonsocial.map(
-            (
-              {
-                txtbuttonsc,
-                colorbuttonsc,
-                colortxtbuttonsc,
-                fsbuttonsc,
-                brbuttonsc,
-                leftimagesc,
-                rightimagesc = {},
-              },
-              index
-            ) => (
-              <Button
-                key={index}
-                leftImage={leftimagesc}
-                rightImage={rightimagesc}
-                fsbutton={fsbuttonsc}
-                bgbutton={colorbuttonsc}
-                type='submit'
-                brbutton={brbuttonsc}
-                txtbutton={txtbuttonsc}
-                colorbutton={colortxtbuttonsc}
-              />
-            )
-          )}
-        </form>
-      </DivForm>
-    </div>
-  );
+            {birthsocial.map(
+              (
+                { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
+                index
+              ) => (
+                <Birthday
+                  key={index}
+                  labelBirth={labelbirthsc}
+                  yearEnd={endbirthsc}
+                  color={colorbirthsc}
+                  yearBegin={startbirthsc}
+                />
+              )
+            )}
+
+            {checksocial.map(
+              (
+                {
+                  textchecksc,
+                  errorchecksc,
+                  colorchecksc,
+                  colortextchecksc,
+                  colorerrorchecksc,
+                  fschecksc,
+                  checksc,
+                  roundsc,
+                  requiredchecksc = {},
+                },
+                index
+              ) => (
+                <Checkbox
+                  key={index}
+                  type={checksc}
+                  round={roundsc}
+                  txtColor={colortextchecksc}
+                  inputColor={colorchecksc}
+                  text={textchecksc}
+                  number={`${fschecksc}`}
+                />
+              )
+            )}
+
+            {buttonsocial.map(
+              (
+                {
+                  txtbuttonsc,
+                  colorbuttonsc,
+                  colortxtbuttonsc,
+                  fsbuttonsc,
+                  brbuttonsc,
+                  leftimagesc,
+                  rightimagesc = {},
+                },
+                index
+              ) => (
+                <Button
+                  key={index}
+                  leftImage={leftimagesc}
+                  rightImage={rightimagesc}
+                  fsbutton={fsbuttonsc}
+                  bgbutton={colorbuttonsc}
+                  type='submit'
+                  brbutton={brbuttonsc}
+                  txtbutton={txtbuttonsc}
+                  colorbutton={colortxtbuttonsc}
+                />
+              )
+            )}
+          </form>
+        </DivForm>
+      </div>
+    );
+  } else {
+    return(
+      <></>
+    )
+  }
 };
 
 Social.defaultProps = {
@@ -314,7 +322,7 @@ Social.defaultProps = {
       requiredinputsc: true,
     },
   ],
-  
+
   certsocial: [
     {
       colorbtsc: "#074EE8",
