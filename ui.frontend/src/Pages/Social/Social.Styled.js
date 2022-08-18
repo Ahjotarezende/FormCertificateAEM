@@ -13,6 +13,6 @@ export const DivForm = styled.div`
     height: 610px;
    
 
-    border-radius: 1.1rem;
+    border-radius: 20px;
     margin: 10px auto;
 `;
