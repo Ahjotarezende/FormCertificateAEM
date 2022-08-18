@@ -3,17 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
   background: ${(props) => props.bgform};
-  
+
   border-radius: 16px;
   width: 38.5rem;
   min-height: 47.6rem;
   padding: 2rem;
-  .none {
-    display: none;
-  }
 `;
 export const ContainerP = styled.p`
   font-size: ${(props) => props.fonte};
@@ -29,4 +26,15 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .none {
+    display: none;
+  }
+`;
+
+export const Align = styled.div`
+  align-self: flex-start;
+`;
+
+export const AlignButton = styled.div`
+  align-self: flex-end;
 `;

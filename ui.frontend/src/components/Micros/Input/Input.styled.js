@@ -43,8 +43,9 @@ export const ContainerInputBirthday = styled.input`
   height: 2rem;
   padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
-  margin-left: 0.5rem;
+
   width: 7.18rem;
+  height: 2.5rem;
   text-align: center;
 `;
 

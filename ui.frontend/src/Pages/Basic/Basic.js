@@ -6,7 +6,7 @@ import Birthday from "../../components/Birthday/Birthday";
 import Certificates from "../../components/Certificates/Certificates";
 import Header from "../../components/Micros/Header/Header";
 import Navbar from "../../components/Micros/Navbar/Navbar";
-import { Container, Content, ContainerP } from "./Basic.styled";
+import { Container, Content, ContainerP, Align,AlignButton } from "./Basic.styled";
 import { useForm } from "react-hook-form";
 const Basic = (props) => {
   const {
@@ -162,7 +162,7 @@ const Basic = (props) => {
               },
               index
             ) => (
-              <div key={index}>
+              <Align key={index}>
                 <Checkbox
                   round={roundbs}
                   txtColor={colortextcheckbs}
@@ -171,7 +171,7 @@ const Basic = (props) => {
                   number={fscheckbs}
                   required={requiredcheckbs}
                 />
-              </div>
+              </Align>
             )
           )}
           {certbasic.map(
@@ -201,7 +201,7 @@ const Basic = (props) => {
               index
             ) => (
               <div key={index}>
-                <Certificates
+                {/* <Certificates
                   labelcert={setDisplay(labelcertbs)}
                   colorlabelcert={colorlabelcertbs}
                   colorbt={colorbtbs}
@@ -222,7 +222,7 @@ const Basic = (props) => {
                   colorerrorcert={colorerrorcertbs}
                   phcert={phcertbs}
                   errortext={errortextbs}
-                />
+                /> */}
               </div>
             )
           )}
@@ -239,7 +239,7 @@ const Basic = (props) => {
               },
               index
             ) => (
-              <div key={index}>
+              <AlignButton key={index}>
                 <Button
                   leftImage={leftimagebs}
                   rightImage={rightimagebs}
@@ -254,7 +254,7 @@ const Basic = (props) => {
                   }}
                   type='submit'
                 />
-              </div>
+              </AlignButton>
             )
           )}
         </Container>
