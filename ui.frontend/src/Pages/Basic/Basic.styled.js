@@ -8,9 +8,12 @@ export const Container = styled.div`
   background: ${(props) => props.bgform};
 
   border-radius: 16px;
-  width: 38.5rem;
-  min-height: 47.6rem;
+  max-width: 40rem;
+  min-height: 30rem;
   padding: 2rem;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const ContainerP = styled.p`
   font-size: ${(props) => props.fonte};
@@ -37,4 +40,14 @@ export const Align = styled.div`
 
 export const AlignButton = styled.div`
   align-self: flex-end;
+`;
+
+export const InputEmailPhone = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

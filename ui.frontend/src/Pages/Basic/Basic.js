@@ -6,7 +6,14 @@ import Birthday from "../../components/Birthday/Birthday";
 import Certificates from "../../components/Certificates/Certificates";
 import Header from "../../components/Micros/Header/Header";
 import Navbar from "../../components/Micros/Navbar/Navbar";
-import { Container, Content, ContainerP, Align,AlignButton } from "./Basic.styled";
+import {
+  Container,
+  Content,
+  ContainerP,
+  Align,
+  AlignButton,
+  InputEmailPhone,
+} from "./Basic.styled";
 import { useForm } from "react-hook-form";
 const Basic = (props) => {
   const {
@@ -91,38 +98,40 @@ const Basic = (props) => {
               </div>
             )
           )}
-          {inputbasic.map(
-            (
-              {
-                textonebs,
-                texttwobs,
-                typeinputbs,
-                textthreebs,
-                colortextnavbs,
-                colorselectedbs,
-                colorcompbs,
-                requiredinputbs = {},
-              },
-              index
-            ) => (
-              <div key={index}>
-                <InputLabel
-                  colorcomp={colorcomp}
-                  textLabel={textonebs}
-                  placeholder={texttwobs}
-                  txtmessage={textthreebs}
-                  colorLabel={colortextnavbs}
-                  colormessage={colorselectedbs}
-                  fontSizeLabel={colorcompbs}
-                  inputName={texttwobs}
-                  type={typeinputbs}
-                  register={register}
-                  errors={errors}
-                  required={requiredinputbs}
-                />
-              </div>
-            )
-          )}
+          <InputEmailPhone>
+            {inputbasic.map(
+              (
+                {
+                  textonebs,
+                  texttwobs,
+                  typeinputbs,
+                  textthreebs,
+                  colortextnavbs,
+                  colorselectedbs,
+                  colorcompbs,
+                  requiredinputbs = {},
+                },
+                index
+              ) => (
+                <div key={index}>
+                  <InputLabel
+                    colorcomp={colorcomp}
+                    textLabel={textonebs}
+                    placeholder={texttwobs}
+                    txtmessage={textthreebs}
+                    colorLabel={colortextnavbs}
+                    colormessage={colorselectedbs}
+                    fontSizeLabel={colorcompbs}
+                    inputName={texttwobs}
+                    type={typeinputbs}
+                    register={register}
+                    errors={errors}
+                    required={requiredinputbs}
+                  />
+                </div>
+              )
+            )}
+          </InputEmailPhone>
           {birthbasic.map(
             (
               { labelbirthbs, colorbirthbs, startbirthbs, endbirthbs = {} },
