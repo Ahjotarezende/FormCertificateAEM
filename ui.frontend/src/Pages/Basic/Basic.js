@@ -130,6 +130,7 @@ const Basic = (props) => {
                   yearEnd={endbirthbs}
                   color={colorbirthbs}
                   labelBirth={labelbirthbs}
+                  className='birthday'
                 />
               </div>
             )

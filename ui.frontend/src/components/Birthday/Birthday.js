@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "../Micros/Select/Select";
 import Input from "../Micros/Input/Input";
 import {
   Body,
   Container,
-  
   ContainerMessage,
   ContainerMedia,
 } from "./Birthday.styled";
@@ -12,12 +11,22 @@ import ErrorMessage from "../Micros/ErrorMessage/ErrorMessage";
 import Label from "../Micros/Label/Label";
 
 function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
-  const [age, setAge] = useState(0);
+  const [day, setDay] = useState();
+  const [month, setMonth] = useState();
+  const [year, setYear] = useState();
+  useEffect(() => {
+    localStorage.setItem("date", day + "/" + month + "/" + year);
+    localStorage.setItem("age", yearEnd - year);
+  }, [day, month, year]);
   return (
     <Body className={className}>
       <ContainerMessage>
         <Label text={labelBirth} />
-        {/* <ErrorMessage txtmessage='Please enter your Age' colormessage='red' /> */}
+        {/* <ErrorMessage
+          txtmessage='Please enter your Age'
+          colormessage='red'
+          className={className}
+        /> */}
       </ContainerMessage>
       <Container>
         <ContainerMedia>
@@ -28,6 +37,7 @@ function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
             fsslect={16}
             colorselect='aaaaaa'
             cbselect={color}
+            setDay={setDay}
           />
           <Select
             inicio={1}
@@ -35,6 +45,7 @@ function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
             brselect={4}
             fsslect={16}
             cbselect={color}
+            setMonth={setMonth}
           />
         </ContainerMedia>
         <ContainerMedia>
@@ -45,9 +56,13 @@ function Birthday({ yearBegin, yearEnd, color, labelBirth, className }) {
             fsslect={16}
             colorselect='aaaaaa'
             cbselect={color}
-            setAge={setAge}
+            setYear={setYear}
           />
-          <Input type='birthday' inputName='birthday' valueAge={age} />
+          <Input
+            type='birthday'
+            inputName='birthday'
+            valueAge={yearEnd - year}
+          />
         </ContainerMedia>
       </Container>
     </Body>
