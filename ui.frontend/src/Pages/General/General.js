@@ -12,7 +12,7 @@ export const AuthContext = React.createContext();
 //state that sets witch page we are
 
 const General = (props) => {
-  let [page, setPage] = useState(0); 
+  let [page, setPage] = useState(1); 
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
     props;
   const {
@@ -52,21 +52,6 @@ const General = (props) => {
     <AuthContext.Provider value={{ name: [page, setPage] }}>
     <FullPage fontFamily={fonts} backGround={bgpage} id='FullPage'>
       
-      <Basic
-        fonts={fonts}
-        title={title}
-        titlecolor={titlecolor}
-        fonte={fstitle}
-        bgform={bgform}
-        colorcomp={colorcomp}
-        headerbasic={headerbasic}
-        navbasic={navbasic}
-        inputbasic={inputbasic}
-        birthbasic={birthbasic}
-        checkbasic={checkbasic}
-        buttonbasic={buttonbasic}
-        certbasic={certbasic}
-      />
 
       <Social
         fonts={fonts}
