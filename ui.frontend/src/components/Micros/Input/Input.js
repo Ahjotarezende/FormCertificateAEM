@@ -6,6 +6,7 @@ import {
   ContainerInput,
   ContainerInputBirthday,
   ContainerInputPhone,
+  ContainerInputEmail,
 } from "./Input.styled";
 function Input({
   type,
@@ -89,7 +90,7 @@ function Input({
       case "email":
         return (
           <Container>
-            <ContainerInput
+            <ContainerInputEmail
               {...register(`${inputName}`, requiredProp)}
               placeholder={placeholder}
               type='email'
