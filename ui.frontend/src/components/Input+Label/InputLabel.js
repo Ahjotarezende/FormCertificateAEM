@@ -6,22 +6,31 @@ import { Container, ContainerLabelError } from "./InputLabel.styled";
 
 function InputLabel(props) {
   const { textLabel, colorLabel, fontSizeLabel } = props;
-  const { placeholder, type, inputName, color, fontSizeInput, borderRadius, className, register, required } =
-    props;
+  const {
+    placeholder,
+    type,
+    inputName,
+    color,
+    fontSizeInput,
+    borderRadius,
+    className,
+    register,
+    required,
+  } = props;
   const { fsmessage, fwmessage, txtmessage, colormessage, errors } = props;
 
   return (
     <Container className={className}>
       <ContainerLabelError>
         <Label text={textLabel} color={colorLabel} fontSize={fontSizeLabel} />
-        {/* <ErrorMessage
+        <ErrorMessage
           fsmessage={fsmessage}
           fwmessage={fwmessage}
           errors={errors}
           className={textLabel}
           txtmessage={txtmessage}
           colormessage={colormessage}
-        /> */}
+        />
       </ContainerLabelError>
       <Input
         type={type}

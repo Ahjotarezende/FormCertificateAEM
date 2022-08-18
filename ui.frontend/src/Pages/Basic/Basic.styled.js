@@ -5,17 +5,23 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: ${(props) => props.bgform};
+  
   border-radius: 16px;
   width: 38.5rem;
   min-height: 47.6rem;
   padding: 2rem;
+  .none {
+    display: none;
+  }
 `;
 export const ContainerP = styled.p`
-  font-size: 18px;
+  font-size: ${(props) => props.fonte};
+  color: ${(props) => props.titlecolor};
   margin-bottom: 1.5rem;
   align-self: flex-start;
   font-weight: bold;
+  font-family: ${(props) => props.fonts};
 `;
 
 export const Content = styled.div`

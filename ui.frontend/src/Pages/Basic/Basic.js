@@ -17,6 +17,12 @@ const Basic = (props) => {
     checkbasic,
     buttonbasic,
     certbasic,
+    fonts,
+    title,
+    titlecolor,
+    fonte,
+    bgform,
+    colorcomp,
   } = props;
 
   const {
@@ -30,6 +36,9 @@ const Basic = (props) => {
     for (let i = 0; i < localValues.length; i++) {
       localStorage.setItem(localValues[i][0], localValues[i][1]);
     }
+  };
+  const setDisplay = (i) => {
+    if (i === "") return "none";
   };
 
   return (
@@ -50,8 +59,14 @@ const Basic = (props) => {
         )
       )}
       <Content>
-        <Container>
-          <ContainerP>Team Sign up</ContainerP>
+        <Container bgform={bgform}>
+          <ContainerP
+            titlecolor={titlecolor}
+            fonts={fonts}
+            fonte={`${fonte}px`}
+          >
+            {title}
+          </ContainerP>
           {navbasic.map(
             (
               {
@@ -66,6 +81,7 @@ const Basic = (props) => {
             ) => (
               <div key={index}>
                 <Navbar
+                  colorcomp={colorcomp}
                   firstText={textonebs}
                   secondText={texttwobs}
                   thirdText={textthreebs}
@@ -91,6 +107,7 @@ const Basic = (props) => {
             ) => (
               <div key={index}>
                 <InputLabel
+                  colorcomp={colorcomp}
                   textLabel={textonebs}
                   placeholder={texttwobs}
                   txtmessage={textthreebs}
@@ -123,6 +140,8 @@ const Basic = (props) => {
                   yearEnd={endbirthbs}
                   color={colorbirthbs}
                   labelBirth={labelbirthbs}
+                  colorcomp={colorcomp}
+                  className='birthday'
                 />
               </div>
             )
@@ -183,7 +202,7 @@ const Basic = (props) => {
             ) => (
               <div key={index}>
                 <Certificates
-                  labelcert={labelcertbs}
+                  labelcert={setDisplay(labelcertbs)}
                   colorlabelcert={colorlabelcertbs}
                   colorbt={colorbtbs}
                   leftimagecert={leftimagecertbs}
@@ -242,6 +261,10 @@ const Basic = (props) => {
       </Content>
     </>
   );
+};
+
+Basic.defaultProps = {
+  bgform: "white",
 };
 
 export default Basic;

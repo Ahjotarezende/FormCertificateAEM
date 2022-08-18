@@ -59,7 +59,7 @@ const General = (props) => {
         certbasic={certbasic}
       />
 
-     <Social
+      <Social
         fonts={fonts}
         title={title}
         titlecolor={titlecolor}
@@ -95,92 +95,109 @@ const General = (props) => {
 };
 
 General.defaultProps = {
+  fonts: "Nunito",
+  title: "Team Sign Up",
+  titlecolor: "#111111",
+  fstitle: 18,
+  bgform: "white",
+  bgpage: "#E5E5E5",
+  colorcomp: "#AAAAAA",
+
   headerbasic: [
     {
-      smalltextbs: "Basic",
-      bigtextbs: "Basic",
-      colorbigtextbs: "#000000",
-      colorsmalltextbs: "red",
+      smalltextbs: "Forms",
+      bigtextbs: "First Tab",
+      colorbigtextbs: "#074EE8",
+      colorsmalltextbs: "#111111",
     },
   ],
   navbasic: [
     {
-      textonebs: "First Tab",
-      texttwobs: "Second Tab",
-      textthreebs: "Third Tab",
-      colortextnavbs: "#000000",
-      colorselectedbs: "red",
+      textonebs: "Basic",
+      texttwobs: "Social",
+      textthreebs: "Certificates",
+      colortextnavbs: "#111111",
+      colorselectedbs: "#074EE8",
     },
   ],
   inputbasic: [
     {
-      textonebs: "",
-      texttwobs: "",
-      typeinputbs: "",
-      textthreebs: "",
-      colortextnavbs: "",
-      colorselectedbs: "",
-      colorcompbs: "",
-      requiredinputbs: {},
+      textonebs: "Label",
+      texttwobs: "Placeholder",
+      typeinputbs: "text",
+      textthreebs: "Error Message",
+      colortextnavbs: "#767676",
+      colorselectedbs: "#FF0000",
+      colorcompbs: 16,
+      requiredinputbs: true,
     },
   ],
   birthbasic: [
     {
-      startbirthbs: "",
-      endbirthbs: "",
-      colorbirthbs: "#aaaaaa",
-      labelbirthbs: "Set Birthday",
+      startbirthbs: 1902,
+      endbirthbs: 2022,
+      colorbirthbs: "#767676",
+      labelbirthbs: "Birthday *",
     },
   ],
   checkbasic: [
     {
-      textcheckbs: "set checkbox",
-      errorcheckbs: "",
-      colorcheckbs: "",
-      colortextcheckbs: "",
-      colorerrorcheckbs: "",
-      fscheckbs: "",
-      checkbs: "",
-      roundbs: "",
-      requiredcheckbs: "",
+      textcheckbs: "I accept the terms and privacy",
+      errorcheckbs: "Please confirm the terms",
+      colorcheckbs: "#074EE8",
+      colortextcheckbs: "#111111",
+      colorerrorcheckbs: "#FF0000",
+      fscheckbs: 16,
+      checkbs: true,
+      roundbs: false,
+      requiredcheckbs: true,
     },
   ],
   buttonbasic: [
     {
-      leftimagebs: "https://via.placeholder.com/150",
-      rightimagebs: "https://via.placeholder.com/150",
-      fsbuttonbs: "16",
-      brbuttonbs: "2",
+      leftimagebs: {
+        src: "",
+      },
+      rightimagebs: {
+        src: "",
+      },
+      fsbuttonbs: 16,
+      brbuttonbs: 4,
       txtbuttonbs: "Button",
-      colortxtbuttonbs: "#000000",
-      colorbuttonbs: "#ffffff",
-      onClick: () => {},
-      form: "",
-      type: "submit",
+      colortxtbuttonbs: "#FFFFFF",
+      colorbuttonbs: "#074EE8",
     },
   ],
   certbasic: [
     {
-      labelcertbs: "sdfsdf",
-      colorlabelcertbs: "",
-      colorbtbs: "",
-      leftimagecertbs: "",
-      rightimagecertbs: "",
-      txtcertbs: "",
-      colortxtcertbs: "",
-      fstxtcertbs: "",
-      brbtcertbs: "",
-      bgopcertbs: "",
-      colorbtmorebs: "",
-      leftimagemorebs: "",
-      rightimagemorebs: "",
-      txtmorebs: "",
-      colortxtmorebs: "",
-      fstxtmorebs: "",
-      brbtmorebs: "",
-      colorerrorcertbs: "",
-      phcertbs: "",
-      errortextbs: "",
+      labelcertbs: "",
+      colorlabelcertbs: "#767676",
+      colorbtbs: "#074EE8",
+      leftimagecertbs: {
+        src: "",
+      },
+      rightimagecertbs: {
+        src: "",
+      },
+      txtcertbs: "Certificates",
+      colortxtcertbs: "#FFFFFF",
+      fstxtcertbs: 16,
+      brbtcertbs: 4,
+      bgopcertbs: "#074EE8",
+      colorbtmorebs: "#074EE8",
+      leftimagemorebs: {
+        src: "",
+      },
+      rightimagemorebs: {
+        src: "",
+      },
+      txtmorebs: "More",
+      colortxtmorebs: "#FFFFFF",
+      fstxtmorebs: 16,
+      brbtmorebs: 4,
+      colorerrorcertbs: "#FF0000",
+      phcertbs: "https://www.linkedin.com/in/foo-bar-3a0560104/",
+      errortextbs: "Empty certificate is not allowed.",
     },
   ],
 };

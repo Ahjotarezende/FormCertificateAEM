@@ -5,7 +5,6 @@ export const SelectMicro = styled.select`
   font-family: "Nunito";
   font-weight: ${(props) => props.wselect};
   border-color: ${(props) => props.cbselect};
-  color: ${(props) => props.colorselect};
   font-size: ${(props) => props.fsslect};
   border-radius: ${(props) => props.brselect};
   padding-left: 0.6rem;

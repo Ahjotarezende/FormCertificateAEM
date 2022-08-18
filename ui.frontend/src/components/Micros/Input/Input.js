@@ -1,3 +1,4 @@
+/* eslint-disable no-new-wrappers */
 import React, { useState } from "react";
 import {
   Container,
@@ -11,36 +12,30 @@ function Input({
   placeholder,
   inputName,
   color,
-  valor,
+  valor = Boolean,
   fontSize,
   borderRadius,
   valueAge,
-  register
+  register,
 }) {
-
-  const viewValue = () => {
-    if(valor===false)
-      return true
-    else
-      return false
-  }
-
-  const [age, setAge] = useState(50);
+  const requiredProp = new Boolean(valor);
+  console.log(valor);
   const getTypeInput = (type, register) => {
     switch (type) {
       case "text":
         return (
           <Container>
             <ContainerInput
+              {...register(`${inputName}`, { required: requiredProp })}
+              valor
               placeholder={placeholder}
               type='text'
               fontSize={fontSize}
               color={color}
               borderRadius={borderRadius}
-               onChange={(e) => {
-                 localStorage.setItem(`${inputName}`, e.target.value);
-               }}
-              {...register(`${inputName}`, { required: viewValue()})}      
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
             />
           </Container>
         );
@@ -78,17 +73,16 @@ function Input({
         return (
           <Container>
             <ContainerInputPhone
+              {...register(`${inputName}`, { required: requiredProp })}
               placeholder={placeholder}
               type='text'
               maxLength='11'
               font-size={fontSize}
               color={color}
               borderRadius={borderRadius}
-               onChange={(e) => {
-                 localStorage.setItem(`${inputName}`, e.target.value);
-               }}
-              {...register(`${inputName}`, { required: viewValue()})}      
- 
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
             />
           </Container>
         );
@@ -96,16 +90,15 @@ function Input({
         return (
           <Container>
             <ContainerInput
+              {...register(`${inputName}`, requiredProp)}
               placeholder={placeholder}
               type='email'
               color={color}
               font-size={fontSize}
               borderRadius={borderRadius}
-               onChange={(e) => {
-                 localStorage.setItem(`${inputName}`, e.target.value);
-               }}
-              {...register(`${inputName}`, viewValue())}    
-  
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
             />
           </Container>
         );
@@ -119,9 +112,9 @@ function Input({
               borderRadius={borderRadius}
               value={valueAge}
               disabled
-               onChange={(e) => {
-                 localStorage.setItem(`${inputName}`, e.target.value);
-               }}
+              onChange={(e) => {
+                localStorage.setItem(`${inputName}`, e.target.value);
+              }}
             />
           </ContainerBirtthday>
         );
@@ -131,6 +124,5 @@ function Input({
   };
   return <div>{getTypeInput(type, register)}</div>;
 }
-
 
 export default Input;

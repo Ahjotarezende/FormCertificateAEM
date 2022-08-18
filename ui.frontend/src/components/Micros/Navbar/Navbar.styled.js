@@ -19,8 +19,9 @@ export const NavText = styled.p`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  border-bottom: 2px solid #aaaaaa;
+  border-bottom: 2px solid ${(props) => props.colorcomp};
   cursor: pointer;
+  color: ${(props) => props.textColor};
   font-size: ${(props) => props.fontSize};
 
   padding: 0.8rem;
@@ -30,9 +31,6 @@ export const NavText = styled.p`
     css`
       padding-bottom: calc(0.8rem - 1px);
       border-bottom: 3px solid ${(props) => props.color};
-      color: ${(props) => props.textColor};
-      
-;
-
+      color: ${(props) => props.color}; ;
     `};
 `;
