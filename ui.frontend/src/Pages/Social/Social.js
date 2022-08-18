@@ -40,7 +40,6 @@ const Social = ({
     }
   };
 
- 
   return (
     <div>
       {headersocial.map(
@@ -181,7 +180,6 @@ const Social = ({
             ) => (
               <Birthday
                 key={index}
-               
                 labelBirth={labelbirthsc}
                 yearEnd={endbirthsc}
                 color={colorbirthsc}
@@ -207,7 +205,6 @@ const Social = ({
             ) => (
               <Checkbox
                 key={index}
-                
                 type={checksc}
                 round={roundsc}
                 txtColor={colortextchecksc}
@@ -259,6 +256,16 @@ Social.defaultProps = {
       colorsmalltextsc: "#111111",
     },
   ],
+  navsocial: [
+    {
+      textonesc: "first",
+      texttwosc: "second",
+      textthreesc: "third",
+      colortextnavsc: "#111111",
+      colorselectedsc: "#074EE8",
+      fsnavsc: "16px",
+    },
+  ],
   buttonsocial: [
     {
       txtbuttonsc: "Insert Text",
@@ -282,7 +289,7 @@ Social.defaultProps = {
       colortextchecksc: "#111111",
       colorerrorchecksc: "#FF0000",
       fschecks: "16px",
-      checksc: true,
+      checksc: false,
       roundsc: false,
       requiredchecksc: true,
     },
@@ -307,16 +314,7 @@ Social.defaultProps = {
       requiredinputsc: true,
     },
   ],
-  navsocial: [
-    {
-      textonesc: "Basic",
-      texttwosc: "Social",
-      textthreesc: "Certificates",
-      colortextnavsc: "#111111",
-      colorselectedsc: "#074EE8",
-      fsnavsc: "16px",
-    },
-  ],
+  
   certsocial: [
     {
       colorbtsc: "#074EE8",

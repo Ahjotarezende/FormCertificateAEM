@@ -76,7 +76,21 @@ const General = (props) => {
 
 
 
-     
+      <Certificate
+        fonts={fonts}
+        title={title}
+        titlecolor={titlecolor}
+        fonte={fstitle}
+        bgform={bgform}
+        colorcomp={colorcomp}
+        headercertificate={headercertificate}
+        navcertificate={navcertificate}
+        inputcertificate={inputcertificate}
+        birthcertificate={birthcertificate}
+        checkcertificate={checkcertificate}
+        buttoncertificate={buttoncertificate}
+        certcertificate={certcertificate}
+      />
     </FullPage>
   );
 };

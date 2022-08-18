@@ -9,11 +9,10 @@ export const Title = styled.p`
 
 export const DivForm = styled.div`
     background-color: ${(props) => props.bgform};
-    width: 617px;
-    height: 763px;
-    .none{
-        display: none;
-    }
-    border-radius: 20px;
+    width: 600px;
+    height: 610px;
+   
+
+    border-radius: 1.1rem;
     margin: 10px auto;
 `;
