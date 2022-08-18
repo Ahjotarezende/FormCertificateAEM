@@ -57,7 +57,7 @@ const General = (props) => {
         buttonbasic={buttonbasic}
         certbasic={certbasic}
       />
-
+      
      <Social
         fonts={fonts}
         title={title}
@@ -73,9 +73,7 @@ const General = (props) => {
         buttonsocial={buttonsocial}
         certsocial={certsocial}
       />
-
-
-
+      
       <Certificate
         fonts={fonts}
         title={title}
