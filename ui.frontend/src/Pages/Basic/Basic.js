@@ -7,6 +7,7 @@ import Certificates from "../../components/Certificates/Certificates";
 import Header from "../../components/Micros/Header/Header";
 import Navbar from "../../components/Micros/Navbar/Navbar";
 import { Container, Content, ContainerP } from "./Basic.styled";
+import { useForm } from "react-hook-form";
 const Basic = (props) => {
   const {
     headerbasic,
@@ -17,6 +18,19 @@ const Basic = (props) => {
     buttonbasic,
     certbasic,
   } = props;
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    let localValues = Object.entries(data);
+    for (let i = 0; i < localValues.length; i++) {
+      localStorage.setItem(localValues[i][0], localValues[i][1]);
+    }
+  };
 
   return (
     <>
@@ -85,6 +99,9 @@ const Basic = (props) => {
                   fontSizeLabel={colorcompbs}
                   inputName={texttwobs}
                   type={typeinputbs}
+                  register={register}
+                  errors={errors}
+                  required={requiredinputbs}
                 />
               </div>
             )
