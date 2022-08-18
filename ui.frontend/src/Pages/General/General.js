@@ -40,6 +40,7 @@ const General = (props) => {
   } = props;
 
   const { headerresult, colorresult, buttonresult } = props;
+
   return (
     <FullPage fontFamily={fonts} backGround={bgpage} id='FullPage'>
       <Basic
@@ -57,6 +58,23 @@ const General = (props) => {
         buttonbasic={buttonbasic}
         certbasic={certbasic}
       />
+
+     <Social
+        fonts={fonts}
+        title={title}
+        titlecolor={titlecolor}
+        fonte={fstitle}
+        bgform={bgform}
+        colorcomp={colorcomp}
+        headersocial={headersocial}
+        navsocial={navsocial}
+        inputsocial={inputsocial}
+        birthsocial={birthsocial}
+        checksocial={checksocial}
+        buttonsocial={buttonsocial}
+        certsocial={certsocial}
+      />
+
       <Certificate
         fonts={fonts}
         title={title}
