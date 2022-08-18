@@ -6,10 +6,16 @@ import Birthday from "../../components/Birthday/Birthday";
 import Certificates from "../../components/Certificates/Certificates";
 import Header from "../../components/Micros/Header/Header";
 import Navbar from "../../components/Micros/Navbar/Navbar";
-import { Container, Content, ContainerP } from "./Basic.styled";
+import { Container, Content, ContainerP, FontFamily } from "./Basic.styled";
 import { useForm } from "react-hook-form";
 const Basic = (props) => {
   const {
+    fonts,
+    title,
+    titlecolor,
+    fonte,
+    bgform,
+    colorcomp,
     headerbasic,
     navbasic,
     inputbasic,
@@ -33,7 +39,7 @@ const Basic = (props) => {
   };
 
   return (
-    <>
+    <FontFamily fonts={fonts}>
       {headerbasic.map(
         (
           { smalltextbs, bigtextbs, colorbigtextbs, colorsmalltextbs = {} },
@@ -101,6 +107,7 @@ const Basic = (props) => {
                   type={typeinputbs}
                   register={register}
                   errors={errors}
+                  borderRadius='2px'
                   required={requiredinputbs}
                 />
               </div>
@@ -240,7 +247,7 @@ const Basic = (props) => {
           )}
         </Container>
       </Content>
-    </>
+    </FontFamily>
   );
 };
 

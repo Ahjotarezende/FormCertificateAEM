@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+export const FontFamily = styled.div`
+  font-family: ${(props) => props.fonts};
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: red;
+  background: white;
   border-radius: 16px;
   width: 38.5rem;
   min-height: 47.6rem;

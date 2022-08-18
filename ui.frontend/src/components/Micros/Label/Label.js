@@ -9,10 +9,4 @@ function Label({ text, color, fontSize }) {
   );
 }
 
-Label.defaultProps = {
-  color: "#000",
-  fontSize: "14px",
-  text: "Insert label",
-};
-
 export default Label;
