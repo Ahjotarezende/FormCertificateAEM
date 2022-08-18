@@ -1,26 +1,19 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: red;
-  border-radius: 16px;
-  width: 38.5rem;
-  min-height: 47.6rem;
-  padding: 2rem;
-`;
-export const ContainerP = styled.p`
-  font-size: 18px;
-  margin-bottom: 1.5rem;
-  align-self: flex-start;
-  font-weight: bold;
+export const Title = styled.p`
+    font-family: ${(props) => props.fonts}, sans-serif;
+    font-weight: 600;
+    font-size: ${(props) => props.fonte};
+    color: ${(props) => props.titlecolor};
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const DivForm = styled.div`
+    background-color: ${(props) => props.bgform};
+    width: 617px;
+    height: 763px;
+    .none{
+        display: none;
+    }
+    border-radius: 20px;
+    margin: 10px auto;
 `;
