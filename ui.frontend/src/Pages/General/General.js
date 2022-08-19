@@ -1,12 +1,24 @@
 import React from "react";
+import { useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import { FullPage } from "./General.styled";
 import Basic from "../Basic/Basic";
 import Social from "../Social/Social";
 import Certificate from "../Certificate/Certificate";
 import Success from "../Success/Success";
+import { set } from "react-hook-form";
+
+
+export const AuthContext = React.createContext();
+//state that sets witch page we are
 
 const General = (props) => {
+  let [page, setPage] = useState(0); 
+  let userAgent = document.body.scrollHeight;
+
+ 
+
+  
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
     props;
   const {
@@ -41,9 +53,11 @@ const General = (props) => {
 
   const { headerresult, colorresult, buttonresult } = props;
 
+
   return (
+    <AuthContext.Provider value={{ name: [page, setPage] }}>
     <FullPage fontFamily={fonts} backGround={bgpage} id='FullPage'>
-      <Basic
+    <Basic
         fonts={fonts}
         title={title}
         titlecolor={titlecolor}
@@ -90,7 +104,9 @@ const General = (props) => {
         buttoncertificate={buttoncertificate}
         certcertificate={certcertificate}
       />
-    </FullPage>
+
+     </FullPage>
+    </AuthContext.Provider>
   );
 };
 

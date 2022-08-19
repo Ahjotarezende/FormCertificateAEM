@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavStyled, NavText } from "./Navbar.styled";
 
+import { AuthContext } from "../../../Pages/General/General";
+
 function Navbar({
   firstText,
   secondText,
@@ -9,18 +11,26 @@ function Navbar({
   color,
   colorcomp,
 }) {
-  const [page, setPage] = useState(0);
+  const { name } = React.useContext(AuthContext); //page authcontext
+  const [page, setPage] = name; //page state
+
   let tabA, tabB, tabC, Nav;
 
-  if (page == 0) {
+  if (page == 1) {
+    console.log(page)
     tabA = "true";
-  } else if (page == 1) {
-    tabB = "true";
   } else if (page == 2) {
-    tabC = "true";
+    console.log(page)
+    tabB = "true";
   } else if (page == 3) {
+    console.log(page)
+    tabC = "true";
+  } else if (page == 4) {
+    console.log(page)
     Nav = "sucess";
   }
+
+  
 
   return (
     <NavStyled>
@@ -29,7 +39,7 @@ function Navbar({
         colorcomp={colorcomp}
         color={color}
         textColor={textColor}
-        onClick={() => setPage(0)}
+        onClick={() => setPage(1)}
       >
         {firstText}
       </NavText>
@@ -38,7 +48,7 @@ function Navbar({
         colorcomp={colorcomp}
         color={color}
         textColor={textColor}
-        onClick={() => setPage(1)}
+        onClick={() => setPage(2)}
       >
         {secondText}
       </NavText>
@@ -47,7 +57,7 @@ function Navbar({
         colorcomp={colorcomp}
         color={color}
         textColor={textColor}
-        onClick={() => setPage(2)}
+        onClick={() => setPage(3)}
       >
         {" "}
         {thirdText}
