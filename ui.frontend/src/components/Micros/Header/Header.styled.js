@@ -6,6 +6,13 @@ export const DivHeader = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3em 0;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+  @media (max-width: 415px){
+      display: none;
+    }
 `;
 
 export const SmallText = styled.h4`
