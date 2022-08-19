@@ -42,7 +42,7 @@ const Social = ({
   const { name } = React.useContext(AuthContext); //page authcontext
   const [page, setPage] = name; //page state
   
-  if (page === 1) {
+  if(page === 2) {
     return (
       <div>
         {headersocial.map(
@@ -59,12 +59,12 @@ const Social = ({
             />
           )
         )}
-
+  
         <DivForm bgform={bgform}>
           <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
             {title}
           </Title>
-
+  
           {navsocial.map(
             (
               {
@@ -87,7 +87,7 @@ const Social = ({
               />
             )
           )}
-
+  
           {certsocial.map(
             (
               {
@@ -175,7 +175,7 @@ const Social = ({
                 />
               )
             )}
-
+  
             {birthsocial.map(
               (
                 { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
@@ -190,7 +190,7 @@ const Social = ({
                 />
               )
             )}
-
+  
             {checksocial.map(
               (
                 {
@@ -217,7 +217,7 @@ const Social = ({
                 />
               )
             )}
-
+  
             {buttonsocial.map(
               (
                 {
@@ -247,19 +247,430 @@ const Social = ({
           </form>
         </DivForm>
       </div>
-    );
+      ); 
+  } else if (page === 0) {
+    return (
+      <div>
+        {headersocial.map(
+          (
+            { smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {} },
+            index
+          ) => (
+            <Header
+              key={index}
+              smalltext={smalltextsc}
+              bigtext={bigtextsc}
+              colorbigtext={colorbigtextsc}
+              colorsmalltext={colorsmalltextsc}
+            />
+          )
+        )}
+  
+        <DivForm bgform={bgform}>
+          <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
+            {title}
+          </Title>
+  
+          {navsocial.map(
+            (
+              {
+                textonesc,
+                texttwosc,
+                textthreesc,
+                colortextnavsc,
+                colorselectedsc,
+                fsnavct = {},
+              },
+              index
+            ) => (
+              <Navbar
+                key={index}
+                firstText={textonesc}
+                secondText={texttwosc}
+                thirdText={textthreesc}
+                textColor={colortextnavsc}
+                color={colorselectedsc}
+              />
+            )
+          )}
+  
+          {certsocial.map(
+            (
+              {
+                labelcertsc,
+                colorlabelcertsc,
+                colorbtsc,
+                leftimagecertsc,
+                rightimagecertsc,
+                txtcertsc,
+                colortxtcertsc,
+                fstxtcertsc,
+                brbtcertsc,
+                bgopcertsc,
+                colorbtmoresc,
+                leftimagemoresc,
+                rightimagemoresc,
+                txtmoresc,
+                colortxtmoresc,
+                fstxtmoresc,
+                brbtmoresc,
+                colorerrorcertsc,
+                phcertsc,
+                errortextsc = {},
+              },
+              index
+            ) => (
+              <Certificates
+                key={index}
+                labelcert={labelcertsc}
+                colorlabelcert={colorlabelcertsc}
+                colorbt={colorbtsc}
+                leftimagecert={leftimagecertsc}
+                rightimagecert={rightimagecertsc}
+                txtcert={txtcertsc}
+                colortxtcert={colortxtcertsc}
+                fstxtcert={fstxtcertsc}
+                brbtcert={brbtcertsc}
+                bgopcert={bgopcertsc}
+                colorbtmore={colorbtmoresc}
+                leftimagemore={leftimagemoresc}
+                rightimagemore={rightimagemoresc}
+                txtmore={txtmoresc}
+                colortxtmore={colortxtmoresc}
+                fstxtmore={fstxtmoresc}
+                brbtmore={brbtmoresc}
+                colorerrorcert={colorerrorcertsc}
+                phcert={phcertsc}
+                errortext={errortextsc}
+                colorcomp={colorcomp}
+              />
+            )
+          )}
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {inputsocial.map(
+              (
+                {
+                  textonesc,
+                  texttwosc,
+                  textthreesc,
+                  colortextnavsc,
+                  colorselectedsc,
+                  colorcompsc,
+                  requiredinputsc,
+                  typeinputsc = {},
+                },
+                index
+              ) => (
+                <InputLabel
+                  key={index}
+                  textLabel={textonesc}
+                  colorLabel={colortextnavsc}
+                  fontSizeLabel='14px'
+                  placeholder={texttwosc}
+                  type={typeinputsc}
+                  color={colorcomp}
+                  required={requiredinputsc}
+                  fontSizeInput={colorcompsc}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreesc}
+                  colormessage={colorselectedsc}
+                  register={register}
+                  errors={errors}
+                />
+              )
+            )}
+  
+            {birthsocial.map(
+              (
+                { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
+                index
+              ) => (
+                <Birthday
+                  key={index}
+                  labelBirth={labelbirthsc}
+                  yearEnd={endbirthsc}
+                  color={colorbirthsc}
+                  yearBegin={startbirthsc}
+                />
+              )
+            )}
+  
+            {checksocial.map(
+              (
+                {
+                  textchecksc,
+                  errorchecksc,
+                  colorchecksc,
+                  colortextchecksc,
+                  colorerrorchecksc,
+                  fschecksc,
+                  checksc,
+                  roundsc,
+                  requiredchecksc = {},
+                },
+                index
+              ) => (
+                <Checkbox
+                  key={index}
+                  type={checksc}
+                  round={roundsc}
+                  txtColor={colortextchecksc}
+                  inputColor={colorchecksc}
+                  text={textchecksc}
+                  number={`${fschecksc}`}
+                />
+              )
+            )}
+  
+            {buttonsocial.map(
+              (
+                {
+                  txtbuttonsc,
+                  colorbuttonsc,
+                  colortxtbuttonsc,
+                  fsbuttonsc,
+                  brbuttonsc,
+                  leftimagesc,
+                  rightimagesc = {},
+                },
+                index
+              ) => (
+                <Button
+                  key={index}
+                  leftImage={leftimagesc}
+                  rightImage={rightimagesc}
+                  fsbutton={fsbuttonsc}
+                  bgbutton={colorbuttonsc}
+                  type='submit'
+                  brbutton={brbuttonsc}
+                  txtbutton={txtbuttonsc}
+                  colorbutton={colortxtbuttonsc}
+                />
+              )
+            )}
+          </form>
+        </DivForm>
+      </div>
+      ); 
   } else {
-    return(
-      <></>
-    )
-  }
+    return <></>
+  } 
+
+ { /* return (
+    <div>
+      {headersocial.map(
+        (
+          { smalltextsc, bigtextsc, colorbigtextsc, colorsmalltextsc = {} },
+          index
+        ) => (
+          <Header
+            key={index}
+            smalltext={smalltextsc}
+            bigtext={bigtextsc}
+            colorbigtext={colorbigtextsc}
+            colorsmalltext={colorsmalltextsc}
+          />
+        )
+      )}
+
+      <DivForm bgform={bgform}>
+        <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
+          {title}
+        </Title>
+
+        {navsocial.map(
+          (
+            {
+              textonesc,
+              texttwosc,
+              textthreesc,
+              colortextnavsc,
+              colorselectedsc,
+              fsnavct = {},
+            },
+            index
+          ) => (
+            <Navbar
+              key={index}
+              firstText={textonesc}
+              secondText={texttwosc}
+              thirdText={textthreesc}
+              textColor={colortextnavsc}
+              color={colorselectedsc}
+            />
+          )
+        )}
+
+        {certsocial.map(
+          (
+            {
+              labelcertsc,
+              colorlabelcertsc,
+              colorbtsc,
+              leftimagecertsc,
+              rightimagecertsc,
+              txtcertsc,
+              colortxtcertsc,
+              fstxtcertsc,
+              brbtcertsc,
+              bgopcertsc,
+              colorbtmoresc,
+              leftimagemoresc,
+              rightimagemoresc,
+              txtmoresc,
+              colortxtmoresc,
+              fstxtmoresc,
+              brbtmoresc,
+              colorerrorcertsc,
+              phcertsc,
+              errortextsc = {},
+            },
+            index
+          ) => (
+            <Certificates
+              key={index}
+              labelcert={labelcertsc}
+              colorlabelcert={colorlabelcertsc}
+              colorbt={colorbtsc}
+              leftimagecert={leftimagecertsc}
+              rightimagecert={rightimagecertsc}
+              txtcert={txtcertsc}
+              colortxtcert={colortxtcertsc}
+              fstxtcert={fstxtcertsc}
+              brbtcert={brbtcertsc}
+              bgopcert={bgopcertsc}
+              colorbtmore={colorbtmoresc}
+              leftimagemore={leftimagemoresc}
+              rightimagemore={rightimagemoresc}
+              txtmore={txtmoresc}
+              colortxtmore={colortxtmoresc}
+              fstxtmore={fstxtmoresc}
+              brbtmore={brbtmoresc}
+              colorerrorcert={colorerrorcertsc}
+              phcert={phcertsc}
+              errortext={errortextsc}
+              colorcomp={colorcomp}
+            />
+          )
+        )}
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {inputsocial.map(
+            (
+              {
+                textonesc,
+                texttwosc,
+                textthreesc,
+                colortextnavsc,
+                colorselectedsc,
+                colorcompsc,
+                requiredinputsc,
+                typeinputsc = {},
+              },
+              index
+            ) => (
+              <InputLabel
+                key={index}
+                textLabel={textonesc}
+                colorLabel={colortextnavsc}
+                fontSizeLabel='14px'
+                placeholder={texttwosc}
+                type={typeinputsc}
+                color={colorcomp}
+                required={requiredinputsc}
+                fontSizeInput={colorcompsc}
+                borderRadius='4px'
+                fsmessage='14'
+                fwmessage='400'
+                txtmessage={textthreesc}
+                colormessage={colorselectedsc}
+                register={register}
+                errors={errors}
+              />
+            )
+          )}
+
+          {birthsocial.map(
+            (
+              { labelbirthsc, colorbirthsc, startbirthsc, endbirthsc = {} },
+              index
+            ) => (
+              <Birthday
+                key={index}
+                labelBirth={labelbirthsc}
+                yearEnd={endbirthsc}
+                color={colorbirthsc}
+                yearBegin={startbirthsc}
+              />
+            )
+          )}
+
+          {checksocial.map(
+            (
+              {
+                textchecksc,
+                errorchecksc,
+                colorchecksc,
+                colortextchecksc,
+                colorerrorchecksc,
+                fschecksc,
+                checksc,
+                roundsc,
+                requiredchecksc = {},
+              },
+              index
+            ) => (
+              <Checkbox
+                key={index}
+                type={checksc}
+                round={roundsc}
+                txtColor={colortextchecksc}
+                inputColor={colorchecksc}
+                text={textchecksc}
+                number={`${fschecksc}`}
+              />
+            )
+          )}
+
+          {buttonsocial.map(
+            (
+              {
+                txtbuttonsc,
+                colorbuttonsc,
+                colortxtbuttonsc,
+                fsbuttonsc,
+                brbuttonsc,
+                leftimagesc,
+                rightimagesc = {},
+              },
+              index
+            ) => (
+              <Button
+                key={index}
+                leftImage={leftimagesc}
+                rightImage={rightimagesc}
+                fsbutton={fsbuttonsc}
+                bgbutton={colorbuttonsc}
+                type='submit'
+                brbutton={brbuttonsc}
+                txtbutton={txtbuttonsc}
+                colorbutton={colortxtbuttonsc}
+              />
+            )
+          )}
+        </form>
+      </DivForm>
+    </div>
+    ); */}
+
 };
 
 Social.defaultProps = {
   headersocial: [
     {
       smalltextsc: "Forms",
-      bigtextsc: "Social Tab",
+      bigtextsc: "Second Tab",
       colorbigtextsc: "#074EE8",
       colorsmalltextsc: "#111111",
     },

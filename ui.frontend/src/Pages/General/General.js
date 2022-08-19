@@ -6,13 +6,19 @@ import Basic from "../Basic/Basic";
 import Social from "../Social/Social";
 import Certificate from "../Certificate/Certificate";
 import Success from "../Success/Success";
+import { set } from "react-hook-form";
 
 
 export const AuthContext = React.createContext();
 //state that sets witch page we are
 
 const General = (props) => {
-  let [page, setPage] = useState(1); 
+  let [page, setPage] = useState(0); 
+  let userAgent = document.body.scrollHeight;
+
+ 
+
+  
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
     props;
   const {
@@ -51,7 +57,21 @@ const General = (props) => {
   return (
     <AuthContext.Provider value={{ name: [page, setPage] }}>
     <FullPage fontFamily={fonts} backGround={bgpage} id='FullPage'>
-      
+    <Basic
+        fonts={fonts}
+        title={title}
+        titlecolor={titlecolor}
+        fonte={fstitle}
+        bgform={bgform}
+        colorcomp={colorcomp}
+        headerbasic={headerbasic}
+        navbasic={navbasic}
+        inputbasic={inputbasic}
+        birthbasic={birthbasic}
+        checkbasic={checkbasic}
+        buttonbasic={buttonbasic}
+        certbasic={certbasic}
+      />
 
       <Social
         fonts={fonts}
