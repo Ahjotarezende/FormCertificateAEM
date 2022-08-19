@@ -8,6 +8,9 @@ import Checkbox from "../../components/Checkbox/Checkbox";
 import Birthday from "../../components/Birthday/Birthday";
 import Button from "../../components/Button/Button";
 
+import { AuthContext } from "../General/General";
+
+
 import { useForm } from "react-hook-form";
 const saveLocalStorage = (label, localStorageData) => {
   localStorageData.push(label);
@@ -38,17 +41,439 @@ const Certificate = ({
   } = useForm();
   const onSubmit = (data) => {
     console.log("fez o submit");
-    let localValues = Object.entries(data);
-    for (let i = 0; i < localValues.length; i++) {
-      localStorage.setItem(localValues[i][0], localValues[i][1]);
-    }
+    
   };
+
 
   const setDisplay = (i) => {
     if (i === "") return "none";
   };
 
-  return (
+  const { name } = React.useContext(AuthContext); //page authcontext
+  const [page, setPage] = name; //page state
+
+  if(page === 3) {
+    return (
+      <div>
+        {headercertificate.map(
+          (
+            { smalltextct, bigtextct, colorbigtextct, colorsmalltextct = {} },
+            index
+          ) => (
+            <Header
+              key={index}
+              smalltext={smalltextct}
+              bigtext={bigtextct}
+              colorbigtext={colorbigtextct}
+              colorsmalltext={colorsmalltextct}
+            />
+          )
+        )}
+  
+        <DivForm bgform={bgform}>
+          <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
+            {title}
+          </Title>
+  
+          {navcertificate.map(
+            (
+              {
+                textonect,
+                texttwoct,
+                textthreect,
+                colortextnavct,
+                colorselectedct,
+                fsnavct = {},
+              },
+              index
+            ) => (
+              <Navbar
+               colorcomp={colorcomp}
+                key={index}
+                firstText={textonect}
+                secondText={texttwoct}
+                thirdText={textthreect}
+                textColor={colortextnavct}
+                color={colorselectedct}
+              />
+            )
+          )}
+  
+          {certcertificate.map(
+            (
+              {
+                labelcertct,
+                colorlabelcertct,
+                colorbtct,
+                leftimagecertct,
+                rightimagecertct,
+                txtcertct,
+                colortxtcertct,
+                fstxtcertct,
+                brbtcertct,
+                bgopcertct,
+                colorbtmorect,
+                leftimagemorect,
+                rightimagemorect,
+                txtmorect,
+                colortxtmorect,
+                fstxtmorect,
+                brbtmorect,
+                colorerrorcertct,
+                phcertct,
+                errortextct = {},
+              },
+              index
+            ) => (
+              <Certificates
+                key={index}
+                labelcert={labelcertct}
+                colorlabelcert={colorlabelcertct}
+                colorbt={colorbtct}
+                leftimagecert={leftimagecertct}
+                rightimagecert={rightimagecertct}
+                txtcert={txtcertct}
+                colortxtcert={colortxtcertct}
+                fstxtcert={fstxtcertct}
+                brbtcert={brbtcertct}
+                bgopcert={bgopcertct}
+                colorbtmore={colorbtmorect}
+                leftimagemore={leftimagemorect}
+                rightimagemore={rightimagemorect}
+                txtmore={txtmorect}
+                colortxtmore={colortxtmorect}
+                fstxtmore={fstxtmorect}
+                brbtmore={brbtmorect}
+                colorerrorcert={colorerrorcertct}
+                phcert={phcertct}
+                errortext={errortextct}
+                colorcomp={colorcomp}
+              />
+            )
+          )}
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {inputcertificate.map(
+              (
+                {
+                  textonect,
+                  texttwoct,
+                  textthreect,
+                  colortextnavct,
+                  colorselectedct,
+                  colorcompct,
+                  requiredinputct,
+                  typeinputct = {},
+                },
+                index
+              ) => (
+                <InputLabel
+                  key={index}
+                  textLabel={textonect}
+                  colorLabel={colortextnavct}
+                  fontSizeLabel='14px'
+                  placeholder={texttwoct}
+                  type={typeinputct}
+                  color={colorcomp}
+                  required={requiredinputct}
+                  fontSizeInput={colorcompct}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreect}
+                  colormessage={colorselectedct}
+                  register={register}
+                  errors={errors}
+                />
+              )
+            )}
+  
+            {birthcertificate.map(
+              (
+                { labelbirthct, colorbirthct, startbirthct, endbirthct = {} },
+                index
+              ) => (
+                <Birthday
+                  key={index}
+                  className={setDisplay(labelbirthct)}
+                  labelBirth={labelbirthct}
+                  yearEnd={endbirthct}
+                  color={colorbirthct}
+                  yearBegin={startbirthct}
+                />
+              )
+            )}
+  
+            {checkcertificate.map(
+              (
+                {
+                  textcheckct,
+                  errorcheckct,
+                  colorcheckct,
+                  colortextcheckct,
+                  colorerrorcheckct,
+                  fscheckct,
+                  checkct,
+                  roundct,
+                  requiredcheckct = {},
+                },
+                index
+              ) => (
+                <Checkbox
+                  key={index}
+                  className={setDisplay(textcheckct)}
+                  type={checkct}
+                  round={roundct}
+                  txtColor={colortextcheckct}
+                  inputColor={colorcheckct}
+                  text={textcheckct}
+                  number={`${fscheckct}`}
+                />
+              )
+            )}
+  
+            {buttoncertificate.map(
+              (
+                {
+                  txtbuttonct,
+                  colorbuttonct,
+                  colortxtbuttonct,
+                  fsbuttonct,
+                  brbuttonct,
+                  leftimagect,
+                  rightimagect = {},
+                },
+                index
+              ) => (
+                <Button
+                  key={index}
+                  leftImage={leftimagect}
+                  rightImage={rightimagect}
+                  fsbutton={fsbuttonct}
+                  bgbutton={colorbuttonct}
+                  type='submit'
+                  brbutton={brbuttonct}
+                  txtbutton={txtbuttonct}
+                  colorbutton={colortxtbuttonct}
+                />
+              )
+            )}
+          </form>
+        </DivForm>
+      </div>
+       );
+  } else if (page === 0) {
+    return (
+      <div>
+        {headercertificate.map(
+          (
+            { smalltextct, bigtextct, colorbigtextct, colorsmalltextct = {} },
+            index
+          ) => (
+            <Header
+              key={index}
+              smalltext={smalltextct}
+              bigtext={bigtextct}
+              colorbigtext={colorbigtextct}
+              colorsmalltext={colorsmalltextct}
+            />
+          )
+        )}
+  
+        <DivForm bgform={bgform}>
+          <Title fonts={fonts} titlecolor={titlecolor} fonte={`${fonte}px`}>
+            {title}
+          </Title>
+  
+          {navcertificate.map(
+            (
+              {
+                textonect,
+                texttwoct,
+                textthreect,
+                colortextnavct,
+                colorselectedct,
+                fsnavct = {},
+              },
+              index
+            ) => (
+              <Navbar
+                key={index}
+                firstText={textonect}
+                secondText={texttwoct}
+                thirdText={textthreect}
+                textColor={colortextnavct}
+                color={colorselectedct}
+              />
+            )
+          )}
+  
+          {certcertificate.map(
+            (
+              {
+                labelcertct,
+                colorlabelcertct,
+                colorbtct,
+                leftimagecertct,
+                rightimagecertct,
+                txtcertct,
+                colortxtcertct,
+                fstxtcertct,
+                brbtcertct,
+                bgopcertct,
+                colorbtmorect,
+                leftimagemorect,
+                rightimagemorect,
+                txtmorect,
+                colortxtmorect,
+                fstxtmorect,
+                brbtmorect,
+                colorerrorcertct,
+                phcertct,
+                errortextct = {},
+              },
+              index
+            ) => (
+              <Certificates
+                key={index}
+                labelcert={labelcertct}
+                colorlabelcert={colorlabelcertct}
+                colorbt={colorbtct}
+                leftimagecert={leftimagecertct}
+                rightimagecert={rightimagecertct}
+                txtcert={txtcertct}
+                colortxtcert={colortxtcertct}
+                fstxtcert={fstxtcertct}
+                brbtcert={brbtcertct}
+                bgopcert={bgopcertct}
+                colorbtmore={colorbtmorect}
+                leftimagemore={leftimagemorect}
+                rightimagemore={rightimagemorect}
+                txtmore={txtmorect}
+                colortxtmore={colortxtmorect}
+                fstxtmore={fstxtmorect}
+                brbtmore={brbtmorect}
+                colorerrorcert={colorerrorcertct}
+                phcert={phcertct}
+                errortext={errortextct}
+                colorcomp={colorcomp}
+              />
+            )
+          )}
+          <form>
+            {inputcertificate.map(
+              (
+                {
+                  textonect,
+                  texttwoct,
+                  textthreect,
+                  colortextnavct,
+                  colorselectedct,
+                  colorcompct,
+                  requiredinputct,
+                  typeinputct = {},
+                },
+                index
+              ) => (
+                <InputLabel
+                  key={index}
+                  textLabel={textonect}
+                  colorLabel={colortextnavct}
+                  fontSizeLabel='14px'
+                  placeholder={texttwoct}
+                  type={typeinputct}
+                  color={colorcomp}
+                  required={requiredinputct}
+                  fontSizeInput={colorcompct}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreect}
+                  colormessage={colorselectedct}
+                  register={register}
+                  errors={errors}
+                />
+              )
+            )}
+  
+            {birthcertificate.map(
+              (
+                { labelbirthct, colorbirthct, startbirthct, endbirthct = {} },
+                index
+              ) => (
+                <Birthday
+                  key={index}
+                  className={setDisplay(labelbirthct)}
+                  labelBirth={labelbirthct}
+                  yearEnd={endbirthct}
+                  color={colorbirthct}
+                  yearBegin={startbirthct}
+                />
+              )
+            )}
+  
+            {checkcertificate.map(
+              (
+                {
+                  textcheckct,
+                  errorcheckct,
+                  colorcheckct,
+                  colortextcheckct,
+                  colorerrorcheckct,
+                  fscheckct,
+                  checkct,
+                  roundct,
+                  requiredcheckct = {},
+                },
+                index
+              ) => (
+                <Checkbox
+                  key={index}
+                  className={setDisplay(textcheckct)}
+                  type={checkct}
+                  round={roundct}
+                  txtColor={colortextcheckct}
+                  inputColor={colorcheckct}
+                  text={textcheckct}
+                  number={`${fscheckct}`}
+                />
+              )
+            )}
+  
+            {buttoncertificate.map(
+              (
+                {
+                  txtbuttonct,
+                  colorbuttonct,
+                  colortxtbuttonct,
+                  fsbuttonct,
+                  brbuttonct,
+                  leftimagect,
+                  rightimagect = {},
+                },
+                index
+              ) => (
+                <Button
+                  key={index}
+                  leftImage={leftimagect}
+                  rightImage={rightimagect}
+                  fsbutton={fsbuttonct}
+                  bgbutton={colorbuttonct}
+                  type='submit'
+                  brbutton={brbuttonct}
+                  txtbutton={txtbuttonct}
+                  colorbutton={colortxtbuttonct}
+                  onClick={handleSubmit(onSubmit)}
+                />
+              )
+            )}
+          </form>
+        </DivForm>
+      </div>
+       );
+  } else {
+    return <></>
+  } 
+  {/*return (
     <div>
       {headercertificate.map(
         (
@@ -258,7 +683,9 @@ const Certificate = ({
         </form>
       </DivForm>
     </div>
-  );
+     ); */}
+
+
 };
 
 Certificate.defaultProps = {

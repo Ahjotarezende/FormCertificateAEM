@@ -14,7 +14,7 @@ const Certificates = ({labelcert, colorlabelcert, colorbt,
     const [viewFull, setViewFull] = useState("notView");
     const [certificado, setCertificado] = useState("");
     const [arrayCertificado, setArrayCertificado] = useState([]);
-    const [bigButton, setBigButton] = useState("");
+    const [bigButton, setBigButton] = useState("noneBig");
 
     const viewOptions = () => {
         if(bigButton==="big"){
@@ -29,6 +29,10 @@ const Certificates = ({labelcert, colorlabelcert, colorbt,
 
     const adding = () => {
         if(arrayCertificado.length<5 && certificado!==""){
+            localStorage.setItem(`Certificado${arrayCertificado.length+1}`, certificado)
+            if(bigButton!=="big")
+                setBigButton("")
+
             setArrayCertificado([...arrayCertificado, certificado]);
             setViewEmpty("notView")
             setViewFull("notView")
@@ -44,6 +48,15 @@ const Certificates = ({labelcert, colorlabelcert, colorbt,
     const deletOp = (entry) => {
         const newList = arrayCertificado.filter(rdm => rdm != entry)
         setArrayCertificado(newList)
+
+        const findCert = (entry) => {
+            for(let i=0;i<5;i++){
+                if(arrayCertificado[i]===entry){
+                    return "Certificado"+(i+1);
+                }
+            }
+        }
+        localStorage.removeItem(findCert(entry))
     }
 
     return (

@@ -8,14 +8,18 @@ export const InputCert = styled.input`
     border-color: ${(props) => props.color};
     margin-bottom: 1.8rem;
     border-radius: 4px;
-    padding: 12px 0 12px 12px;
+    padding: 0.75rem 0 0.75rem 0.75rem;
+    @media (max-width: 415px){
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
 `;
 
 export const DivCertificate = styled.div`
     padding: 0;
-    width: 550px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 2.31rem;
 `;
 
 export const Empty = styled.p`
@@ -29,7 +33,7 @@ export const Empty = styled.p`
 `;
 
 export const DivMore = styled.div`
-    width: 255px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -41,7 +45,7 @@ export const DivMore = styled.div`
 
 export const DivButtons = styled.div`
     display: flex;
-    height: 79px;
+    height: 4.93rem;
 `;
 
 export const DivCert = styled.div`
@@ -50,11 +54,14 @@ export const DivCert = styled.div`
     width: 53.6%;
     flex-direction: column;
     .big{
-        max-width: 187px;
+        max-width: 11.68rem;
         z-index: 1;
         cursor: pointer;
-        padding-left: 41.5px;
-        padding-right: 41.5px;
+        padding-left: 2.59rem;
+        padding-right: 2.59rem;
+    }
+    .noneBig{
+        display: none;
     }
 `;
 
@@ -62,31 +69,31 @@ export const DivOptions = styled.div`
     &.not, &#delOption0, &#delOption1, &#delOption2, &#delOption3, &#delOption4{
         display: none;
     }
-    width: 187px;
+    width: 11.68rem;
     font-size: 11px;
-    padding-right: 5px;
+    padding-right: 0.31rem;
     background-color: ${(props) => props.bgopcert};
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
-    bottom: 5px;
-    padding: 7px 0 1px 0;
+    bottom: 0.31rem;
+    padding: 0.43rem 0 0.06rem 0;
     z-index: 0;
     p{
-        margin-left: 3px;
+        margin-left: 0.18rem;
         color: white;
         overflow: hidden;
     }
     button{
-        margin-top: 1px;
+        margin-top: 0.06rem;
         color: white;
         font-size: 11px;
         text-align: end;
         background-color: transparent;
         border: none;
-        width: 22.5px;
-        height: 15.5px;
+        width: 1.40rem;
+        height: 0.96rem;
         border-bottom: 1px solid white;
         cursor: pointer;
     }
