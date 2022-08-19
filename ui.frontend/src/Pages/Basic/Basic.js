@@ -123,7 +123,7 @@ const Basic = (props) => {
                 ) => (
                   <div key={index}>
                     <InputLabel
-                      colorcomp={colorcomp}
+                      color={colorcomp}
                       textLabel={textonebs}
                       placeholder={texttwobs}
                       txtmessage={textthreebs}
@@ -218,7 +218,8 @@ const Basic = (props) => {
                 index
               ) => (
                 <div key={index}>
-                  {/* <Certificates
+                   <Certificates
+                    colorcomp={colorcomp}
                     labelcert={setDisplay(labelcertbs)}
                     colorlabelcert={colorlabelcertbs}
                     colorbt={colorbtbs}
@@ -239,7 +240,7 @@ const Basic = (props) => {
                     colorerrorcert={colorerrorcertbs}
                     phcert={phcertbs}
                     errortext={errortextbs}
-                  /> */}
+                  /> 
                 </div>
               )
             )}

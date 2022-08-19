@@ -38,10 +38,7 @@ const Certificate = ({
   } = useForm();
   const onSubmit = (data) => {
     console.log("fez o submit");
-    let localValues = Object.entries(data);
-    for (let i = 0; i < localValues.length; i++) {
-      localStorage.setItem(localValues[i][0], localValues[i][1]);
-    }
+    
   };
 
 
@@ -88,6 +85,7 @@ const Certificate = ({
               index
             ) => (
               <Navbar
+               colorcomp={colorcomp}
                 key={index}
                 firstText={textonect}
                 secondText={texttwoct}
@@ -150,7 +148,7 @@ const Certificate = ({
               />
             )
           )}
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             {inputcertificate.map(
               (
                 {
@@ -253,7 +251,6 @@ const Certificate = ({
                   brbutton={brbuttonct}
                   txtbutton={txtbuttonct}
                   colorbutton={colortxtbuttonct}
-                  onClick={handleSubmit(onSubmit)}
                 />
               )
             )}

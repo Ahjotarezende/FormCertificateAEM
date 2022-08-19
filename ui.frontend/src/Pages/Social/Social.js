@@ -1,7 +1,7 @@
 import React from "react";
 import Certificates from "../../components/Certificates/Certificates";
 import Header from "../../components/Micros/Header/Header";
-import { Title, DivForm } from "./Social.styled";
+import { Title, DivForm } from "./Social.Styled";
 import Navbar from "../../components/Micros/Navbar/Navbar";
 import InputLabel from "../../components/Input+Label/InputLabel";
 import Checkbox from "../../components/Checkbox/Checkbox";
