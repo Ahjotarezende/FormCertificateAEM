@@ -16,6 +16,9 @@ import {
 } from "./Basic.styled";
 import { useForm } from "react-hook-form";
 const Basic = (props) => {
+  const saveLocalStorage = (label, localStorageData) => {
+    localStorageData.push(label);
+  };
   const {
     headerbasic,
     navbasic,
@@ -30,6 +33,7 @@ const Basic = (props) => {
     fonte,
     bgform,
     colorcomp,
+    localStorageData,
   } = props;
 
   const {
@@ -114,6 +118,7 @@ const Basic = (props) => {
                 index
               ) => (
                 <div key={index}>
+                  {saveLocalStorage(textonebs, localStorageData)}
                   <InputLabel
                     colorcomp={colorcomp}
                     textLabel={textonebs}
@@ -138,12 +143,6 @@ const Basic = (props) => {
               index
             ) => (
               <div key={index}>
-                {console.log(
-                  labelbirthbs,
-                  colorbirthbs,
-                  startbirthbs,
-                  endbirthbs
-                )}
                 <Birthday
                   yearBegin={startbirthbs}
                   yearEnd={endbirthbs}

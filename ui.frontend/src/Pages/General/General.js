@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import { FullPage } from "./General.styled";
 import Basic from "../Basic/Basic";
@@ -7,6 +7,7 @@ import Certificate from "../Certificate/Certificate";
 import Success from "../Success/Success";
 
 const General = (props) => {
+  const [localStorageData, setLocalStorageData] = useState([""]);
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
     props;
   const {
@@ -57,6 +58,7 @@ const General = (props) => {
         checkbasic={checkbasic}
         buttonbasic={buttonbasic}
         certbasic={certbasic}
+        localStorageData={localStorageData}
       />
 
       <Social
@@ -73,6 +75,7 @@ const General = (props) => {
         checksocial={checksocial}
         buttonsocial={buttonsocial}
         certsocial={certsocial}
+        localStorageData={localStorageData}
       />
 
       <Certificate
@@ -89,6 +92,14 @@ const General = (props) => {
         checkcertificate={checkcertificate}
         buttoncertificate={buttoncertificate}
         certcertificate={certcertificate}
+        localStorageData={localStorageData}
+      />
+      <Success
+        headerresult={headerresult}
+        colorresult={colorresult}
+        buttonresult={buttonresult}
+        localStorageData={localStorageData}
+        bgform={bgform}
       />
     </FullPage>
   );

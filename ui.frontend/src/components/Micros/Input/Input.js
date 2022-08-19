@@ -8,6 +8,7 @@ import {
   ContainerInputPhone,
   ContainerInputEmail,
 } from "./Input.styled";
+import { maskPhone } from "../../../utils/maskPhone";
 function Input({
   type,
   placeholder,
@@ -77,12 +78,12 @@ function Input({
               {...register(`${inputName}`, { required: requiredProp })}
               placeholder={placeholder}
               type='text'
-              maxLength='11'
               font-size={fontSize}
               color={color}
               borderRadius={borderRadius}
               onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
+                maskPhone(e);
+                localStorage.setItem(`phone`, e.target.value);
               }}
             />
           </Container>
@@ -114,7 +115,7 @@ function Input({
               value={valueAge}
               disabled
               onChange={(e) => {
-                localStorage.setItem(`${inputName}`, e.target.value);
+                localStorage.setItem(`birthday`, e.target.value);
               }}
             />
           </ContainerBirtthday>
