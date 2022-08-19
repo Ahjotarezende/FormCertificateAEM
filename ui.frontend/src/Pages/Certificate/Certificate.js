@@ -12,7 +12,9 @@ import { AuthContext } from "../General/General";
 
 
 import { useForm } from "react-hook-form";
-
+const saveLocalStorage = (label, localStorageData) => {
+  localStorageData.push(label);
+};
 const Certificate = ({
   fonts,
   title,
@@ -27,6 +29,7 @@ const Certificate = ({
   checkcertificate,
   buttoncertificate,
   certcertificate,
+  localStorageData,
 }) => {
   console.log(inputcertificate);
 
@@ -582,24 +585,27 @@ const Certificate = ({
               },
               index
             ) => (
-              <InputLabel
-                key={index}
-                textLabel={textonect}
-                colorLabel={colortextnavct}
-                fontSizeLabel='14px'
-                placeholder={texttwoct}
-                type={typeinputct}
-                color={colorcomp}
-                required={requiredinputct}
-                fontSizeInput={colorcompct}
-                borderRadius='4px'
-                fsmessage='14'
-                fwmessage='400'
-                txtmessage={textthreect}
-                colormessage={colorselectedct}
-                register={register}
-                errors={errors}
-              />
+              <>
+                {saveLocalStorage(textonect, localStorageData)}
+                <InputLabel
+                  key={index}
+                  textLabel={textonect}
+                  colorLabel={colortextnavct}
+                  fontSizeLabel='14px'
+                  placeholder={texttwoct}
+                  type={typeinputct}
+                  color={colorcomp}
+                  required={requiredinputct}
+                  fontSizeInput={colorcompct}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreect}
+                  colormessage={colorselectedct}
+                  register={register}
+                  errors={errors}
+                />
+              </>
             )
           )}
 

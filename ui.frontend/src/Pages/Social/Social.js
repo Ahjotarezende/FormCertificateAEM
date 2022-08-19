@@ -25,7 +25,14 @@ const Social = ({
   checksocial,
   buttonsocial,
   certsocial,
+  localStorageData,
 }) => {
+
+  const saveLocalStorage = (label, localStorageData) => {
+    localStorageData.push(label);
+  };
+
+
   const {
     register,
     handleSubmit,
@@ -570,24 +577,27 @@ const Social = ({
               },
               index
             ) => (
-              <InputLabel
-                key={index}
-                textLabel={textonesc}
-                colorLabel={colortextnavsc}
-                fontSizeLabel='14px'
-                placeholder={texttwosc}
-                type={typeinputsc}
-                color={colorcomp}
-                required={requiredinputsc}
-                fontSizeInput={colorcompsc}
-                borderRadius='4px'
-                fsmessage='14'
-                fwmessage='400'
-                txtmessage={textthreesc}
-                colormessage={colorselectedsc}
-                register={register}
-                errors={errors}
-              />
+              <>
+                {saveLocalStorage(textonesc, localStorageData)}
+                <InputLabel
+                  key={index}
+                  textLabel={textonesc}
+                  colorLabel={colortextnavsc}
+                  fontSizeLabel='14px'
+                  placeholder={texttwosc}
+                  type={typeinputsc}
+                  color={colorcomp}
+                  required={requiredinputsc}
+                  fontSizeInput={colorcompsc}
+                  borderRadius='4px'
+                  fsmessage='14'
+                  fwmessage='400'
+                  txtmessage={textthreesc}
+                  colormessage={colorselectedsc}
+                  register={register}
+                  errors={errors}
+                />
+              </>
             )
           )}
 

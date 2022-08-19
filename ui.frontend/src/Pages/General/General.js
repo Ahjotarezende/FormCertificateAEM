@@ -1,5 +1,6 @@
-import React from "react";
-import { useState } from "react";
+
+import React, { useState } from "react";
+
 import { MapTo } from "@adobe/aem-react-editable-components";
 import { FullPage } from "./General.styled";
 import Basic from "../Basic/Basic";
@@ -13,12 +14,11 @@ export const AuthContext = React.createContext();
 //state that sets witch page we are
 
 const General = (props) => {
+
+  const [localStorageData, setLocalStorageData] = useState([""]);
   let [page, setPage] = useState(0); 
   let userAgent = document.body.scrollHeight;
 
- 
-
-  
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
     props;
   const {
@@ -71,6 +71,7 @@ const General = (props) => {
         checkbasic={checkbasic}
         buttonbasic={buttonbasic}
         certbasic={certbasic}
+        localStorageData={localStorageData}
       />
 
       <Social
@@ -87,6 +88,7 @@ const General = (props) => {
         checksocial={checksocial}
         buttonsocial={buttonsocial}
         certsocial={certsocial}
+        localStorageData={localStorageData}
       />
 
       <Certificate
@@ -103,6 +105,14 @@ const General = (props) => {
         checkcertificate={checkcertificate}
         buttoncertificate={buttoncertificate}
         certcertificate={certcertificate}
+        localStorageData={localStorageData}
+      />
+      <Success
+        headerresult={headerresult}
+        colorresult={colorresult}
+        buttonresult={buttonresult}
+        localStorageData={localStorageData}
+        bgform={bgform}
       />
 
      </FullPage>
