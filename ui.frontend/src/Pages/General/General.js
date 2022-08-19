@@ -16,7 +16,7 @@ export const AuthContext = React.createContext();
 const General = (props) => {
 
   const [localStorageData, setLocalStorageData] = useState([""]);
-  let [page, setPage] = useState(0); 
+  let [page, setPage] = useState(1); 
   let userAgent = document.body.scrollHeight;
 
   const { fonts, title, titlecolor, fstitle, bgpage, bgform, colorcomp } =
